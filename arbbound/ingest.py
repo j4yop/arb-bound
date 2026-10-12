@@ -115,6 +115,15 @@ def _normalise_frame(frame: pd.DataFrame) -> pd.DataFrame:
     if frame.empty:
         raise ValueError("bhavcopy contained no rows")
 
+    # Fail with a sentence a user can act on, rather than a bare KeyError from
+    # deep inside pandas.
+    for required in ("Symbol", "ExpiryDate", "Date"):
+        if required not in frame.columns:
+            raise ValueError(
+                f"not a bhavcopy: expected a '{required}' column. "
+                f"Found columns: {', '.join(map(str, frame.columns)) or '(none)'}"
+            )
+
     frame = frame.copy()
     frame["symbol"] = frame["Symbol"].astype(str).str.strip()
 
@@ -302,3 +311,25 @@ def reference_price(bhavcopy: pd.DataFrame) -> float:
     if traded.empty:
         raise ValueError("cannot derive a reference price: no traded rows")
     return float(traded["px_per_g_fine"].median())
+
+
+def basis_history(bhavcopy: pd.DataFrame, max_points: int = 400) -> dict[str, list[dict]]:
+    """Basis series per pair, downsampled, ready for the dashboard sparkline.
+
+    Lives here rather than in the build script so the browser playground can
+    render charts from the frame it already loaded, without importing the
+    file-system oriented build module.
+    """
+    basis = matched_basis(bhavcopy)
+    out: dict[str, list[dict]] = {}
+    for col in basis.columns:
+        series = basis[col].dropna()
+        if len(series) < 2:
+            continue
+        step = max(1, len(series) // max_points)
+        sampled = series.iloc[::step]
+        out[col] = [
+            {"x": i, "y": float(v), "label": str(ts.date())}
+            for i, (ts, v) in enumerate(sampled.items())
+        ]
+    return out

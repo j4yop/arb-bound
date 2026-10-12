@@ -7,25 +7,19 @@ import json
 from pathlib import Path
 
 from .cli import _load, build_report
-from .ingest import matched_basis
+from .ingest import basis_history as history
+from .playground import build_playground
 
 
-def history(report_input: Path, max_points: int = 400) -> dict[str, list[dict]]:
-    """Basis series per pair, downsampled for the sparkline."""
-    frame = _load(report_input)
-    basis = matched_basis(frame)
-    out: dict[str, list[dict]] = {}
-    for col in basis.columns:
-        series = basis[col].dropna()
-        if len(series) < 2:
-            continue
-        step = max(1, len(series) // max_points)
-        sampled = series.iloc[::step]
-        out[col] = [
-            {"x": i, "y": float(v), "label": str(ts.date())}
-            for i, (ts, v) in enumerate(sampled.items())
-        ]
-    return out
+def _sample_for_embedding(path: Path) -> str:
+    """The full input CSV, to be gzipped into the playground page.
+
+    The whole fixture gzips to a few hundred KB, so the default in-browser demo
+    runs the identical analysis the command line does - across all four
+    contracts and the entire sample window. Truncating by row count is avoided
+    deliberately: it silently drops whichever contracts happen to sort last.
+    """
+    return path.read_text()
 
 
 def main() -> int:
@@ -42,10 +36,19 @@ def main() -> int:
 
     from .report import render
 
-    html = render(report, history(args.input))
+    html = render(report, history(frame))
     (args.outdir / "index.html").write_text(html)
 
-    print(f"wrote {args.outdir}/report.json and {args.outdir}/index.html")
+    # The playground ships this package's own source so the browser can run the
+    # genuine pipeline. See arbbound/playground.py.
+    build_playground(
+        Path(__file__).parent,
+        _sample_for_embedding(args.input),
+        args.outdir / "playground.html",
+        sample_label=f"bundled sample ({args.input.name})",
+    )
+
+    print(f"wrote {args.outdir}/report.json, index.html and playground.html")
     return 0
 
 

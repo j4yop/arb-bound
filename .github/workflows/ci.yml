@@ -34,6 +34,23 @@ jobs:
               assert len(s['corners']) == 8, f'{name}: expected 8 assumption corners'
           print('report is derived, not transcribed')
           PY
+      - name: Verify the in-browser playground embeds current source
+        run: |
+          python - <<'PY'
+          import json, re, gzip, base64
+          from pathlib import Path
+          html = Path('docs/playground.html').read_text()
+          m = re.search(r'const SOURCES = (\{.*?\});\nconst SAMPLE_GZ', html, re.S)
+          src = json.loads(m.group(1))
+          # The page must ship the same code the repo runs, or the demo lies.
+          for name, text in src.items():
+              assert text == Path('arbbound', name).read_text(), f'{name} is stale in the page'
+          sm = re.search(r'const SAMPLE_GZ = "([A-Za-z0-9+/=]+)";', html)
+          sample = gzip.decompress(base64.b64decode(sm.group(1))).decode()
+          for sym in ('GOLDGUINEA', 'GOLDM', 'GOLDPETAL', 'GOLDTEN'):
+              assert sym in sample, f'playground sample dropped {sym}'
+          print('playground ships current source and a full sample')
+          PY
       - name: Verify the deck still matches the report
         run: |
           python -m arbbound.deck --report docs/report.json --out /tmp/deck.pptx
