@@ -58,7 +58,11 @@ def _embed_csv(csv_text: str) -> str:
     analysis as the command line, across all four contracts, instead of a
     row-truncated slice that can silently drop a symbol.
     """
-    packed = gzip.compress(csv_text.encode("utf-8"), compresslevel=9)
+    # mtime=0 pins the gzip header timestamp so the generated page is
+    # byte-for-byte reproducible: rebuilding from the same input must not
+    # depend on the wall clock, or "generated, never hand-edited" stops
+    # being verifiable with a plain diff.
+    packed = gzip.compress(csv_text.encode("utf-8"), compresslevel=9, mtime=0)
     return base64.b64encode(packed).decode("ascii")
 
 

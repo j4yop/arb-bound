@@ -90,6 +90,22 @@ def test_embedded_sample_is_a_real_bhavcopy(page):
         assert sym in csv, f"sample dropped {sym}"
 
 
+def test_page_is_byte_for_byte_reproducible(tmp_path):
+    """Rebuilding from the same input must produce identical bytes.
+
+    The gzip header carries an mtime field; leaving it at the wall clock
+    makes the committed page differ from a fresh build for no real reason,
+    which turns the CI drift check into noise and undermines the claim that
+    every published byte is generated from the input.
+    """
+    csv_text = Path("data/fixture_gold_2023-2026.csv").read_text()
+    first = tmp_path / "a.html"
+    second = tmp_path / "b.html"
+    build_playground(PKG, csv_text, first, sample_label="test sample")
+    build_playground(PKG, csv_text, second, sample_label="test sample")
+    assert first.read_bytes() == second.read_bytes()
+
+
 def test_page_loads_nothing_but_the_pinned_runtime(page):
     """No API keys, no server calls - only the pinned CDN runtime.
 

@@ -5,7 +5,11 @@ __pycache__/
 *.egg-info/
 .DS_Store
 
-# docs/index.html and docs/report.json are intentionally COMMITTED: they are
-# the GitHub Pages demo and must open offline with no network in Manali.
+# Vercel CLI linkage and local env
+.vercel
+.env*
+
+# docs/index.html, docs/report.json and docs/playground.html are intentionally
+# COMMITTED: they are the static demo and must open with no network.
 # Rebuild them with:
 #   python -m arbbound.build --input data/fixture_gold_2023-2026.csv --outdir docs
