@@ -8,7 +8,7 @@ import numpy as np
 import pandas as pd
 import pytest
 
-from arbbound.analysis import detect_breaks, walk_forward
+from arbbound.analysis import attribute_break, detect_breaks, walk_forward
 from arbbound.bound import compute_pair_bound
 from arbbound.contracts import spec_for
 from arbbound.ingest import (
@@ -230,3 +230,50 @@ def test_break_reports_volume_signature():
     assert found
     assert found[0].classification == "liquidity-event"
     assert found[0].volume_after > found[0].volume_before
+
+# ------------------------------------------------------- break attribution
+
+
+def test_attribution_identifies_the_idiosyncratic_leg(frame):
+    """On the real Nov-2024 break, PETAL held a premium while the complex fell.
+
+    Checked against the bundled data: the whole gold complex dropped ~-312 bps
+    after 2024-11-07, GUINEA tracked it almost exactly, and PETAL lagged by
+    ~+167 bps. That is the documented finding, so the decomposition must
+    reproduce it.
+    """
+    a = attribute_break(("GOLDGUINEA", "GOLDPETAL"), pd.Timestamp("2024-11-07"), frame)
+    assert a is not None
+    assert a["complex_move_bps"] < -100, "the complex should have fallen"
+    assert a["idiosyncratic_leg"] == "GOLDPETAL"
+    # GUINEA tracked the complex; PETAL did not.
+    assert abs(a["legs"]["GOLDGUINEA"]["idiosyncratic_bps"]) < 40
+    assert a["legs"]["GOLDPETAL"]["idiosyncratic_bps"] > 100
+
+
+def test_attribution_does_not_call_a_market_wide_move_idiosyncratic():
+    """A leg that moves with the complex must not be flagged."""
+    idx = pd.bdate_range("2024-01-01", periods=60)
+    rows = []
+    for sym, base in (("GOLDM", 10000.0), ("GOLDPETAL", 11000.0),
+                      ("GOLDGUINEA", 11100.0), ("GOLDTEN", 11200.0)):
+        for ts in idx:
+            # Everything falls 5% after the midpoint, together.
+            px = base * (0.95 if ts >= idx[30] else 1.0)
+            rows.append({
+                "date": ts, "symbol": sym, "days_to_expiry": 20,
+                "no_trade": False, "px_per_g_fine": px, "Volume": 1000.0,
+            })
+    frame = pd.DataFrame(rows)
+    a = attribute_break(("GOLDM", "GOLDPETAL"), idx[30], frame, window_days=10)
+    assert a is not None
+    assert a["idiosyncratic_leg"] is None
+    assert "complex" in a["reading"]
+
+
+def test_attribution_returns_none_without_enough_data():
+    frame = pd.DataFrame([
+        {"date": pd.Timestamp("2024-01-01"), "symbol": "GOLDM",
+         "days_to_expiry": 20, "no_trade": False, "px_per_g_fine": 100.0, "Volume": 10.0},
+    ])
+    assert attribute_break(("GOLDM", "GOLDPETAL"), pd.Timestamp("2024-01-01"), frame) is None

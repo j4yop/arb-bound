@@ -21,7 +21,17 @@ Built for **Hack in Hills '26 · Track 03: Commodity Derivatives Intelligence**.
 
 **Full write-ups:** [`docs/PROBLEM.md`](docs/PROBLEM.md) (problem statement + every question and
 its answer) · [`docs/WORKFLOW.md`](docs/WORKFLOW.md) (architecture, tech stack, build phases) ·
+[`docs/NOV2024.md`](docs/NOV2024.md) (the Nov-2024 break, decomposed) ·
 [`docs/JUDGE-SCRIPT.md`](docs/JUDGE-SCRIPT.md) (6-minute demo runbook + Q&A defence)
+
+## Run it yourself, live
+
+**[▶ Open the playground](https://j4yop.github.io/arb-bound/playground.html)** — paste your own
+MCX bhavcopy (or load the bundled sample) and the *actual package* runs in your browser via
+Pyodide. No server, no API key, nothing sent anywhere. Different input produces a different
+verdict, because the result is computed, not stored.
+
+The static report is at **[j4yop.github.io/arb-bound](https://j4yop.github.io/arb-bound/)**.
 
 ## Submission deck
 
@@ -130,11 +140,14 @@ liquidity, because a gap you could never have crossed is not an opportunity.
 
 - **No pair shows a persistent arbitrageable edge.** Of six pairs, the large apparent gaps
   are explained by the purity/duty wedge and by fabrication overhead.
-- **A genuine regime break in Nov 2024.** The `GOLDGUINEA/GOLDPETAL` basis moved
-  **+245.7 → −12.0 bps** over roughly three weeks — not an instant step. Structural cost
-  cannot drift like that. The competing team's own analysis flags this break and attributes
-  it to a March 2025 MCX circular; **that circular post-dates the break by months and cannot
-  explain it.** We report it as an open, dated question rather than inventing a cause.
+- **A genuine regime break in Nov 2024, now decomposed.** The `GOLDGUINEA/GOLDPETAL` basis moved
+  **+245.7 → −12.0 bps** over roughly three weeks — not an instant step. Decomposing it by
+  contract shows the whole gold complex fell ~−312 bps after the 5-Nov-2024 US election while
+  `GOLDGUINEA` tracked it exactly and `GOLDPETAL` held a **+167 bps premium** — and PETAL is the
+  *liquid* leg, so it is not a thin-contract artefact. Best-supported account: a retail-premium
+  normalisation, matching the WGC's India domestic-premium timeline. Full write-up:
+  [`docs/NOV2024.md`](docs/NOV2024.md). We report the one remaining unverified channel (an MCX
+  contract-spec change) as a dated open question rather than inventing a cause.
 - **Level shifts are reported as level shifts.** Two pairs show a large *median* difference
   between train and test windows. That is a change in the structural relationship, not 200+
    separate trading opportunities, and the tool says so.

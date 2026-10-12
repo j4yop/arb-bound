@@ -664,7 +664,30 @@
         "volume_before": 51112.0,
         "volume_after": 52705.5,
         "volume_ratio": 1.031176631710753,
-        "classification": "structural"
+        "classification": "structural",
+        "attribution": {
+          "pair": "GOLDGUINEA/GOLDM",
+          "date": "2026-05-06",
+          "legs": {
+            "GOLDGUINEA": {
+              "px_before": 15227.977977977978,
+              "px_after": 15964.777277277277,
+              "median_volume": 3012.0,
+              "move_bps": 472.5048301620139,
+              "idiosyncratic_bps": -7.768449258440398
+            },
+            "GOLDM": {
+              "px_before": 15110.050251256282,
+              "px_after": 15946.030150753768,
+              "median_volume": 15229.0,
+              "move_bps": 538.4980290765093,
+              "idiosyncratic_bps": 58.224749656054996
+            }
+          },
+          "complex_move_bps": 480.2732794204543,
+          "idiosyncratic_leg": "GOLDM",
+          "reading": "GOLDM moved +58 bps away from the complex"
+        }
       },
       {
         "date": "2025-12-17",
@@ -674,7 +697,30 @@
         "volume_before": 86292.0,
         "volume_after": 85878.0,
         "volume_ratio": 0.9952023362536504,
-        "classification": "step-change"
+        "classification": "step-change",
+        "attribution": {
+          "pair": "GOLDGUINEA/GOLDM",
+          "date": "2025-12-17",
+          "legs": {
+            "GOLDGUINEA": {
+              "px_before": 13165.603103103102,
+              "px_after": 13835.21021021021,
+              "median_volume": 3012.0,
+              "move_bps": 496.09204214838354,
+              "idiosyncratic_bps": 29.45335809357715
+            },
+            "GOLDM": {
+              "px_before": 13020.30150753769,
+              "px_after": 13559.24623115578,
+              "median_volume": 15229.0,
+              "move_bps": 405.58899521062625,
+              "idiosyncratic_bps": -61.04968884418014
+            }
+          },
+          "complex_move_bps": 466.6386840548064,
+          "idiosyncratic_leg": "GOLDM",
+          "reading": "GOLDM moved -61 bps away from the complex"
+        }
       },
       {
         "date": "2025-04-09",
@@ -684,7 +730,30 @@
         "volume_before": 31873.5,
         "volume_after": 65927.0,
         "volume_ratio": 2.0683953754686497,
-        "classification": "structural"
+        "classification": "structural",
+        "attribution": {
+          "pair": "GOLDGUINEA/GOLDM",
+          "date": "2025-04-09",
+          "legs": {
+            "GOLDGUINEA": {
+              "px_before": 8969.156656656658,
+              "px_after": 9536.786786786786,
+              "median_volume": 3012.0,
+              "move_bps": 613.6496048237052,
+              "idiosyncratic_bps": 2.7669034769304517
+            },
+            "GOLDM": {
+              "px_before": 8900.150753768845,
+              "px_after": 9510.502512562814,
+              "median_volume": 15229.0,
+              "move_bps": 663.285003786723,
+              "idiosyncratic_bps": 52.402302439948244
+            }
+          },
+          "complex_move_bps": 610.8827013467748,
+          "idiosyncratic_leg": "GOLDM",
+          "reading": "GOLDM moved +52 bps away from the complex"
+        }
       },
       {
         "date": "2024-04-12",
@@ -694,7 +763,30 @@
         "volume_before": 19783.5,
         "volume_after": 23912.5,
         "volume_ratio": 1.2087092779336315,
-        "classification": "step-change"
+        "classification": "step-change",
+        "attribution": {
+          "pair": "GOLDGUINEA/GOLDM",
+          "date": "2024-04-12",
+          "legs": {
+            "GOLDGUINEA": {
+              "px_before": 7051.739239239239,
+              "px_after": 7314.5645645645645,
+              "median_volume": 3012.0,
+              "move_bps": 365.9321932510833,
+              "idiosyncratic_bps": 17.544332915729115
+            },
+            "GOLDM": {
+              "px_before": 7036.381909547739,
+              "px_after": 7238.341708542714,
+              "median_volume": 15229.0,
+              "move_bps": 282.9802962315298,
+              "idiosyncratic_bps": -65.40756410382437
+            }
+          },
+          "complex_move_bps": 348.38786033535416,
+          "idiosyncratic_leg": "GOLDM",
+          "reading": "GOLDM moved -65 bps away from the complex"
+        }
       }
     ],
     "GOLDGUINEA/GOLDPETAL": [
@@ -706,7 +798,30 @@
         "volume_before": 43641.5,
         "volume_after": 39969.5,
         "volume_ratio": 0.9158599039904678,
-        "classification": "structural"
+        "classification": "structural",
+        "attribution": {
+          "pair": "GOLDGUINEA/GOLDPETAL",
+          "date": "2024-11-07",
+          "legs": {
+            "GOLDGUINEA": {
+              "px_before": 7944.882382382382,
+              "px_after": 7701.076076076076,
+              "median_volume": 3012.0,
+              "move_bps": -311.67926664290457,
+              "idiosyncratic_bps": 0.0
+            },
+            "GOLDPETAL": {
+              "px_before": 7791.291291291292,
+              "px_after": 7679.179179179179,
+              "median_volume": 37097.0,
+              "move_bps": -144.93945090643655,
+              "idiosyncratic_bps": 166.73981573646802
+            }
+          },
+          "complex_move_bps": -311.67926664290457,
+          "idiosyncratic_leg": "GOLDPETAL",
+          "reading": "GOLDPETAL moved +167 bps away from the complex"
+        }
       },
       {
         "date": "2025-02-14",
@@ -716,7 +831,30 @@
         "volume_before": 50057.0,
         "volume_after": 58816.5,
         "volume_ratio": 1.174990510817668,
-        "classification": "structural"
+        "classification": "structural",
+        "attribution": {
+          "pair": "GOLDGUINEA/GOLDPETAL",
+          "date": "2025-02-14",
+          "legs": {
+            "GOLDGUINEA": {
+              "px_before": 8462.274774774774,
+              "px_after": 8717.78028028028,
+              "median_volume": 3012.0,
+              "move_bps": 297.46627120553114,
+              "idiosyncratic_bps": 0.0
+            },
+            "GOLDPETAL": {
+              "px_before": 8356.856856856857,
+              "px_after": 8693.693693693695,
+              "median_volume": 37097.0,
+              "move_bps": 395.15517686193715,
+              "idiosyncratic_bps": 97.688905656406
+            }
+          },
+          "complex_move_bps": 297.46627120553114,
+          "idiosyncratic_leg": "GOLDPETAL",
+          "reading": "GOLDPETAL moved +98 bps away from the complex"
+        }
       },
       {
         "date": "2026-06-10",
@@ -726,7 +864,30 @@
         "volume_before": 313807.5,
         "volume_after": 370402.5,
         "volume_ratio": 1.1803494180349419,
-        "classification": "step-change"
+        "classification": "step-change",
+        "attribution": {
+          "pair": "GOLDGUINEA/GOLDPETAL",
+          "date": "2026-06-10",
+          "legs": {
+            "GOLDGUINEA": {
+              "px_before": 15787.349849849848,
+              "px_after": 14922.797797797797,
+              "median_volume": 3012.0,
+              "move_bps": -563.1887977745292,
+              "idiosyncratic_bps": 8.164749353707066
+            },
+            "GOLDPETAL": {
+              "px_before": 15813.813813813813,
+              "px_after": 14923.423423423425,
+              "median_volume": 37097.0,
+              "move_bps": -579.5182964819434,
+              "idiosyncratic_bps": -8.164749353707066
+            }
+          },
+          "complex_move_bps": -571.3535471282363,
+          "idiosyncratic_leg": null,
+          "reading": "both legs moved with the wider gold complex"
+        }
       },
       {
         "date": "2025-08-01",
@@ -736,7 +897,30 @@
         "volume_before": 127274.0,
         "volume_after": 138179.5,
         "volume_ratio": 1.0856852145764258,
-        "classification": "step-change"
+        "classification": "step-change",
+        "attribution": {
+          "pair": "GOLDGUINEA/GOLDPETAL",
+          "date": "2025-08-01",
+          "legs": {
+            "GOLDGUINEA": {
+              "px_before": 9912.537537537537,
+              "px_after": 10106.856856856857,
+              "median_volume": 3012.0,
+              "move_bps": 194.13716376756693,
+              "idiosyncratic_bps": -2.1029433590577185
+            },
+            "GOLDPETAL": {
+              "px_before": 9953.453453453454,
+              "px_after": 10119.61961961962,
+              "median_volume": 37097.0,
+              "move_bps": 165.56504457799568,
+              "idiosyncratic_bps": -30.675062548628972
+            }
+          },
+          "complex_move_bps": 196.24010712662465,
+          "idiosyncratic_leg": null,
+          "reading": "both legs moved with the wider gold complex"
+        }
       }
     ],
     "GOLDGUINEA/GOLDTEN": [
@@ -748,7 +932,30 @@
         "volume_before": 19680.5,
         "volume_after": 40027.5,
         "volume_ratio": 2.033866009501791,
-        "classification": "liquidity-event"
+        "classification": "liquidity-event",
+        "attribution": {
+          "pair": "GOLDGUINEA/GOLDTEN",
+          "date": "2025-10-01",
+          "legs": {
+            "GOLDGUINEA": {
+              "px_before": 11411.473973973974,
+              "px_after": 12262.637637637637,
+              "median_volume": 3012.0,
+              "move_bps": 719.3771092552709,
+              "idiosyncratic_bps": 0.6837380294400646
+            },
+            "GOLDTEN": {
+              "px_before": 11337.737737737738,
+              "px_after": 12177.477477477478,
+              "median_volume": 11054.5,
+              "move_bps": 714.5135280607659,
+              "idiosyncratic_bps": -4.179843165064881
+            }
+          },
+          "complex_move_bps": 718.6933712258308,
+          "idiosyncratic_leg": null,
+          "reading": "both legs moved with the wider gold complex"
+        }
       },
       {
         "date": "2026-03-25",
@@ -758,7 +965,30 @@
         "volume_before": 47708.0,
         "volume_after": 44611.0,
         "volume_ratio": 0.9350842625974679,
-        "classification": "structural"
+        "classification": "structural",
+        "attribution": {
+          "pair": "GOLDGUINEA/GOLDTEN",
+          "date": "2026-03-25",
+          "legs": {
+            "GOLDGUINEA": {
+              "px_before": 15958.02052052052,
+              "px_after": 14993.243243243243,
+              "median_volume": 3012.0,
+              "move_bps": -623.6190762482465,
+              "idiosyncratic_bps": -60.72684445680272
+            },
+            "GOLDTEN": {
+              "px_before": 15685.435435435436,
+              "px_after": 14917.217217217216,
+              "median_volume": 11054.5,
+              "move_bps": -502.16538733464114,
+              "idiosyncratic_bps": 60.72684445680267
+            }
+          },
+          "complex_move_bps": -562.8922317914438,
+          "idiosyncratic_leg": "GOLDGUINEA",
+          "reading": "GOLDGUINEA moved -61 bps away from the complex"
+        }
       },
       {
         "date": "2026-07-28",
@@ -768,7 +998,30 @@
         "volume_before": 37682.0,
         "volume_after": 46271.5,
         "volume_ratio": 1.2279470304123985,
-        "classification": "structural"
+        "classification": "structural",
+        "attribution": {
+          "pair": "GOLDGUINEA/GOLDTEN",
+          "date": "2026-07-28",
+          "legs": {
+            "GOLDGUINEA": {
+              "px_before": 14378.878878878879,
+              "px_after": 14657.282282282282,
+              "median_volume": 3012.0,
+              "move_bps": 191.76910735598025,
+              "idiosyncratic_bps": -8.57318917021533
+            },
+            "GOLDTEN": {
+              "px_before": 14294.544544544544,
+              "px_after": 14619.019019019019,
+              "median_volume": 11054.5,
+              "move_bps": 224.45389413535347,
+              "idiosyncratic_bps": 24.111597609157883
+            }
+          },
+          "complex_move_bps": 200.34229652619558,
+          "idiosyncratic_leg": null,
+          "reading": "both legs moved with the wider gold complex"
+        }
       },
       {
         "date": "2026-07-07",
@@ -778,7 +1031,30 @@
         "volume_before": 40978.5,
         "volume_after": 37592.0,
         "volume_ratio": 0.9173591029442268,
-        "classification": "step-change"
+        "classification": "step-change",
+        "attribution": {
+          "pair": "GOLDGUINEA/GOLDTEN",
+          "date": "2026-07-07",
+          "legs": {
+            "GOLDGUINEA": {
+              "px_before": 14554.054054054053,
+              "px_after": 14452.827827827829,
+              "median_volume": 3012.0,
+              "move_bps": -69.7949111248991,
+              "idiosyncratic_bps": 0.14316564501277185
+            },
+            "GOLDTEN": {
+              "px_before": 14480.580580580581,
+              "px_after": 14364.364364364365,
+              "median_volume": 11054.5,
+              "move_bps": -80.58038958522619,
+              "idiosyncratic_bps": -10.642312815314313
+            }
+          },
+          "complex_move_bps": -69.93807676991187,
+          "idiosyncratic_leg": null,
+          "reading": "both legs moved with the wider gold complex"
+        }
       }
     ],
     "GOLDM/GOLDPETAL": [
@@ -790,7 +1066,30 @@
         "volume_before": 42740.5,
         "volume_after": 45833.5,
         "volume_ratio": 1.072366958739369,
-        "classification": "structural"
+        "classification": "structural",
+        "attribution": {
+          "pair": "GOLDM/GOLDPETAL",
+          "date": "2024-10-28",
+          "legs": {
+            "GOLDM": {
+              "px_before": 7788.442211055277,
+              "px_after": 7871.959798994975,
+              "median_volume": 15229.0,
+              "move_bps": 106.66185923411655,
+              "idiosyncratic_bps": -15.365812503856617
+            },
+            "GOLDPETAL": {
+              "px_before": 7638.138138138138,
+              "px_after": 7786.286286286287,
+              "median_volume": 37097.0,
+              "move_bps": 192.10143596246766,
+              "idiosyncratic_bps": 70.0737642244945
+            }
+          },
+          "complex_move_bps": 122.02767173797317,
+          "idiosyncratic_leg": "GOLDPETAL",
+          "reading": "GOLDPETAL moved +70 bps away from the complex"
+        }
       },
       {
         "date": "2025-02-14",
@@ -800,7 +1099,30 @@
         "volume_before": 50057.0,
         "volume_after": 58816.5,
         "volume_ratio": 1.174990510817668,
-        "classification": "structural"
+        "classification": "structural",
+        "attribution": {
+          "pair": "GOLDM/GOLDPETAL",
+          "date": "2025-02-14",
+          "legs": {
+            "GOLDM": {
+              "px_before": 8439.798994974875,
+              "px_after": 8616.130653266333,
+              "median_volume": 15229.0,
+              "move_bps": 206.77611204245426,
+              "idiosyncratic_bps": -90.69015916307688
+            },
+            "GOLDPETAL": {
+              "px_before": 8356.856856856857,
+              "px_after": 8693.693693693695,
+              "median_volume": 37097.0,
+              "move_bps": 395.15517686193715,
+              "idiosyncratic_bps": 97.688905656406
+            }
+          },
+          "complex_move_bps": 297.46627120553114,
+          "idiosyncratic_leg": "GOLDPETAL",
+          "reading": "GOLDPETAL moved +98 bps away from the complex"
+        }
       },
       {
         "date": "2026-07-24",
@@ -810,7 +1132,30 @@
         "volume_before": 343673.0,
         "volume_after": 361902.0,
         "volume_ratio": 1.0530416995225111,
-        "classification": "step-change"
+        "classification": "step-change",
+        "attribution": {
+          "pair": "GOLDM/GOLDPETAL",
+          "date": "2026-07-24",
+          "legs": {
+            "GOLDM": {
+              "px_before": 14340.552763819094,
+              "px_after": 14375.32663316583,
+              "median_volume": 15229.0,
+              "move_bps": 24.219273151172093,
+              "idiosyncratic_bps": -17.35936567511912
+            },
+            "GOLDPETAL": {
+              "px_before": 14392.392392392392,
+              "px_after": 14451.451451451452,
+              "median_volume": 37097.0,
+              "move_bps": 40.950950859976835,
+              "idiosyncratic_bps": -0.627687966314376
+            }
+          },
+          "complex_move_bps": 41.57863882629121,
+          "idiosyncratic_leg": null,
+          "reading": "both legs moved with the wider gold complex"
+        }
       },
       {
         "date": "2026-05-08",
@@ -820,7 +1165,30 @@
         "volume_before": 308833.0,
         "volume_after": 309407.0,
         "volume_ratio": 1.0018586096693034,
-        "classification": "step-change"
+        "classification": "step-change",
+        "attribution": {
+          "pair": "GOLDM/GOLDPETAL",
+          "date": "2026-05-08",
+          "legs": {
+            "GOLDM": {
+              "px_before": 15148.743718592965,
+              "px_after": 15997.638190954774,
+              "median_volume": 15229.0,
+              "move_bps": 545.2349262663732,
+              "idiosyncratic_bps": 50.75979592720773
+            },
+            "GOLDPETAL": {
+              "px_before": 15279.279279279279,
+              "px_after": 16027.027027027027,
+              "median_volume": 37097.0,
+              "move_bps": 477.788713139868,
+              "idiosyncratic_bps": -16.686417199297523
+            }
+          },
+          "complex_move_bps": 494.4751303391655,
+          "idiosyncratic_leg": "GOLDM",
+          "reading": "GOLDM moved +51 bps away from the complex"
+        }
       }
     ],
     "GOLDM/GOLDTEN": [
@@ -832,7 +1200,30 @@
         "volume_before": 14947.5,
         "volume_after": 11101.5,
         "volume_ratio": 0.7426994480682388,
-        "classification": "structural"
+        "classification": "structural",
+        "attribution": {
+          "pair": "GOLDM/GOLDTEN",
+          "date": "2025-06-25",
+          "legs": {
+            "GOLDM": {
+              "px_before": 9935.678391959798,
+              "px_after": 9738.793969849246,
+              "median_volume": 15229.0,
+              "move_bps": -200.14869117901964,
+              "idiosyncratic_bps": -11.575088807036792
+            },
+            "GOLDTEN": {
+              "px_before": 9917.567567567567,
+              "px_after": 9732.032032032032,
+              "median_volume": 11054.5,
+              "move_bps": -188.84970017914299,
+              "idiosyncratic_bps": -0.27609780716014143
+            }
+          },
+          "complex_move_bps": -188.57360237198284,
+          "idiosyncratic_leg": null,
+          "reading": "both legs moved with the wider gold complex"
+        }
       },
       {
         "date": "2026-05-05",
@@ -842,7 +1233,30 @@
         "volume_before": 39592.5,
         "volume_after": 31042.5,
         "volume_ratio": 0.7840500094714908,
-        "classification": "step-change"
+        "classification": "step-change",
+        "attribution": {
+          "pair": "GOLDM/GOLDTEN",
+          "date": "2026-05-05",
+          "legs": {
+            "GOLDM": {
+              "px_before": 15180.502512562814,
+              "px_after": 15600.301507537688,
+              "median_volume": 15229.0,
+              "move_bps": 272.7836646102113,
+              "idiosyncratic_bps": -60.232388175997414
+            },
+            "GOLDTEN": {
+              "px_before": 15150.25025025025,
+              "px_after": 15706.356356356355,
+              "median_volume": 11054.5,
+              "move_bps": 360.4844389406531,
+              "idiosyncratic_bps": 27.468386154444374
+            }
+          },
+          "complex_move_bps": 333.0160527862087,
+          "idiosyncratic_leg": "GOLDM",
+          "reading": "GOLDM moved -60 bps away from the complex"
+        }
       },
       {
         "date": "2025-12-29",
@@ -852,7 +1266,30 @@
         "volume_before": 36796.5,
         "volume_after": 38264.5,
         "volume_ratio": 1.0398950987186282,
-        "classification": "structural"
+        "classification": "structural",
+        "attribution": {
+          "pair": "GOLDM/GOLDTEN",
+          "date": "2025-12-29",
+          "legs": {
+            "GOLDM": {
+              "px_before": 13523.718592964822,
+              "px_after": 13867.035175879399,
+              "median_volume": 15229.0,
+              "move_bps": 250.69376774069354,
+              "idiosyncratic_bps": -76.66946545124785
+            },
+            "GOLDTEN": {
+              "px_before": 13499.44944944945,
+              "px_after": 13907.307307307306,
+              "median_volume": 11054.5,
+              "move_bps": 297.65504473032155,
+              "idiosyncratic_bps": -29.70818846161984
+            }
+          },
+          "complex_move_bps": 327.3632331919414,
+          "idiosyncratic_leg": "GOLDM",
+          "reading": "GOLDM moved -77 bps away from the complex"
+        }
       },
       {
         "date": "2025-11-21",
@@ -862,7 +1299,30 @@
         "volume_before": 32386.5,
         "volume_after": 34172.0,
         "volume_ratio": 1.0551309959396662,
-        "classification": "step-change"
+        "classification": "step-change",
+        "attribution": {
+          "pair": "GOLDM/GOLDTEN",
+          "date": "2025-11-21",
+          "legs": {
+            "GOLDM": {
+              "px_before": 12439.29648241206,
+              "px_after": 12768.090452261305,
+              "median_volume": 15229.0,
+              "move_bps": 260.8859212491478,
+              "idiosyncratic_bps": -8.104946514228232
+            },
+            "GOLDTEN": {
+              "px_before": 12417.167167167167,
+              "px_after": 12781.681681681683,
+              "median_volume": 11054.5,
+              "move_bps": 289.3306316840446,
+              "idiosyncratic_bps": 20.33976392066853
+            }
+          },
+          "complex_move_bps": 268.99086776337606,
+          "idiosyncratic_leg": null,
+          "reading": "both legs moved with the wider gold complex"
+        }
       }
     ],
     "GOLDPETAL/GOLDTEN": [
@@ -874,7 +1334,30 @@
         "volume_before": 37682.0,
         "volume_after": 57699.5,
         "volume_ratio": 1.531221803513614,
-        "classification": "structural"
+        "classification": "structural",
+        "attribution": {
+          "pair": "GOLDPETAL/GOLDTEN",
+          "date": "2026-08-04",
+          "legs": {
+            "GOLDPETAL": {
+              "px_before": 14392.392392392392,
+              "px_after": 15394.394394394394,
+              "median_volume": 37097.0,
+              "move_bps": 673.0368189610659,
+              "idiosyncratic_bps": -11.988818624865871
+            },
+            "GOLDTEN": {
+              "px_before": 14308.408408408408,
+              "px_after": 15329.32932932933,
+              "median_volume": 11054.5,
+              "move_bps": 689.2057797526264,
+              "idiosyncratic_bps": 4.180142166694623
+            }
+          },
+          "complex_move_bps": 685.0256375859318,
+          "idiosyncratic_leg": null,
+          "reading": "both legs moved with the wider gold complex"
+        }
       },
       {
         "date": "2026-05-11",
@@ -884,7 +1367,30 @@
         "volume_before": 38401.5,
         "volume_after": 29782.0,
         "volume_ratio": 0.7755426220329935,
-        "classification": "structural"
+        "classification": "structural",
+        "attribution": {
+          "pair": "GOLDPETAL/GOLDTEN",
+          "date": "2026-05-11",
+          "legs": {
+            "GOLDPETAL": {
+              "px_before": 15299.299299299299,
+              "px_after": 16027.027027027027,
+              "median_volume": 37097.0,
+              "move_bps": 464.6945643526391,
+              "idiosyncratic_bps": -17.578898622510565
+            },
+            "GOLDTEN": {
+              "px_before": 15170.02002002002,
+              "px_after": 15943.343343343342,
+              "median_volume": 11054.5,
+              "move_bps": 497.2028380231337,
+              "idiosyncratic_bps": 14.929375047984081
+            }
+          },
+          "complex_move_bps": 482.27346297514964,
+          "idiosyncratic_leg": null,
+          "reading": "both legs moved with the wider gold complex"
+        }
       },
       {
         "date": "2025-10-29",
@@ -894,7 +1400,30 @@
         "volume_before": 42036.5,
         "volume_after": 30827.0,
         "volume_ratio": 0.7333388840650387,
-        "classification": "step-change"
+        "classification": "step-change",
+        "attribution": {
+          "pair": "GOLDPETAL/GOLDTEN",
+          "date": "2025-10-29",
+          "legs": {
+            "GOLDPETAL": {
+              "px_before": 12749.24924924925,
+              "px_after": 12291.29129129129,
+              "median_volume": 37097.0,
+              "move_bps": -365.814009470152,
+              "idiosyncratic_bps": 1.312592564550073
+            },
+            "GOLDTEN": {
+              "px_before": 12643.943943943945,
+              "px_after": 12181.08108108108,
+              "median_volume": 11054.5,
+              "move_bps": -372.9434387958268,
+              "idiosyncratic_bps": -5.816836761124762
+            }
+          },
+          "complex_move_bps": -367.12660203470205,
+          "idiosyncratic_leg": null,
+          "reading": "both legs moved with the wider gold complex"
+        }
       },
       {
         "date": "2025-07-18",
@@ -904,7 +1433,30 @@
         "volume_before": 11195.5,
         "volume_after": 15131.0,
         "volume_ratio": 1.3515251663614845,
-        "classification": "structural"
+        "classification": "structural",
+        "attribution": {
+          "pair": "GOLDPETAL/GOLDTEN",
+          "date": "2025-07-18",
+          "legs": {
+            "GOLDPETAL": {
+              "px_before": 9852.352352352353,
+              "px_after": 9963.963963963964,
+              "median_volume": 37097.0,
+              "move_bps": 112.64736600606898,
+              "idiosyncratic_bps": -5.559692222389799
+            },
+            "GOLDTEN": {
+              "px_before": 9768.368368368368,
+              "px_after": 9881.18118118118,
+              "median_volume": 11054.5,
+              "move_bps": 114.82609518290623,
+              "idiosyncratic_bps": -3.380963045552548
+            }
+          },
+          "complex_move_bps": 118.20705822845878,
+          "idiosyncratic_leg": null,
+          "reading": "both legs moved with the wider gold complex"
+        }
       }
     ]
   },

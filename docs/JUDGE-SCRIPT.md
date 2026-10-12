@@ -56,7 +56,21 @@ Point at the contract table on slide 2.
 
 ## 1:30 – 3:00 · The live demo
 
-**This is the part that has to not break.** Run it in front of them.
+**This is the part that has to not break, and it now runs in the browser.** Open
+`j4yop.github.io/arb-bound/playground.html` before you start talking, so Python has finished
+booting. Then:
+
+1. Click **Load bundled sample** → **Run the analysis**. The real package executes in the tab:
+   11,954 rows, 6 pairs, ~10 seconds. Say: *"This is the actual code, running here, on this
+   machine. No server."*
+2. Then **paste something different** — delete the last ~1000 lines of the textarea, or paste a
+   handful of your own rows, and run it again. **The verdict changes.** Say: *"If this were
+   hardcoded, that number wouldn't move. It moves because it's computed."*
+3. Optionally paste deliberate nonsense. It is **rejected with a readable message**, not a
+   traceback — because a tool that silently answers garbage is worse than one that refuses.
+
+If the venue wifi is dead, the offline fallback is the CLI (identical pipeline, identical
+numbers):
 
 ```bash
 python -m arbbound.cli --input data/fixture_gold_2023-2026.csv
@@ -69,7 +83,7 @@ Talk over the output, pointing at these five lines:
 | `STRUCTURAL BOUND` — wedge column | "240 basis points on the GOLDM pairs, zero on the 999-only pairs. That's the purity and duty difference. It's a contractual wedge — you can't trade it." |
 | `WALK-FORWARD` — level frozen | "We fit one number on the training window. Then we froze it and applied it to data the test never saw." |
 | `** LEVEL SHIFTED +150 bps **` | "Two pairs flagged 213 days. But the structural level itself moved. That's a regime change, not 213 separate trades — and we report it that way instead of counting them as opportunities." |
-| `REGIME BREAKS — 2024-11-07 +246 → -12` | "This is the find. A structural cost can't drift over three weeks like that. Something else moved it." |
+| `REGIME BREAKS — 2024-11-07 +246 → -12` | "This is the find. And we decomposed it: the whole gold complex fell 312 bps after the US election. GOLDPETAL held a 167 bps premium — and it's the *liquid* leg, so it isn't a thin-contract artefact." |
 | `VERDICT` | "No persistent edge survives costs." |
 
 **Then switch to the browser.** Scroll to `Basis history`. Point at the

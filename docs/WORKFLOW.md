@@ -181,13 +181,32 @@ The hardcoding audit found three real violations, all now fixed:
 | `cli.py` | `--sensitivity` used a fabricated `7500.0` price | derive it from the supplied input |
 | `report.py` | no assumptions shown on the live page | sensitivity table + limitations panel |
 
-### Phase 6 — The open question *(the real differentiator)*
-We dated a regime break and could not attribute it. That is worth more than a tidy answer.
+### Phase 6 — The open question *(complete)*
 
-- [ ] **Hunt the Nov 2024 cause.** MCX circular archive is numbered and dated. Pull Oct–Dec 2024 bullion circulars and check for a contract-spec or delivery change.
-- [ ] **If found:** that's the headline — we explain a dislocation the leading competitor flagged and couldn't solve.
-- [ ] **If not found:** publish it as an open question with the date, the window, and the volume signature. Explicitly blessed by the brief.
-- [ ] **Bonus if time allows:** extend the maturity-matched method to silver (`SILVER`/`SILVERM`/`SILVERMIC`/`SILVER100`) — identical contract structure, near-zero extra code.
+We dated a regime break and set about attributing it. The answer is more interesting than a
+circular would have been.
+
+- [x] **Hunt the Nov 2024 cause.** Pulled the sources (WGC India market update, CBIC tariff-value
+      notice, MCX circular chronology) and, more decisively, **decomposed the break by contract**
+      from our own bhavcopy.
+- [x] **The decomposition is the finding.** The whole gold complex fell ~−312 bps after the
+      5-Nov-2024 US election. `GOLDGUINEA` tracked it exactly (0 bps idiosyncratic). `GOLDPETAL`
+      fell only half as far, holding a **+167 bps premium** — and PETAL is the *liquid* leg
+      (~37k lots/day vs ~3k), so it is not a thin-contract artefact. A smooth decay, not a step,
+      rules out a contract event. Best-supported account: a **retail-premium normalisation**
+      (WGC: India's domestic premium fell US$2.8/oz → US$1/oz in the first week of November).
+- [x] **Only two of the fourteen detected breaks are market-wide.** The rest are leg-specific,
+      which is what makes the attribution column worth having.
+- [x] **Publish it either way.** Full write-up in [`docs/NOV2024.md`](NOV2024.md): verdict,
+      timeline with sources, per-hypothesis table, negative searches, confidence.
+- [x] **It became a product feature, not a footnote.** `analysis.attribute_break` now runs on
+      every break and reports which leg moved and whether it moved with the complex. The
+      dashboard's *Detected regime breaks* table carries the attribution.
+- [ ] **Remaining:** the MCX circular archive for Oct–Dec 2024, via the working `r.jina.ai`
+      proxy, to formally close the rule-change channel (H1). Recorded as the one open item.
+
+The brief explicitly blesses "no persistent edge"; it does not require a tidy cause. We have a
+**dated, decomposed, sourced** account and one honestly-open search thread.
 
 ---
 
@@ -201,12 +220,17 @@ We dated a regime break and could not attribute it. That is worth more than a ti
 - [x] Executability audit against printed hi/lo
 - [x] 60 tests green
 - [x] Live demo at `j4yop.github.io/arb-bound`
+- [x] Live in-browser playground — run the real pipeline on your own input
+- [x] Break attribution: which leg moved, and whether it moved with the complex
+- [x] Nov-2024 break decomposed and documented (`docs/NOV2024.md`)
 - [x] Problem statement + Q&A documented
 - [x] Submission deck, generated from the report
 - [x] Judge script + Q&A defence
 - [x] Sensitivity sweep + limitations panel published in the UI
 - [x] Hardcoding audit — no result is pinned to a date, pair, or invented price
-- [ ] Nov 2024 attribution
+- [x] Break attribution — which leg moved, relative to the whole complex
+- [x] Nov-2024 break decomposed from our own data (`docs/NOV2024.md`)
+- [ ] Nov 2024 rule-change channel — MCX circular archive Oct–Dec 2024 (the one open thread)
 
 ---
 

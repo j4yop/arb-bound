@@ -19,7 +19,13 @@ from pathlib import Path
 
 import pandas as pd
 
-from .analysis import check_executability, detect_breaks, sensitivity, walk_forward
+from .analysis import (
+    attribute_break,
+    check_executability,
+    detect_breaks,
+    sensitivity,
+    walk_forward,
+)
 from .bound import compute_pair_bound
 from .contracts import CONTRACTS, pairs, spec_for
 from .ingest import (
@@ -140,6 +146,7 @@ def build_report(frame: pd.DataFrame) -> dict:
                     ]
 
             pair_vol = vol_by_symbol.get(b)
+            pair_breaks = detect_breaks(basis[pair_name], pair_vol)
             breaks[pair_name] = [
                 {
                     "date": str(br.date.date()),
@@ -154,8 +161,10 @@ def build_report(frame: pd.DataFrame) -> dict:
                         else None
                     ),
                     "classification": br.classification,
+                    # Which leg actually moved, and whether it was the thin one.
+                    "attribution": attribute_break((a, b), br.date, frame),
                 }
-                for br in detect_breaks(basis[pair_name], pair_vol)
+                for br in pair_breaks
             ]
 
     return {
@@ -232,6 +241,10 @@ def _print_human(report: dict) -> None:
             vol = f"vol x{vr:.1f}" if vr else "vol n/a"
             print(f"{name:<26} {br['date']}  {br['median_before_bps']:+8.1f} -> "
                   f"{br['median_after_bps']:+7.1f} bps   {br['classification']:<16} {vol}")
+            attr = br.get("attribution")
+            if attr and attr.get("reading"):
+                print(f"{'':26} attribution: {attr['reading']} "
+                      f"(complex {attr['complex_move_bps']:+.0f} bps)")
     if not any_break:
         print("(no break above 25 bps detected)")
     print()

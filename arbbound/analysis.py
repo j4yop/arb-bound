@@ -273,6 +273,98 @@ def _classify(shift: float, statistic: float, vol_before: float, vol_after: floa
     return "step-change"
 
 
+def attribute_break(
+    pair: tuple[str, str],
+    break_date: pd.Timestamp,
+    bhavcopy: pd.DataFrame,
+    max_dte: int = 60,
+    window_days: int = 15,
+) -> dict | None:
+    """Work out **which leg moved** across a break, from the data itself.
+
+    A basis is a difference, so a break says nothing about which side caused it.
+    This decomposes it: for each contract, measure the median per-gram-fine
+    price in the ``window_days`` before and after ``break_date``.
+
+    The key comparison is not leg-vs-leg but **leg-vs-the-whole-complex**. Two
+    very different stories live here and they look identical in the raw basis:
+
+    * *market-wide move* - every contract falls together. The basis moved only
+      because one leg fell a little less. Nothing contract-specific happened.
+    * *idiosyncratic move* - one leg diverges from the complex. That is real
+      information about that contract, and worth chasing.
+
+    So each leg is scored by ``move_bps`` minus the complex median move. The
+    leg with the largest divergence is the idiosyncratic one. Reporting which
+    leg is *thinner* is deliberately avoided: on this data the thin leg can
+    move in lockstep with the liquid complex, and calling that a liquidity
+    artefact would be wrong.
+
+    Returns ``None`` when there is not enough data on either side of the date.
+    """
+    sym_a, sym_b = pair
+    traded = bhavcopy[(~bhavcopy["no_trade"]) & (bhavcopy["days_to_expiry"] <= max_dte)]
+    date = pd.Timestamp(break_date)
+    lo = date - pd.Timedelta(days=window_days)
+    hi = date + pd.Timedelta(days=window_days)
+
+    def window_move(sub: pd.DataFrame) -> float | None:
+        before = sub[(sub["date"] >= lo) & (sub["date"] < date)]["px_per_g_fine"]
+        after = sub[(sub["date"] >= date) & (sub["date"] <= hi)]["px_per_g_fine"]
+        if len(before) < 3 or len(after) < 3:
+            return None
+        px_before, px_after = float(before.median()), float(after.median())
+        if px_before <= 0:
+            return None
+        return 1e4 * math.log(px_after / px_before)
+
+    # Movement of the whole modelled complex, as the reference for "market-wide".
+    per_symbol = {
+        sym: window_move(traded[traded["symbol"] == sym])
+        for sym in sorted(traded["symbol"].unique())
+    }
+    known = [v for v in per_symbol.values() if v is not None]
+    if len(known) < 3:
+        return None
+    complex_move = float(np.median(known))
+
+    legs = {}
+    for sym in (sym_a, sym_b):
+        sub = traded[traded["symbol"] == sym]
+        before = sub[(sub["date"] >= lo) & (sub["date"] < date)]["px_per_g_fine"]
+        after = sub[(sub["date"] >= date) & (sub["date"] <= hi)]["px_per_g_fine"]
+        if len(before) < 3 or len(after) < 3:
+            return None
+        move = window_move(sub)
+        if move is None:
+            return None
+        legs[sym] = {
+            "px_before": float(before.median()),
+            "px_after": float(after.median()),
+            "median_volume": float(sub["Volume"].median()),
+            "move_bps": move,
+            # How far this leg departed from the rest of the complex.
+            "idiosyncratic_bps": move - complex_move,
+        }
+
+    idiosyncratic = max(legs, key=lambda s: abs(legs[s]["idiosyncratic_bps"]))
+    # Tolerance: a leg within ~40 bps of the complex moved *with* the market.
+    flagged = abs(legs[idiosyncratic]["idiosyncratic_bps"]) > 40.0
+    return {
+        "pair": f"{sym_a}/{sym_b}",
+        "date": str(date.date()),
+        "legs": legs,
+        "complex_move_bps": complex_move,
+        "idiosyncratic_leg": idiosyncratic if flagged else None,
+        "reading": (
+            f"{idiosyncratic} moved {legs[idiosyncratic]['idiosyncratic_bps']:+.0f} bps "
+            f"away from the complex"
+            if flagged
+            else "both legs moved with the wider gold complex"
+        ),
+    }
+
+
 # ---------------------------------------------------------------- walk-forward
 
 
