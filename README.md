@@ -17,6 +17,8 @@ the metal**, which nobody can arbitrage away.
 
 Built for **Hack in Hills '26 · Track 03: Commodity Derivatives Intelligence**.
 
+**Live demo:** <https://j4yop.github.io/arb-bound/>
+
 ---
 
 ## The claim
@@ -52,8 +54,8 @@ python -m arbbound.cli --input data/fixture_gold_2023-2026.csv
 # Machine-readable output
 python -m arbbound.cli --input data/fixture_gold_2023-2026.csv --json report.json
 
-# Build the HTML dashboard
-python -m arbbound.build --input data/fixture_gold_2023-2026.csv --outdir site
+# Build the HTML dashboard (this is what GitHub Pages serves)
+python -m arbbound.build --input data/fixture_gold_2023-2026.csv --outdir docs
 
 # Fetch live data (MCX blocks data-centre IPs; routed through a read proxy)
 python -m arbbound.fetch --out data/bhavcopy_2026-09-10.json

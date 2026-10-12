@@ -5,6 +5,7 @@ __pycache__/
 *.egg-info/
 .DS_Store
 
-# reports/ is scratch output from ad-hoc CLI runs.
-# site/ is intentionally COMMITTED: it is the GitHub Pages demo, and it must
-# open offline with no network in Manali.
+# docs/index.html and docs/report.json are intentionally COMMITTED: they are
+# the GitHub Pages demo and must open offline with no network in Manali.
+# Rebuild them with:
+#   python -m arbbound.build --input data/fixture_gold_2023-2026.csv --outdir docs
