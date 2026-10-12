@@ -1,0 +1,3565 @@
+{
+  "reference_price_inr_per_gram_fine": 12384.384384384384,
+  "sample": {
+    "rows": 11954,
+    "traded_rows": 11771,
+    "start": "2023-10-10",
+    "end": "2026-09-30",
+    "contracts": [
+      "GOLDGUINEA",
+      "GOLDM",
+      "GOLDPETAL",
+      "GOLDTEN"
+    ]
+  },
+  "bounds": {
+    "GOLDGUINEA/GOLDM": {
+      "pair": "GOLDGUINEA/GOLDM",
+      "purity_mismatch": true,
+      "structural_bps": 243.915360020277,
+      "purity_wedge_bps": 240.20100502512668,
+      "bound_low_bps": 255.915360020277,
+      "bound_high_bps": 333.91536002027703,
+      "overhead_a_inr_per_g": 5.0,
+      "overhead_b_inr_per_g": 0.4
+    },
+    "GOLDGUINEA/GOLDPETAL": {
+      "pair": "GOLDGUINEA/GOLDPETAL",
+      "purity_mismatch": false,
+      "structural_bps": 28.261396702230844,
+      "purity_wedge_bps": 0.0,
+      "bound_low_bps": 40.26139670223084,
+      "bound_high_bps": 118.26139670223084,
+      "overhead_a_inr_per_g": 5.0,
+      "overhead_b_inr_per_g": 40.0
+    },
+    "GOLDGUINEA/GOLDTEN": {
+      "pair": "GOLDGUINEA/GOLDTEN",
+      "purity_mismatch": false,
+      "structural_bps": 0.8074684772065955,
+      "purity_wedge_bps": 0.0,
+      "bound_low_bps": 12.807468477206596,
+      "bound_high_bps": 90.8074684772066,
+      "overhead_a_inr_per_g": 5.0,
+      "overhead_b_inr_per_g": 4.0
+    },
+    "GOLDM/GOLDPETAL": {
+      "pair": "GOLDM/GOLDPETAL",
+      "purity_mismatch": true,
+      "structural_bps": 272.1767567225079,
+      "purity_wedge_bps": 240.20100502512668,
+      "bound_low_bps": 284.1767567225079,
+      "bound_high_bps": 362.1767567225079,
+      "overhead_a_inr_per_g": 0.4,
+      "overhead_b_inr_per_g": 40.0
+    },
+    "GOLDM/GOLDTEN": {
+      "pair": "GOLDM/GOLDTEN",
+      "purity_mismatch": true,
+      "structural_bps": 243.10789154307042,
+      "purity_wedge_bps": 240.20100502512668,
+      "bound_low_bps": 255.10789154307042,
+      "bound_high_bps": 333.1078915430704,
+      "overhead_a_inr_per_g": 0.4,
+      "overhead_b_inr_per_g": 4.0
+    },
+    "GOLDPETAL/GOLDTEN": {
+      "pair": "GOLDPETAL/GOLDTEN",
+      "purity_mismatch": false,
+      "structural_bps": 29.068865179437438,
+      "purity_wedge_bps": 0.0,
+      "bound_low_bps": 41.06886517943744,
+      "bound_high_bps": 119.06886517943744,
+      "overhead_a_inr_per_g": 40.0,
+      "overhead_b_inr_per_g": 4.0
+    }
+  },
+  "walk_forward": {
+    "GOLDGUINEA/GOLDM": {
+      "verdict": "BOUND_EXCEEDED_IN_TEST",
+      "train_window": [
+        "2023-11-13",
+        "2025-11-19"
+      ],
+      "test_window": [
+        "2025-11-20",
+        "2026-09-30"
+      ],
+      "train_median_bps": 58.25718080279042,
+      "test_median_bps": 52.354338967657945,
+      "level_shift_bps": -5.902841835132477,
+      "level_is_stable": true,
+      "wedge_bps": 240.20100502512668,
+      "train_breaches": 1,
+      "test_breaches": 16,
+      "test_cleared_strict_bound": 10,
+      "max_exceedance_bps": 691.0962599990153,
+      "mean_exceedance_bps": -211.27148148340197,
+      "bound_low_bps": 255.915360020277,
+      "bound_high_bps": 333.91536002027703
+    },
+    "GOLDGUINEA/GOLDPETAL": {
+      "verdict": "BOUND_EXCEEDED_IN_TEST",
+      "train_window": [
+        "2023-10-13",
+        "2025-11-13"
+      ],
+      "test_window": [
+        "2025-11-14",
+        "2026-09-30"
+      ],
+      "train_median_bps": 140.21839136477968,
+      "test_median_bps": -9.800223674405563,
+      "level_shift_bps": 150.01861503918525,
+      "level_is_stable": false,
+      "wedge_bps": 0.0,
+      "train_breaches": 229,
+      "test_breaches": 225,
+      "test_cleared_strict_bound": 213,
+      "max_exceedance_bps": 275.37352455078417,
+      "mean_exceedance_bps": 111.47013075572225,
+      "bound_low_bps": 40.26139670223084,
+      "bound_high_bps": 118.26139670223084
+    },
+    "GOLDGUINEA/GOLDTEN": {
+      "verdict": "NOT_ARBITRAGABLE",
+      "train_window": [
+        "2025-04-01",
+        "2026-04-20"
+      ],
+      "test_window": [
+        "2026-04-21",
+        "2026-09-30"
+      ],
+      "train_median_bps": 58.253370588069004,
+      "test_median_bps": 44.63270844444269,
+      "level_shift_bps": -13.620662143626312,
+      "level_is_stable": false,
+      "wedge_bps": 0.0,
+      "train_breaches": 118,
+      "test_breaches": 12,
+      "test_cleared_strict_bound": 0,
+      "max_exceedance_bps": 44.78534573138704,
+      "mean_exceedance_bps": -27.599575048075703,
+      "bound_low_bps": 12.807468477206596,
+      "bound_high_bps": 90.8074684772066
+    },
+    "GOLDM/GOLDPETAL": {
+      "verdict": "BOUND_EXCEEDED_IN_TEST",
+      "train_window": [
+        "2023-11-13",
+        "2025-11-19"
+      ],
+      "test_window": [
+        "2025-11-20",
+        "2026-09-30"
+      ],
+      "train_median_bps": 73.34672125898996,
+      "test_median_bps": -65.34113715160035,
+      "level_shift_bps": 138.6878584105903,
+      "level_is_stable": true,
+      "wedge_bps": 240.20100502512668,
+      "train_breaches": 2,
+      "test_breaches": 39,
+      "test_cleared_strict_bound": 21,
+      "max_exceedance_bps": 815.4470221284109,
+      "mean_exceedance_bps": -98.2831334092106,
+      "bound_low_bps": 284.1767567225079,
+      "bound_high_bps": 362.1767567225079
+    },
+    "GOLDM/GOLDTEN": {
+      "verdict": "NOT_ARBITRAGABLE",
+      "train_window": [
+        "2025-04-01",
+        "2026-04-20"
+      ],
+      "test_window": [
+        "2026-04-21",
+        "2026-09-30"
+      ],
+      "train_median_bps": 14.477073965018917,
+      "test_median_bps": 19.08378050011682,
+      "level_shift_bps": -4.606706535097903,
+      "level_is_stable": true,
+      "wedge_bps": 240.20100502512668,
+      "train_breaches": 5,
+      "test_breaches": 0,
+      "test_cleared_strict_bound": 0,
+      "max_exceedance_bps": -144.6966361818814,
+      "mean_exceedance_bps": -257.6739064756148,
+      "bound_low_bps": 255.10789154307042,
+      "bound_high_bps": 333.1078915430704
+    },
+    "GOLDPETAL/GOLDTEN": {
+      "verdict": "NOT_ARBITRAGABLE",
+      "train_window": [
+        "2025-04-01",
+        "2026-04-20"
+      ],
+      "test_window": [
+        "2026-04-21",
+        "2026-09-30"
+      ],
+      "train_median_bps": 87.08353641857957,
+      "test_median_bps": 51.54650588664422,
+      "level_shift_bps": -35.53703053193535,
+      "level_is_stable": true,
+      "wedge_bps": 0.0,
+      "train_breaches": 71,
+      "test_breaches": 1,
+      "test_cleared_strict_bound": 0,
+      "max_exceedance_bps": 3.948069099986384,
+      "mean_exceedance_bps": -77.95065181596289,
+      "bound_low_bps": 41.06886517943744,
+      "bound_high_bps": 119.06886517943744
+    }
+  },
+  "regime_breaks": {
+    "GOLDGUINEA/GOLDM": [
+      {
+        "date": "2026-05-06",
+        "magnitude_bps": -32.925521581188406,
+        "median_before_bps": 64.2791998626186,
+        "median_after_bps": 31.35367828143019,
+        "volume_before": 51112.0,
+        "volume_after": 52705.5,
+        "volume_ratio": 1.031176631710753,
+        "classification": "structural"
+      },
+      {
+        "date": "2025-12-17",
+        "magnitude_bps": 108.93295578813517,
+        "median_before_bps": 58.06028936359179,
+        "median_after_bps": 166.99324515172697,
+        "volume_before": 86292.0,
+        "volume_after": 85878.0,
+        "volume_ratio": 0.9952023362536504,
+        "classification": "step-change"
+      },
+      {
+        "date": "2025-04-09",
+        "magnitude_bps": -38.56038873859692,
+        "median_before_bps": 70.33918220584484,
+        "median_after_bps": 31.778793467247915,
+        "volume_before": 31873.5,
+        "volume_after": 65927.0,
+        "volume_ratio": 2.0683953754686497,
+        "classification": "structural"
+      },
+      {
+        "date": "2024-04-12",
+        "magnitude_bps": 34.361011476758925,
+        "median_before_bps": 44.84579479085286,
+        "median_after_bps": 79.20680626761178,
+        "volume_before": 19783.5,
+        "volume_after": 23912.5,
+        "volume_ratio": 1.2087092779336315,
+        "classification": "step-change"
+      }
+    ],
+    "GOLDGUINEA/GOLDPETAL": [
+      {
+        "date": "2024-11-07",
+        "magnitude_bps": -257.697416477708,
+        "median_before_bps": 245.69908061550103,
+        "median_after_bps": -11.998335862206927,
+        "volume_before": 43641.5,
+        "volume_after": 39969.5,
+        "volume_ratio": 0.9158599039904678,
+        "classification": "structural"
+      },
+      {
+        "date": "2025-02-14",
+        "magnitude_bps": -120.78481733601456,
+        "median_before_bps": 102.96923261179876,
+        "median_after_bps": -17.81558472421579,
+        "volume_before": 50057.0,
+        "volume_after": 58816.5,
+        "volume_ratio": 1.174990510817668,
+        "classification": "structural"
+      },
+      {
+        "date": "2026-06-10",
+        "magnitude_bps": 24.042541037269498,
+        "median_before_bps": -21.656353642061717,
+        "median_after_bps": 2.3861873952077803,
+        "volume_before": 313807.5,
+        "volume_after": 370402.5,
+        "volume_ratio": 1.1803494180349419,
+        "classification": "step-change"
+      },
+      {
+        "date": "2025-08-01",
+        "magnitude_bps": 15.896777794821801,
+        "median_before_bps": -33.3335738430902,
+        "median_after_bps": -17.4367960482684,
+        "volume_before": 127274.0,
+        "volume_after": 138179.5,
+        "volume_ratio": 1.0856852145764258,
+        "classification": "step-change"
+      }
+    ],
+    "GOLDGUINEA/GOLDTEN": [
+      {
+        "date": "2025-10-01",
+        "magnitude_bps": 30.9559024981246,
+        "median_before_bps": 32.94499481153825,
+        "median_after_bps": 63.90089730966285,
+        "volume_before": 19680.5,
+        "volume_after": 40027.5,
+        "volume_ratio": 2.033866009501791,
+        "classification": "liquidity-event"
+      },
+      {
+        "date": "2026-03-25",
+        "magnitude_bps": -74.09589369039985,
+        "median_before_bps": 118.42596297045027,
+        "median_after_bps": 44.330069280050424,
+        "volume_before": 47708.0,
+        "volume_after": 44611.0,
+        "volume_ratio": 0.9350842625974679,
+        "classification": "structural"
+      },
+      {
+        "date": "2026-07-28",
+        "magnitude_bps": -17.86999498444783,
+        "median_before_bps": 50.34411127079792,
+        "median_after_bps": 32.47411628635009,
+        "volume_before": 37682.0,
+        "volume_after": 46271.5,
+        "volume_ratio": 1.2279470304123985,
+        "classification": "structural"
+      },
+      {
+        "date": "2026-07-07",
+        "magnitude_bps": 10.011175709304581,
+        "median_before_bps": 49.95714539500363,
+        "median_after_bps": 59.96832110430821,
+        "volume_before": 40978.5,
+        "volume_after": 37592.0,
+        "volume_ratio": 0.9173591029442268,
+        "classification": "step-change"
+      }
+    ],
+    "GOLDM/GOLDPETAL": [
+      {
+        "date": "2024-10-28",
+        "magnitude_bps": -222.51474556860725,
+        "median_before_bps": 169.4035444056745,
+        "median_after_bps": -53.111201162932765,
+        "volume_before": 42740.5,
+        "volume_after": 45833.5,
+        "volume_ratio": 1.072366958739369,
+        "classification": "structural"
+      },
+      {
+        "date": "2025-02-14",
+        "magnitude_bps": -100.42256726911062,
+        "median_before_bps": 37.43084847992013,
+        "median_after_bps": -62.991718789190486,
+        "volume_before": 50057.0,
+        "volume_after": 58816.5,
+        "volume_ratio": 1.174990510817668,
+        "classification": "structural"
+      },
+      {
+        "date": "2026-07-24",
+        "magnitude_bps": 44.80751418074212,
+        "median_before_bps": -69.26623953958966,
+        "median_after_bps": -24.458725358847545,
+        "volume_before": 343673.0,
+        "volume_after": 361902.0,
+        "volume_ratio": 1.0530416995225111,
+        "classification": "step-change"
+      },
+      {
+        "date": "2026-05-08",
+        "magnitude_bps": 38.94391449602104,
+        "median_before_bps": -79.98765730205906,
+        "median_after_bps": -41.043742806038026,
+        "volume_before": 308833.0,
+        "volume_after": 309407.0,
+        "volume_ratio": 1.0018586096693034,
+        "classification": "step-change"
+      }
+    ],
+    "GOLDM/GOLDTEN": [
+      {
+        "date": "2025-06-25",
+        "magnitude_bps": -7.0898367596738865,
+        "median_before_bps": 21.72742445224528,
+        "median_after_bps": 14.637587692571394,
+        "volume_before": 14947.5,
+        "volume_after": 11101.5,
+        "volume_ratio": 0.7426994480682388,
+        "classification": "structural"
+      },
+      {
+        "date": "2026-05-05",
+        "magnitude_bps": 8.59953002194275,
+        "median_before_bps": 11.10226399487408,
+        "median_after_bps": 19.70179401681683,
+        "volume_before": 39592.5,
+        "volume_after": 31042.5,
+        "volume_ratio": 0.7840500094714908,
+        "classification": "step-change"
+      },
+      {
+        "date": "2025-12-29",
+        "magnitude_bps": -41.50327669791425,
+        "median_before_bps": 18.044050519183727,
+        "median_after_bps": -23.459226178730525,
+        "volume_before": 36796.5,
+        "volume_after": 38264.5,
+        "volume_ratio": 1.0398950987186282,
+        "classification": "structural"
+      },
+      {
+        "date": "2025-11-21",
+        "magnitude_bps": 6.510241335311857,
+        "median_before_bps": 17.04852497081731,
+        "median_after_bps": 23.55876630612917,
+        "volume_before": 32386.5,
+        "volume_after": 34172.0,
+        "volume_ratio": 1.0551309959396662,
+        "classification": "step-change"
+      }
+    ],
+    "GOLDPETAL/GOLDTEN": [
+      {
+        "date": "2026-08-04",
+        "magnitude_bps": -43.81014950420134,
+        "median_before_bps": 75.02704224525489,
+        "median_after_bps": 31.21689274105355,
+        "volume_before": 37682.0,
+        "volume_after": 57699.5,
+        "volume_ratio": 1.531221803513614,
+        "classification": "structural"
+      },
+      {
+        "date": "2026-05-11",
+        "magnitude_bps": -29.278402669709585,
+        "median_before_bps": 87.02881426053742,
+        "median_after_bps": 57.75041159082783,
+        "volume_before": 38401.5,
+        "volume_after": 29782.0,
+        "volume_ratio": 0.7755426220329935,
+        "classification": "structural"
+      },
+      {
+        "date": "2025-10-29",
+        "magnitude_bps": 54.91743227956057,
+        "median_before_bps": 66.94080990931472,
+        "median_after_bps": 121.8582421888753,
+        "volume_before": 42036.5,
+        "volume_after": 30827.0,
+        "volume_ratio": 0.7333388840650387,
+        "classification": "step-change"
+      },
+      {
+        "date": "2025-07-18",
+        "magnitude_bps": -31.053663927599473,
+        "median_before_bps": 78.38891843048866,
+        "median_after_bps": 47.335254502889185,
+        "volume_before": 11195.5,
+        "volume_after": 15131.0,
+        "volume_ratio": 1.3515251663614845,
+        "classification": "structural"
+      }
+    ]
+  },
+  "executability": {
+    "GOLDGUINEA/GOLDM": [
+      {
+        "date": "2025-12-31",
+        "basis_bps": 317.02869970188266,
+        "printed_band_bps": [
+          162.5444337150713,
+          402.74510778557595
+        ],
+        "hi_lo_cover": true,
+        "volume_sufficient": true,
+        "executable": true
+      },
+      {
+        "date": "2026-01-21",
+        "basis_bps": 745.3395057587724,
+        "printed_band_bps": [
+          -221.00434986237644,
+          1062.1936759445348
+        ],
+        "hi_lo_cover": true,
+        "volume_sufficient": true,
+        "executable": true
+      },
+      {
+        "date": "2026-01-22",
+        "basis_bps": 488.74546913263174,
+        "printed_band_bps": [
+          32.68579811696725,
+          1135.8579183234397
+        ],
+        "hi_lo_cover": true,
+        "volume_sufficient": true,
+        "executable": true
+      },
+      {
+        "date": "2026-01-23",
+        "basis_bps": 495.42483399954625,
+        "printed_band_bps": [
+          297.6491317127122,
+          800.3296722834908
+        ],
+        "hi_lo_cover": true,
+        "volume_sufficient": true,
+        "executable": true
+      },
+      {
+        "date": "2026-01-27",
+        "basis_bps": 461.9756130813373,
+        "printed_band_bps": [
+          276.42202702887647,
+          747.7019964413468
+        ],
+        "hi_lo_cover": true,
+        "volume_sufficient": true,
+        "executable": true
+      },
+      {
+        "date": "2026-01-29",
+        "basis_bps": 350.137353785541,
+        "printed_band_bps": [
+          -781.9775248911692,
+          1141.6292743767801
+        ],
+        "hi_lo_cover": true,
+        "volume_sufficient": true,
+        "executable": true
+      },
+      {
+        "date": "2026-01-30",
+        "basis_bps": 1005.2688008220828,
+        "printed_band_bps": [
+          -896.3464825970113,
+          2326.540401028061
+        ],
+        "hi_lo_cover": true,
+        "volume_sufficient": true,
+        "executable": true
+      },
+      {
+        "date": "2026-02-01",
+        "basis_bps": 419.9487978351826,
+        "printed_band_bps": [
+          225.09238983819364,
+          1874.9647537656888
+        ],
+        "hi_lo_cover": true,
+        "volume_sufficient": true,
+        "executable": true
+      },
+      {
+        "date": "2026-02-02",
+        "basis_bps": 399.7961584145642,
+        "printed_band_bps": [
+          -707.5692115874028,
+          1542.8053750463273
+        ],
+        "hi_lo_cover": true,
+        "volume_sufficient": true,
+        "executable": true
+      },
+      {
+        "date": "2026-02-03",
+        "basis_bps": 415.8649242568993,
+        "printed_band_bps": [
+          -260.89632061911067,
+          1086.237224236824
+        ],
+        "hi_lo_cover": true,
+        "volume_sufficient": true,
+        "executable": true
+      },
+      {
+        "date": "2026-02-04",
+        "basis_bps": 404.60013019432887,
+        "printed_band_bps": [
+          -287.9950364291227,
+          1108.3120194609317
+        ],
+        "hi_lo_cover": true,
+        "volume_sufficient": true,
+        "executable": true
+      },
+      {
+        "date": "2026-02-05",
+        "basis_bps": 405.2000669197752,
+        "printed_band_bps": [
+          -287.9172214432757,
+          749.632304060968
+        ],
+        "hi_lo_cover": true,
+        "volume_sufficient": true,
+        "executable": true
+      },
+      {
+        "date": "2026-02-06",
+        "basis_bps": 331.8608248757109,
+        "printed_band_bps": [
+          -102.71219316152452,
+          765.8351781089806
+        ],
+        "hi_lo_cover": true,
+        "volume_sufficient": true,
+        "executable": true
+      },
+      {
+        "date": "2026-02-09",
+        "basis_bps": 364.77703400387225,
+        "printed_band_bps": [
+          192.082572316511,
+          579.5366664825153
+        ],
+        "hi_lo_cover": true,
+        "volume_sufficient": true,
+        "executable": true
+      },
+      {
+        "date": "2026-02-10",
+        "basis_bps": 352.48923352173836,
+        "printed_band_bps": [
+          64.3679895069343,
+          480.969824413369
+        ],
+        "hi_lo_cover": true,
+        "volume_sufficient": true,
+        "executable": true
+      },
+      {
+        "date": "2026-02-12",
+        "basis_bps": 373.86607937935565,
+        "printed_band_bps": [
+          -83.10172310855162,
+          810.298694601636
+        ],
+        "hi_lo_cover": true,
+        "volume_sufficient": true,
+        "executable": true
+      }
+    ],
+    "GOLDGUINEA/GOLDPETAL": [
+      {
+        "date": "2025-11-14",
+        "basis_bps": -4.693593331386552,
+        "printed_band_bps": [
+          -367.3372966889779,
+          402.4554349938941
+        ],
+        "hi_lo_cover": true,
+        "volume_sufficient": true,
+        "executable": true
+      },
+      {
+        "date": "2025-11-17",
+        "basis_bps": -8.023750731368471,
+        "printed_band_bps": [
+          -158.28124048307436,
+          133.80948249712034
+        ],
+        "hi_lo_cover": true,
+        "volume_sufficient": true,
+        "executable": true
+      },
+      {
+        "date": "2025-11-18",
+        "basis_bps": -10.148969645469295,
+        "printed_band_bps": [
+          -198.4184061302719,
+          135.79258126380853
+        ],
+        "hi_lo_cover": true,
+        "volume_sufficient": true,
+        "executable": true
+      },
+      {
+        "date": "2025-11-19",
+        "basis_bps": -16.629771115895235,
+        "printed_band_bps": [
+          -166.78051709766575,
+          132.8694022020012
+        ],
+        "hi_lo_cover": true,
+        "volume_sufficient": true,
+        "executable": true
+      },
+      {
+        "date": "2025-11-20",
+        "basis_bps": -25.66571829171178,
+        "printed_band_bps": [
+          -196.89718922197355,
+          119.62512283822996
+        ],
+        "hi_lo_cover": true,
+        "volume_sufficient": true,
+        "executable": true
+      },
+      {
+        "date": "2025-11-21",
+        "basis_bps": -31.723572858611536,
+        "printed_band_bps": [
+          -164.52782379305222,
+          123.8768676267055
+        ],
+        "hi_lo_cover": true,
+        "volume_sufficient": true,
+        "executable": true
+      },
+      {
+        "date": "2025-11-24",
+        "basis_bps": 19.21691679541778,
+        "printed_band_bps": [
+          -229.48246335114604,
+          120.04272449664545
+        ],
+        "hi_lo_cover": true,
+        "volume_sufficient": true,
+        "executable": true
+      },
+      {
+        "date": "2025-11-25",
+        "basis_bps": 18.046719261843265,
+        "printed_band_bps": [
+          -135.01790485177443,
+          123.75367980441943
+        ],
+        "hi_lo_cover": true,
+        "volume_sufficient": true,
+        "executable": true
+      },
+      {
+        "date": "2025-11-26",
+        "basis_bps": -23.195025436720822,
+        "printed_band_bps": [
+          -106.83925372772956,
+          59.268023877183005
+        ],
+        "hi_lo_cover": true,
+        "volume_sufficient": true,
+        "executable": true
+      },
+      {
+        "date": "2025-11-27",
+        "basis_bps": -49.826495380329526,
+        "printed_band_bps": [
+          -348.78676241982623,
+          149.12668499236523
+        ],
+        "hi_lo_cover": true,
+        "volume_sufficient": true,
+        "executable": true
+      },
+      {
+        "date": "2025-11-28",
+        "basis_bps": -14.463579715883158,
+        "printed_band_bps": [
+          -86.49948006143596,
+          54.6329282686628
+        ],
+        "hi_lo_cover": true,
+        "volume_sufficient": true,
+        "executable": true
+      },
+      {
+        "date": "2025-12-01",
+        "basis_bps": -38.52537829344312,
+        "printed_band_bps": [
+          -168.7803778735164,
+          93.2702944385143
+        ],
+        "hi_lo_cover": true,
+        "volume_sufficient": true,
+        "executable": true
+      },
+      {
+        "date": "2025-12-02",
+        "basis_bps": -25.965298042432305,
+        "printed_band_bps": [
+          -142.03446510222386,
+          73.86842035952347
+        ],
+        "hi_lo_cover": true,
+        "volume_sufficient": true,
+        "executable": true
+      },
+      {
+        "date": "2025-12-03",
+        "basis_bps": -24.012141968317593,
+        "printed_band_bps": [
+          -108.27875383951213,
+          142.34303133201212
+        ],
+        "hi_lo_cover": true,
+        "volume_sufficient": true,
+        "executable": true
+      },
+      {
+        "date": "2025-12-04",
+        "basis_bps": -17.93068880692934,
+        "printed_band_bps": [
+          -144.09982385907864,
+          38.1698155015868
+        ],
+        "hi_lo_cover": true,
+        "volume_sufficient": true,
+        "executable": true
+      },
+      {
+        "date": "2025-12-05",
+        "basis_bps": -16.752106306512097,
+        "printed_band_bps": [
+          -109.95110432853417,
+          82.37892896638208
+        ],
+        "hi_lo_cover": true,
+        "volume_sufficient": true,
+        "executable": true
+      },
+      {
+        "date": "2025-12-08",
+        "basis_bps": -32.331904805137086,
+        "printed_band_bps": [
+          -200.31486434379602,
+          45.202145534548755
+        ],
+        "hi_lo_cover": true,
+        "volume_sufficient": true,
+        "executable": true
+      },
+      {
+        "date": "2025-12-09",
+        "basis_bps": -13.307741036531539,
+        "printed_band_bps": [
+          -107.56922778608211,
+          106.09671117580189
+        ],
+        "hi_lo_cover": true,
+        "volume_sufficient": true,
+        "executable": true
+      },
+      {
+        "date": "2025-12-10",
+        "basis_bps": -18.1268062543721,
+        "printed_band_bps": [
+          -63.23434947584318,
+          29.503632720191657
+        ],
+        "hi_lo_cover": true,
+        "volume_sufficient": true,
+        "executable": true
+      },
+      {
+        "date": "2025-12-11",
+        "basis_bps": -19.469049425775484,
+        "printed_band_bps": [
+          -159.08896957917102,
+          131.1681195494895
+        ],
+        "hi_lo_cover": true,
+        "volume_sufficient": true,
+        "executable": true
+      },
+      {
+        "date": "2025-12-12",
+        "basis_bps": -15.772281612816096,
+        "printed_band_bps": [
+          -257.6425140500234,
+          215.11041165572624
+        ],
+        "hi_lo_cover": true,
+        "volume_sufficient": true,
+        "executable": true
+      },
+      {
+        "date": "2025-12-15",
+        "basis_bps": -18.714479385106138,
+        "printed_band_bps": [
+          -123.99195928265645,
+          95.87265690098037
+        ],
+        "hi_lo_cover": true,
+        "volume_sufficient": true,
+        "executable": true
+      },
+      {
+        "date": "2025-12-16",
+        "basis_bps": -5.857168923637318,
+        "printed_band_bps": [
+          -345.58417720654387,
+          191.27278952275165
+        ],
+        "hi_lo_cover": true,
+        "volume_sufficient": true,
+        "executable": true
+      },
+      {
+        "date": "2025-12-17",
+        "basis_bps": -4.3560264460098095,
+        "printed_band_bps": [
+          -103.37473346725206,
+          92.26236585837877
+        ],
+        "hi_lo_cover": true,
+        "volume_sufficient": true,
+        "executable": true
+      },
+      {
+        "date": "2025-12-18",
+        "basis_bps": 6.4143982193829805,
+        "printed_band_bps": [
+          -152.32218237361747,
+          130.00423843345794
+        ],
+        "hi_lo_cover": true,
+        "volume_sufficient": true,
+        "executable": true
+      },
+      {
+        "date": "2025-12-19",
+        "basis_bps": -13.30870334225199,
+        "printed_band_bps": [
+          -73.5091651298598,
+          48.40185710144961
+        ],
+        "hi_lo_cover": true,
+        "volume_sufficient": true,
+        "executable": true
+      },
+      {
+        "date": "2025-12-22",
+        "basis_bps": -5.778517833426092,
+        "printed_band_bps": [
+          -129.87195526811078,
+          138.0553389653904
+        ],
+        "hi_lo_cover": true,
+        "volume_sufficient": true,
+        "executable": true
+      },
+      {
+        "date": "2025-12-23",
+        "basis_bps": -10.722887119487577,
+        "printed_band_bps": [
+          -134.82041053746713,
+          127.69192690964728
+        ],
+        "hi_lo_cover": true,
+        "volume_sufficient": true,
+        "executable": true
+      },
+      {
+        "date": "2025-12-24",
+        "basis_bps": 11.156109579925435,
+        "printed_band_bps": [
+          -87.30591934968722,
+          79.73012144662239
+        ],
+        "hi_lo_cover": true,
+        "volume_sufficient": true,
+        "executable": true
+      },
+      {
+        "date": "2025-12-26",
+        "basis_bps": -62.358605876366425,
+        "printed_band_bps": [
+          -169.87316468542022,
+          137.7944498670579
+        ],
+        "hi_lo_cover": true,
+        "volume_sufficient": true,
+        "executable": true
+      },
+      {
+        "date": "2025-12-29",
+        "basis_bps": -4.548175935014174,
+        "printed_band_bps": [
+          -765.2154612299329,
+          619.825408358443
+        ],
+        "hi_lo_cover": true,
+        "volume_sufficient": true,
+        "executable": true
+      },
+      {
+        "date": "2025-12-31",
+        "basis_bps": -42.14645326412331,
+        "printed_band_bps": [
+          -197.381650881982,
+          198.3572136896237
+        ],
+        "hi_lo_cover": true,
+        "volume_sufficient": true,
+        "executable": true
+      },
+      {
+        "date": "2026-01-01",
+        "basis_bps": 34.36429498581097,
+        "printed_band_bps": [
+          -6.989184969235361,
+          127.04174726376779
+        ],
+        "hi_lo_cover": true,
+        "volume_sufficient": true,
+        "executable": true
+      },
+      {
+        "date": "2026-01-02",
+        "basis_bps": 5.357621344335106,
+        "printed_band_bps": [
+          -126.0577239592811,
+          108.45213747257866
+        ],
+        "hi_lo_cover": true,
+        "volume_sufficient": true,
+        "executable": true
+      },
+      {
+        "date": "2026-01-05",
+        "basis_bps": 0.17676432896265612,
+        "printed_band_bps": [
+          -132.54115678415815,
+          118.08079034779945
+        ],
+        "hi_lo_cover": true,
+        "volume_sufficient": true,
+        "executable": true
+      },
+      {
+        "date": "2026-01-06",
+        "basis_bps": 1.2337954206584558,
+        "printed_band_bps": [
+          -57.020447009005025,
+          60.8977655362039
+        ],
+        "hi_lo_cover": true,
+        "volume_sufficient": true,
+        "executable": true
+      },
+      {
+        "date": "2026-01-07",
+        "basis_bps": 15.399459637120152,
+        "printed_band_bps": [
+          -58.69266928347941,
+          98.30482566855316
+        ],
+        "hi_lo_cover": true,
+        "volume_sufficient": true,
+        "executable": true
+      },
+      {
+        "date": "2026-01-08",
+        "basis_bps": 20.790951877973196,
+        "printed_band_bps": [
+          -94.71993332642691,
+          138.6792313968023
+        ],
+        "hi_lo_cover": true,
+        "volume_sufficient": true,
+        "executable": true
+      },
+      {
+        "date": "2026-01-09",
+        "basis_bps": 4.60462241377733,
+        "printed_band_bps": [
+          -81.51737502725034,
+          94.9890179039931
+        ],
+        "hi_lo_cover": true,
+        "volume_sufficient": true,
+        "executable": true
+      },
+      {
+        "date": "2026-01-12",
+        "basis_bps": -19.15676035596115,
+        "printed_band_bps": [
+          -125.96387685685502,
+          114.94379425734991
+        ],
+        "hi_lo_cover": true,
+        "volume_sufficient": true,
+        "executable": true
+      },
+      {
+        "date": "2026-01-13",
+        "basis_bps": -9.800223674405563,
+        "printed_band_bps": [
+          -111.58746358110987,
+          98.62407414349556
+        ],
+        "hi_lo_cover": true,
+        "volume_sufficient": true,
+        "executable": true
+      },
+      {
+        "date": "2026-01-14",
+        "basis_bps": -0.6020133046759036,
+        "printed_band_bps": [
+          -104.46749836859372,
+          81.70627910707974
+        ],
+        "hi_lo_cover": true,
+        "volume_sufficient": true,
+        "executable": true
+      },
+      {
+        "date": "2026-01-15",
+        "basis_bps": -7.567158893062838,
+        "printed_band_bps": [
+          -128.30589358645483,
+          107.25738986903556
+        ],
+        "hi_lo_cover": true,
+        "volume_sufficient": true,
+        "executable": true
+      },
+      {
+        "date": "2026-01-16",
+        "basis_bps": -10.356613622910798,
+        "printed_band_bps": [
+          -73.14917718153617,
+          80.60640059311298
+        ],
+        "hi_lo_cover": true,
+        "volume_sufficient": true,
+        "executable": true
+      },
+      {
+        "date": "2026-01-19",
+        "basis_bps": -31.06578366165222,
+        "printed_band_bps": [
+          -164.962203081761,
+          180.45666503656545
+        ],
+        "hi_lo_cover": true,
+        "volume_sufficient": true,
+        "executable": true
+      },
+      {
+        "date": "2026-01-20",
+        "basis_bps": -23.638848561793104,
+        "printed_band_bps": [
+          -632.5270874860702,
+          565.0327606815687
+        ],
+        "hi_lo_cover": true,
+        "volume_sufficient": true,
+        "executable": true
+      },
+      {
+        "date": "2026-01-21",
+        "basis_bps": 43.187216617673755,
+        "printed_band_bps": [
+          -816.7676394767202,
+          804.4469865787275
+        ],
+        "hi_lo_cover": true,
+        "volume_sufficient": true,
+        "executable": true
+      },
+      {
+        "date": "2026-01-22",
+        "basis_bps": -0.6155171885113296,
+        "printed_band_bps": [
+          -488.90629338587564,
+          746.5133856893484
+        ],
+        "hi_lo_cover": true,
+        "volume_sufficient": true,
+        "executable": true
+      },
+      {
+        "date": "2026-01-23",
+        "basis_bps": -18.164477423372464,
+        "printed_band_bps": [
+          -378.19411546621274,
+          338.01303387130775
+        ],
+        "hi_lo_cover": true,
+        "volume_sufficient": true,
+        "executable": true
+      },
+      {
+        "date": "2026-01-27",
+        "basis_bps": 70.38804067353452,
+        "printed_band_bps": [
+          -529.6193993319938,
+          531.3223259269728
+        ],
+        "hi_lo_cover": true,
+        "volume_sufficient": true,
+        "executable": true
+      },
+      {
+        "date": "2026-01-29",
+        "basis_bps": 13.454470883900731,
+        "printed_band_bps": [
+          -373.5169427349062,
+          775.879126013286
+        ],
+        "hi_lo_cover": true,
+        "volume_sufficient": true,
+        "executable": true
+      },
+      {
+        "date": "2026-01-30",
+        "basis_bps": -55.165493783627205,
+        "printed_band_bps": [
+          -704.3038179574178,
+          528.3679039190918
+        ],
+        "hi_lo_cover": true,
+        "volume_sufficient": true,
+        "executable": true
+      },
+      {
+        "date": "2026-02-01",
+        "basis_bps": -43.97518779275389,
+        "printed_band_bps": [
+          -714.3090601438175,
+          807.2905652958924
+        ],
+        "hi_lo_cover": true,
+        "volume_sufficient": true,
+        "executable": true
+      },
+      {
+        "date": "2026-02-02",
+        "basis_bps": 47.701646471610644,
+        "printed_band_bps": [
+          -1290.089778172129,
+          1181.24557382924
+        ],
+        "hi_lo_cover": true,
+        "volume_sufficient": true,
+        "executable": true
+      },
+      {
+        "date": "2026-02-03",
+        "basis_bps": 37.91473736262217,
+        "printed_band_bps": [
+          -576.397794464145,
+          673.136099672315
+        ],
+        "hi_lo_cover": true,
+        "volume_sufficient": true,
+        "executable": true
+      },
+      {
+        "date": "2026-02-04",
+        "basis_bps": 41.28956159746931,
+        "printed_band_bps": [
+          -628.3698329523504,
+          765.4893417730228
+        ],
+        "hi_lo_cover": true,
+        "volume_sufficient": true,
+        "executable": true
+      },
+      {
+        "date": "2026-02-05",
+        "basis_bps": 32.55980148496311,
+        "printed_band_bps": [
+          -373.0767751093796,
+          675.2585096768346
+        ],
+        "hi_lo_cover": true,
+        "volume_sufficient": true,
+        "executable": true
+      },
+      {
+        "date": "2026-02-06",
+        "basis_bps": 10.419074898394806,
+        "printed_band_bps": [
+          -422.4939514026181,
+          453.80772957341065
+        ],
+        "hi_lo_cover": true,
+        "volume_sufficient": true,
+        "executable": true
+      },
+      {
+        "date": "2026-02-09",
+        "basis_bps": 23.637203277763092,
+        "printed_band_bps": [
+          -213.47191543626622,
+          356.618684971126
+        ],
+        "hi_lo_cover": true,
+        "volume_sufficient": true,
+        "executable": true
+      },
+      {
+        "date": "2026-02-10",
+        "basis_bps": 1.2455626845524166,
+        "printed_band_bps": [
+          -216.4285344758014,
+          172.37789975055114
+        ],
+        "hi_lo_cover": true,
+        "volume_sufficient": true,
+        "executable": true
+      },
+      {
+        "date": "2026-02-11",
+        "basis_bps": -15.232884318511672,
+        "printed_band_bps": [
+          -135.8526614630825,
+          120.87304366238747
+        ],
+        "hi_lo_cover": true,
+        "volume_sufficient": true,
+        "executable": true
+      },
+      {
+        "date": "2026-02-12",
+        "basis_bps": -35.702770741421,
+        "printed_band_bps": [
+          -466.37310808330926,
+          411.59435970282476
+        ],
+        "hi_lo_cover": true,
+        "volume_sufficient": true,
+        "executable": true
+      },
+      {
+        "date": "2026-02-13",
+        "basis_bps": -22.827645520888833,
+        "printed_band_bps": [
+          -196.3775227883439,
+          146.88970434007703
+        ],
+        "hi_lo_cover": true,
+        "volume_sufficient": true,
+        "executable": true
+      },
+      {
+        "date": "2026-02-16",
+        "basis_bps": -42.816449602838546,
+        "printed_band_bps": [
+          -157.22398164758647,
+          61.53183304425188
+        ],
+        "hi_lo_cover": true,
+        "volume_sufficient": true,
+        "executable": true
+      },
+      {
+        "date": "2026-02-17",
+        "basis_bps": 14.046873651670566,
+        "printed_band_bps": [
+          -211.34312073973615,
+          170.8016352216809
+        ],
+        "hi_lo_cover": true,
+        "volume_sufficient": true,
+        "executable": true
+      },
+      {
+        "date": "2026-02-18",
+        "basis_bps": 10.845220914469564,
+        "printed_band_bps": [
+          -229.384238936037,
+          269.9644083645088
+        ],
+        "hi_lo_cover": true,
+        "volume_sufficient": true,
+        "executable": true
+      },
+      {
+        "date": "2026-02-19",
+        "basis_bps": -40.82865572635634,
+        "printed_band_bps": [
+          -195.9687815236466,
+          126.14362766379705
+        ],
+        "hi_lo_cover": true,
+        "volume_sufficient": true,
+        "executable": true
+      },
+      {
+        "date": "2026-02-20",
+        "basis_bps": -50.719153569880575,
+        "printed_band_bps": [
+          -153.5411723250622,
+          51.11676202051966
+        ],
+        "hi_lo_cover": true,
+        "volume_sufficient": true,
+        "executable": true
+      },
+      {
+        "date": "2026-02-23",
+        "basis_bps": -78.4656955923008,
+        "printed_band_bps": [
+          -279.35555163045433,
+          61.4889673758469
+        ],
+        "hi_lo_cover": true,
+        "volume_sufficient": true,
+        "executable": true
+      },
+      {
+        "date": "2026-02-24",
+        "basis_bps": -75.10391076447895,
+        "printed_band_bps": [
+          -243.2362098107994,
+          38.53090342793398
+        ],
+        "hi_lo_cover": true,
+        "volume_sufficient": true,
+        "executable": true
+      },
+      {
+        "date": "2026-02-25",
+        "basis_bps": -118.66641104415845,
+        "printed_band_bps": [
+          -191.89694393141332,
+          5.399110049318944
+        ],
+        "hi_lo_cover": true,
+        "volume_sufficient": true,
+        "executable": true
+      },
+      {
+        "date": "2026-02-26",
+        "basis_bps": -175.41652988823535,
+        "printed_band_bps": [
+          -273.2811502068001,
+          78.98671426010529
+        ],
+        "hi_lo_cover": true,
+        "volume_sufficient": true,
+        "executable": true
+      },
+      {
+        "date": "2026-02-27",
+        "basis_bps": -30.511789192964983,
+        "printed_band_bps": [
+          -238.42883767676807,
+          27.611260470864455
+        ],
+        "hi_lo_cover": true,
+        "volume_sufficient": true,
+        "executable": true
+      },
+      {
+        "date": "2026-03-02",
+        "basis_bps": -60.72573576527551,
+        "printed_band_bps": [
+          -590.5674481287726,
+          447.26489644298226
+        ],
+        "hi_lo_cover": true,
+        "volume_sufficient": true,
+        "executable": true
+      },
+      {
+        "date": "2026-03-03",
+        "basis_bps": -33.32772179631212,
+        "printed_band_bps": [
+          -594.4745864341999,
+          466.06474347823547
+        ],
+        "hi_lo_cover": true,
+        "volume_sufficient": true,
+        "executable": true
+      },
+      {
+        "date": "2026-03-04",
+        "basis_bps": -43.22773302004027,
+        "printed_band_bps": [
+          -179.10926566530443,
+          73.11580781558283
+        ],
+        "hi_lo_cover": true,
+        "volume_sufficient": true,
+        "executable": true
+      },
+      {
+        "date": "2026-03-05",
+        "basis_bps": -45.33261112999966,
+        "printed_band_bps": [
+          -268.49219353169025,
+          161.0369853995891
+        ],
+        "hi_lo_cover": true,
+        "volume_sufficient": true,
+        "executable": true
+      },
+      {
+        "date": "2026-03-06",
+        "basis_bps": -61.007487500288924,
+        "printed_band_bps": [
+          -234.65346968723395,
+          103.09408705314901
+        ],
+        "hi_lo_cover": true,
+        "volume_sufficient": true,
+        "executable": true
+      },
+      {
+        "date": "2026-03-09",
+        "basis_bps": -57.984834145121944,
+        "printed_band_bps": [
+          -161.92134902826214,
+          26.49591395094217
+        ],
+        "hi_lo_cover": true,
+        "volume_sufficient": true,
+        "executable": true
+      },
+      {
+        "date": "2026-03-10",
+        "basis_bps": -61.45784281746425,
+        "printed_band_bps": [
+          -202.6044500307471,
+          57.824519632490215
+        ],
+        "hi_lo_cover": true,
+        "volume_sufficient": true,
+        "executable": true
+      },
+      {
+        "date": "2026-03-11",
+        "basis_bps": -57.62747014246895,
+        "printed_band_bps": [
+          -168.18263137762725,
+          41.429487735599274
+        ],
+        "hi_lo_cover": true,
+        "volume_sufficient": true,
+        "executable": true
+      },
+      {
+        "date": "2026-03-12",
+        "basis_bps": -48.93701159785943,
+        "printed_band_bps": [
+          -145.14020906077843,
+          39.96614257664067
+        ],
+        "hi_lo_cover": true,
+        "volume_sufficient": true,
+        "executable": true
+      },
+      {
+        "date": "2026-03-13",
+        "basis_bps": -36.975155030575536,
+        "printed_band_bps": [
+          -242.48711733531704,
+          150.7012103085085
+        ],
+        "hi_lo_cover": true,
+        "volume_sufficient": true,
+        "executable": true
+      },
+      {
+        "date": "2026-03-16",
+        "basis_bps": -32.51321998767004,
+        "printed_band_bps": [
+          -233.39490012242976,
+          177.72393436771327
+        ],
+        "hi_lo_cover": true,
+        "volume_sufficient": true,
+        "executable": true
+      },
+      {
+        "date": "2026-03-17",
+        "basis_bps": -30.039449336463466,
+        "printed_band_bps": [
+          -152.079359178693,
+          105.52375399659388
+        ],
+        "hi_lo_cover": true,
+        "volume_sufficient": true,
+        "executable": true
+      },
+      {
+        "date": "2026-03-18",
+        "basis_bps": -45.19070244236461,
+        "printed_band_bps": [
+          -304.4858804472948,
+          239.25477255133015
+        ],
+        "hi_lo_cover": true,
+        "volume_sufficient": true,
+        "executable": true
+      },
+      {
+        "date": "2026-03-19",
+        "basis_bps": -23.424937192707855,
+        "printed_band_bps": [
+          -942.6301506231656,
+          975.1711871201686
+        ],
+        "hi_lo_cover": true,
+        "volume_sufficient": true,
+        "executable": true
+      },
+      {
+        "date": "2026-03-20",
+        "basis_bps": -21.300702862170525,
+        "printed_band_bps": [
+          -415.0313240530727,
+          381.53405323419486
+        ],
+        "hi_lo_cover": true,
+        "volume_sufficient": true,
+        "executable": true
+      },
+      {
+        "date": "2026-03-23",
+        "basis_bps": -31.160853602133386,
+        "printed_band_bps": [
+          -900.6901014123052,
+          1123.2798774693665
+        ],
+        "hi_lo_cover": true,
+        "volume_sufficient": true,
+        "executable": true
+      },
+      {
+        "date": "2026-03-24",
+        "basis_bps": -5.282341256418442,
+        "printed_band_bps": [
+          -335.2831976762937,
+          317.39143412817333
+        ],
+        "hi_lo_cover": true,
+        "volume_sufficient": true,
+        "executable": true
+      },
+      {
+        "date": "2026-03-25",
+        "basis_bps": -4.581069889569108,
+        "printed_band_bps": [
+          -361.75579916061145,
+          671.6620414554403
+        ],
+        "hi_lo_cover": true,
+        "volume_sufficient": true,
+        "executable": true
+      },
+      {
+        "date": "2026-03-26",
+        "basis_bps": -43.380552135332444,
+        "printed_band_bps": [
+          -297.90058481684764,
+          155.39250571663962
+        ],
+        "hi_lo_cover": true,
+        "volume_sufficient": true,
+        "executable": true
+      },
+      {
+        "date": "2026-03-27",
+        "basis_bps": -85.11130902615722,
+        "printed_band_bps": [
+          -319.8944263533668,
+          193.53755510592714
+        ],
+        "hi_lo_cover": true,
+        "volume_sufficient": true,
+        "executable": true
+      },
+      {
+        "date": "2026-03-30",
+        "basis_bps": 11.96111073349709,
+        "printed_band_bps": [
+          -213.41325861034903,
+          358.1612241857817
+        ],
+        "hi_lo_cover": true,
+        "volume_sufficient": true,
+        "executable": true
+      },
+      {
+        "date": "2026-03-31",
+        "basis_bps": -24.47125849763072,
+        "printed_band_bps": [
+          -170.63359263115385,
+          169.28251389661287
+        ],
+        "hi_lo_cover": true,
+        "volume_sufficient": true,
+        "executable": true
+      },
+      {
+        "date": "2026-04-01",
+        "basis_bps": -17.877774693543298,
+        "printed_band_bps": [
+          -239.63583070972075,
+          185.0305655783348
+        ],
+        "hi_lo_cover": true,
+        "volume_sufficient": true,
+        "executable": true
+      },
+      {
+        "date": "2026-04-02",
+        "basis_bps": -14.070825464701446,
+        "printed_band_bps": [
+          -364.94349515329657,
+          506.98788558420813
+        ],
+        "hi_lo_cover": true,
+        "volume_sufficient": true,
+        "executable": true
+      },
+      {
+        "date": "2026-04-06",
+        "basis_bps": -1.255182860870489,
+        "printed_band_bps": [
+          -215.88990104491248,
+          239.79144608091366
+        ],
+        "hi_lo_cover": true,
+        "volume_sufficient": true,
+        "executable": true
+      },
+      {
+        "date": "2026-04-07",
+        "basis_bps": -24.50552600398288,
+        "printed_band_bps": [
+          -146.41549992948117,
+          126.12026335118907
+        ],
+        "hi_lo_cover": true,
+        "volume_sufficient": true,
+        "executable": true
+      },
+      {
+        "date": "2026-04-08",
+        "basis_bps": -23.510273963179056,
+        "printed_band_bps": [
+          -229.2253770283527,
+          219.7872666367659
+        ],
+        "hi_lo_cover": true,
+        "volume_sufficient": true,
+        "executable": true
+      },
+      {
+        "date": "2026-04-09",
+        "basis_bps": -19.34102408485907,
+        "printed_band_bps": [
+          -183.85954286230833,
+          137.7608872074122
+        ],
+        "hi_lo_cover": true,
+        "volume_sufficient": true,
+        "executable": true
+      },
+      {
+        "date": "2026-04-10",
+        "basis_bps": -27.03435006884664,
+        "printed_band_bps": [
+          -105.10416611222566,
+          68.02468553757302
+        ],
+        "hi_lo_cover": true,
+        "volume_sufficient": true,
+        "executable": true
+      },
+      {
+        "date": "2026-04-13",
+        "basis_bps": -22.377263516971105,
+        "printed_band_bps": [
+          -110.423582835603,
+          38.59289338069446
+        ],
+        "hi_lo_cover": true,
+        "volume_sufficient": true,
+        "executable": true
+      },
+      {
+        "date": "2026-04-14",
+        "basis_bps": -23.67863056743866,
+        "printed_band_bps": [
+          -138.49508536364587,
+          130.00435926660936
+        ],
+        "hi_lo_cover": true,
+        "volume_sufficient": true,
+        "executable": true
+      },
+      {
+        "date": "2026-04-15",
+        "basis_bps": -26.36591537633064,
+        "printed_band_bps": [
+          -97.6362427978646,
+          69.2583708244899
+        ],
+        "hi_lo_cover": true,
+        "volume_sufficient": true,
+        "executable": true
+      },
+      {
+        "date": "2026-04-16",
+        "basis_bps": -28.183645193985924,
+        "printed_band_bps": [
+          -124.27271708326053,
+          113.88405013087788
+        ],
+        "hi_lo_cover": true,
+        "volume_sufficient": true,
+        "executable": true
+      },
+      {
+        "date": "2026-04-17",
+        "basis_bps": -19.035975631026975,
+        "printed_band_bps": [
+          -198.83182158111893,
+          134.5315417224903
+        ],
+        "hi_lo_cover": true,
+        "volume_sufficient": true,
+        "executable": true
+      },
+      {
+        "date": "2026-04-20",
+        "basis_bps": -26.055251842887767,
+        "printed_band_bps": [
+          -148.68340237346368,
+          89.10416836525184
+        ],
+        "hi_lo_cover": true,
+        "volume_sufficient": true,
+        "executable": true
+      },
+      {
+        "date": "2026-04-21",
+        "basis_bps": -30.43391203663396,
+        "printed_band_bps": [
+          -212.39158127730255,
+          127.30259653240091
+        ],
+        "hi_lo_cover": true,
+        "volume_sufficient": true,
+        "executable": true
+      },
+      {
+        "date": "2026-04-22",
+        "basis_bps": -27.119938293814155,
+        "printed_band_bps": [
+          -103.39626712792465,
+          40.92663484587594
+        ],
+        "hi_lo_cover": true,
+        "volume_sufficient": true,
+        "executable": true
+      },
+      {
+        "date": "2026-04-23",
+        "basis_bps": -15.864473080030752,
+        "printed_band_bps": [
+          -113.7309698276915,
+          56.095254171859615
+        ],
+        "hi_lo_cover": true,
+        "volume_sufficient": true,
+        "executable": true
+      },
+      {
+        "date": "2026-04-24",
+        "basis_bps": -23.13543459183543,
+        "printed_band_bps": [
+          -149.40455461209646,
+          85.61132302033586
+        ],
+        "hi_lo_cover": true,
+        "volume_sufficient": true,
+        "executable": true
+      },
+      {
+        "date": "2026-04-27",
+        "basis_bps": -19.060410679822603,
+        "printed_band_bps": [
+          -180.35155657941382,
+          141.32177351489122
+        ],
+        "hi_lo_cover": true,
+        "volume_sufficient": true,
+        "executable": true
+      },
+      {
+        "date": "2026-04-28",
+        "basis_bps": -37.18952116539287,
+        "printed_band_bps": [
+          -260.21243857748897,
+          180.13844858115718
+        ],
+        "hi_lo_cover": true,
+        "volume_sufficient": true,
+        "executable": true
+      },
+      {
+        "date": "2026-04-29",
+        "basis_bps": -4.6865062953966765,
+        "printed_band_bps": [
+          -133.781259461762,
+          178.10772724559064
+        ],
+        "hi_lo_cover": true,
+        "volume_sufficient": true,
+        "executable": true
+      },
+      {
+        "date": "2026-04-30",
+        "basis_bps": 37.40513747625871,
+        "printed_band_bps": [
+          -266.8419967813649,
+          213.4397941119461
+        ],
+        "hi_lo_cover": true,
+        "volume_sufficient": true,
+        "executable": true
+      },
+      {
+        "date": "2026-05-01",
+        "basis_bps": -24.49967425759845,
+        "printed_band_bps": [
+          -229.7437290535937,
+          122.99227064596772
+        ],
+        "hi_lo_cover": true,
+        "volume_sufficient": true,
+        "executable": true
+      },
+      {
+        "date": "2026-05-04",
+        "basis_bps": -26.08772748274062,
+        "printed_band_bps": [
+          -154.7939418151708,
+          108.57619328939217
+        ],
+        "hi_lo_cover": true,
+        "volume_sufficient": true,
+        "executable": true
+      },
+      {
+        "date": "2026-05-05",
+        "basis_bps": -29.420049979061083,
+        "printed_band_bps": [
+          -95.88435173871648,
+          44.985521749228084
+        ],
+        "hi_lo_cover": true,
+        "volume_sufficient": true,
+        "executable": true
+      },
+      {
+        "date": "2026-05-06",
+        "basis_bps": -24.551098574763504,
+        "printed_band_bps": [
+          -155.03044951670753,
+          155.61164969643573
+        ],
+        "hi_lo_cover": true,
+        "volume_sufficient": true,
+        "executable": true
+      },
+      {
+        "date": "2026-05-07",
+        "basis_bps": -26.315268663755504,
+        "printed_band_bps": [
+          -107.49690147078667,
+          54.9157337133651
+        ],
+        "hi_lo_cover": true,
+        "volume_sufficient": true,
+        "executable": true
+      },
+      {
+        "date": "2026-05-08",
+        "basis_bps": -24.811385285327923,
+        "printed_band_bps": [
+          -77.93207621382969,
+          26.810756605155444
+        ],
+        "hi_lo_cover": true,
+        "volume_sufficient": true,
+        "executable": true
+      },
+      {
+        "date": "2026-05-11",
+        "basis_bps": -23.820916944591602,
+        "printed_band_bps": [
+          -163.06035726831334,
+          109.9877672063437
+        ],
+        "hi_lo_cover": true,
+        "volume_sufficient": true,
+        "executable": true
+      },
+      {
+        "date": "2026-05-12",
+        "basis_bps": -25.224580968219406,
+        "printed_band_bps": [
+          -88.04058391580503,
+          38.91055492966722
+        ],
+        "hi_lo_cover": true,
+        "volume_sufficient": true,
+        "executable": true
+      },
+      {
+        "date": "2026-05-13",
+        "basis_bps": -12.672277444551806,
+        "printed_band_bps": [
+          -656.763567099578,
+          523.2581900173968
+        ],
+        "hi_lo_cover": true,
+        "volume_sufficient": true,
+        "executable": true
+      },
+      {
+        "date": "2026-05-14",
+        "basis_bps": -18.07658037276447,
+        "printed_band_bps": [
+          -123.86892041725481,
+          68.8132477006256
+        ],
+        "hi_lo_cover": true,
+        "volume_sufficient": true,
+        "executable": true
+      },
+      {
+        "date": "2026-05-15",
+        "basis_bps": -20.622201651040484,
+        "printed_band_bps": [
+          -262.5604694571224,
+          131.9721538835501
+        ],
+        "hi_lo_cover": true,
+        "volume_sufficient": true,
+        "executable": true
+      },
+      {
+        "date": "2026-05-18",
+        "basis_bps": -19.766635210128626,
+        "printed_band_bps": [
+          -185.6482164328079,
+          196.1586849462852
+        ],
+        "hi_lo_cover": true,
+        "volume_sufficient": true,
+        "executable": true
+      },
+      {
+        "date": "2026-05-19",
+        "basis_bps": -21.51399631628359,
+        "printed_band_bps": [
+          -124.25050366131056,
+          80.1808354771219
+        ],
+        "hi_lo_cover": true,
+        "volume_sufficient": true,
+        "executable": true
+      },
+      {
+        "date": "2026-05-20",
+        "basis_bps": -19.22882100773349,
+        "printed_band_bps": [
+          -170.4412350303711,
+          97.73958604696358
+        ],
+        "hi_lo_cover": true,
+        "volume_sufficient": true,
+        "executable": true
+      },
+      {
+        "date": "2026-05-21",
+        "basis_bps": -16.577267922135825,
+        "printed_band_bps": [
+          -133.50059259465056,
+          105.65569825100823
+        ],
+        "hi_lo_cover": true,
+        "volume_sufficient": true,
+        "executable": true
+      },
+      {
+        "date": "2026-05-22",
+        "basis_bps": -9.821987109554726,
+        "printed_band_bps": [
+          -81.68440014838964,
+          64.68449721081615
+        ],
+        "hi_lo_cover": true,
+        "volume_sufficient": true,
+        "executable": true
+      },
+      {
+        "date": "2026-05-25",
+        "basis_bps": -6.43202858542574,
+        "printed_band_bps": [
+          -180.61316326162222,
+          50.57831221825854
+        ],
+        "hi_lo_cover": true,
+        "volume_sufficient": true,
+        "executable": true
+      },
+      {
+        "date": "2026-05-26",
+        "basis_bps": -37.25411425293434,
+        "printed_band_bps": [
+          -266.73340447797926,
+          212.11619459599942
+        ],
+        "hi_lo_cover": true,
+        "volume_sufficient": true,
+        "executable": true
+      },
+      {
+        "date": "2026-05-27",
+        "basis_bps": -53.68095666748672,
+        "printed_band_bps": [
+          -208.7899283307904,
+          158.99809244301923
+        ],
+        "hi_lo_cover": true,
+        "volume_sufficient": true,
+        "executable": true
+      },
+      {
+        "date": "2026-05-28",
+        "basis_bps": -6.0558735854485315,
+        "printed_band_bps": [
+          -303.5762891776401,
+          325.6432213108132
+        ],
+        "hi_lo_cover": true,
+        "volume_sufficient": true,
+        "executable": true
+      },
+      {
+        "date": "2026-05-29",
+        "basis_bps": -12.489510833528835,
+        "printed_band_bps": [
+          -149.542191073948,
+          43.12306284010396
+        ],
+        "hi_lo_cover": true,
+        "volume_sufficient": true,
+        "executable": true
+      },
+      {
+        "date": "2026-06-01",
+        "basis_bps": -18.505197015148415,
+        "printed_band_bps": [
+          -117.60892229857153,
+          68.15818148366075
+        ],
+        "hi_lo_cover": true,
+        "volume_sufficient": true,
+        "executable": true
+      },
+      {
+        "date": "2026-06-02",
+        "basis_bps": -15.242039381691656,
+        "printed_band_bps": [
+          -106.77926646266967,
+          64.71800199239232
+        ],
+        "hi_lo_cover": true,
+        "volume_sufficient": true,
+        "executable": true
+      },
+      {
+        "date": "2026-06-03",
+        "basis_bps": -14.9874537889496,
+        "printed_band_bps": [
+          -104.06991761170094,
+          62.54226141723818
+        ],
+        "hi_lo_cover": true,
+        "volume_sufficient": true,
+        "executable": true
+      },
+      {
+        "date": "2026-06-04",
+        "basis_bps": -15.863310549925833,
+        "printed_band_bps": [
+          -96.8142737906179,
+          66.83657083466014
+        ],
+        "hi_lo_cover": true,
+        "volume_sufficient": true,
+        "executable": true
+      },
+      {
+        "date": "2026-06-05",
+        "basis_bps": -16.59457271188538,
+        "printed_band_bps": [
+          -237.2916812317243,
+          181.49434699297427
+        ],
+        "hi_lo_cover": true,
+        "volume_sufficient": true,
+        "executable": true
+      },
+      {
+        "date": "2026-06-08",
+        "basis_bps": -18.886053039474493,
+        "printed_band_bps": [
+          -193.81398521122975,
+          146.7018974779384
+        ],
+        "hi_lo_cover": true,
+        "volume_sufficient": true,
+        "executable": true
+      },
+      {
+        "date": "2026-06-09",
+        "basis_bps": -17.81558472421579,
+        "printed_band_bps": [
+          -212.9490604033706,
+          175.18351076002423
+        ],
+        "hi_lo_cover": true,
+        "volume_sufficient": true,
+        "executable": true
+      },
+      {
+        "date": "2026-06-10",
+        "basis_bps": -4.9018365965500115,
+        "printed_band_bps": [
+          -291.96778964090277,
+          264.173707109175
+        ],
+        "hi_lo_cover": true,
+        "volume_sufficient": true,
+        "executable": true
+      },
+      {
+        "date": "2026-06-11",
+        "basis_bps": -1.094852090787394,
+        "printed_band_bps": [
+          -272.97306808098864,
+          257.40316579730074
+        ],
+        "hi_lo_cover": true,
+        "volume_sufficient": true,
+        "executable": true
+      },
+      {
+        "date": "2026-06-12",
+        "basis_bps": -6.423438261796602,
+        "printed_band_bps": [
+          -112.72079410131683,
+          87.3075843103254
+        ],
+        "hi_lo_cover": true,
+        "volume_sufficient": true,
+        "executable": true
+      },
+      {
+        "date": "2026-06-15",
+        "basis_bps": -8.547852050856577,
+        "printed_band_bps": [
+          -114.57272065036712,
+          107.32439209318049
+        ],
+        "hi_lo_cover": true,
+        "volume_sufficient": true,
+        "executable": true
+      },
+      {
+        "date": "2026-06-16",
+        "basis_bps": 2.1380699888195105,
+        "printed_band_bps": [
+          -97.9465513192141,
+          95.54959801134456
+        ],
+        "hi_lo_cover": true,
+        "volume_sufficient": true,
+        "executable": true
+      },
+      {
+        "date": "2026-06-17",
+        "basis_bps": -0.737007177965096,
+        "printed_band_bps": [
+          -105.53927423632415,
+          344.4886772485735
+        ],
+        "hi_lo_cover": true,
+        "volume_sufficient": true,
+        "executable": true
+      },
+      {
+        "date": "2026-06-18",
+        "basis_bps": 4.288254872132854,
+        "printed_band_bps": [
+          -250.46270278093212,
+          258.9289554083325
+        ],
+        "hi_lo_cover": true,
+        "volume_sufficient": true,
+        "executable": true
+      },
+      {
+        "date": "2026-06-19",
+        "basis_bps": 7.075542362695007,
+        "printed_band_bps": [
+          -182.0072191965035,
+          192.75297549480106
+        ],
+        "hi_lo_cover": true,
+        "volume_sufficient": true,
+        "executable": true
+      },
+      {
+        "date": "2026-06-22",
+        "basis_bps": 6.440787354642492,
+        "printed_band_bps": [
+          -119.95670933733076,
+          127.56722795418038
+        ],
+        "hi_lo_cover": true,
+        "volume_sufficient": true,
+        "executable": true
+      },
+      {
+        "date": "2026-06-23",
+        "basis_bps": -4.108463492465568,
+        "printed_band_bps": [
+          -94.41387462346515,
+          96.84268169959658
+        ],
+        "hi_lo_cover": true,
+        "volume_sufficient": true,
+        "executable": true
+      },
+      {
+        "date": "2026-06-24",
+        "basis_bps": -11.36605933259698,
+        "printed_band_bps": [
+          -350.9131981127006,
+          342.4019940507644
+        ],
+        "hi_lo_cover": true,
+        "volume_sufficient": true,
+        "executable": true
+      },
+      {
+        "date": "2026-06-25",
+        "basis_bps": 3.8043166181052173,
+        "printed_band_bps": [
+          -180.197838426771,
+          202.57084774356497
+        ],
+        "hi_lo_cover": true,
+        "volume_sufficient": true,
+        "executable": true
+      },
+      {
+        "date": "2026-06-26",
+        "basis_bps": -16.427539039749874,
+        "printed_band_bps": [
+          -157.88073392871863,
+          142.8658332413266
+        ],
+        "hi_lo_cover": true,
+        "volume_sufficient": true,
+        "executable": true
+      },
+      {
+        "date": "2026-06-29",
+        "basis_bps": 9.781503165786296,
+        "printed_band_bps": [
+          -149.39039407973578,
+          146.15212370970607
+        ],
+        "hi_lo_cover": true,
+        "volume_sufficient": true,
+        "executable": true
+      },
+      {
+        "date": "2026-06-30",
+        "basis_bps": 23.20237442360995,
+        "printed_band_bps": [
+          -128.62878162179135,
+          648.3382205994237
+        ],
+        "hi_lo_cover": true,
+        "volume_sufficient": true,
+        "executable": true
+      },
+      {
+        "date": "2026-07-01",
+        "basis_bps": 3.783514241911971,
+        "printed_band_bps": [
+          -368.90552438979404,
+          303.9779374299887
+        ],
+        "hi_lo_cover": true,
+        "volume_sufficient": true,
+        "executable": true
+      },
+      {
+        "date": "2026-07-02",
+        "basis_bps": 2.3861873952077803,
+        "printed_band_bps": [
+          -183.9250408880543,
+          201.74150315794944
+        ],
+        "hi_lo_cover": true,
+        "volume_sufficient": true,
+        "executable": true
+      },
+      {
+        "date": "2026-07-03",
+        "basis_bps": -1.4336857132475522,
+        "printed_band_bps": [
+          -83.2589491555372,
+          137.15041181965015
+        ],
+        "hi_lo_cover": true,
+        "volume_sufficient": true,
+        "executable": true
+      },
+      {
+        "date": "2026-07-06",
+        "basis_bps": -3.2984738514410576,
+        "printed_band_bps": [
+          -120.3611798445894,
+          252.0309912162983
+        ],
+        "hi_lo_cover": true,
+        "volume_sufficient": true,
+        "executable": true
+      },
+      {
+        "date": "2026-07-07",
+        "basis_bps": 2.987329477711569,
+        "printed_band_bps": [
+          -107.45924711869937,
+          100.91676412280181
+        ],
+        "hi_lo_cover": true,
+        "volume_sufficient": true,
+        "executable": true
+      },
+      {
+        "date": "2026-07-08",
+        "basis_bps": -2.334135883240324,
+        "printed_band_bps": [
+          -207.0353117974095,
+          195.86401219189858
+        ],
+        "hi_lo_cover": true,
+        "volume_sufficient": true,
+        "executable": true
+      },
+      {
+        "date": "2026-07-09",
+        "basis_bps": 2.393203314043396,
+        "printed_band_bps": [
+          -158.09075265616767,
+          163.58522341880817
+        ],
+        "hi_lo_cover": true,
+        "volume_sufficient": true,
+        "executable": true
+      },
+      {
+        "date": "2026-07-10",
+        "basis_bps": 5.710874178523869,
+        "printed_band_bps": [
+          -138.41943912412376,
+          127.39025777429713
+        ],
+        "hi_lo_cover": true,
+        "volume_sufficient": true,
+        "executable": true
+      },
+      {
+        "date": "2026-07-13",
+        "basis_bps": 0.7067387543143172,
+        "printed_band_bps": [
+          -206.2127332641182,
+          170.40161496534145
+        ],
+        "hi_lo_cover": true,
+        "volume_sufficient": true,
+        "executable": true
+      },
+      {
+        "date": "2026-07-14",
+        "basis_bps": 4.622099823711604,
+        "printed_band_bps": [
+          -189.35083121807438,
+          165.55322950158137
+        ],
+        "hi_lo_cover": true,
+        "volume_sufficient": true,
+        "executable": true
+      },
+      {
+        "date": "2026-07-15",
+        "basis_bps": 8.395718676893372,
+        "printed_band_bps": [
+          -93.62954618678556,
+          106.50827726006068
+        ],
+        "hi_lo_cover": true,
+        "volume_sufficient": true,
+        "executable": true
+      },
+      {
+        "date": "2026-07-16",
+        "basis_bps": 6.180524481786594,
+        "printed_band_bps": [
+          -147.95324162315578,
+          112.97169191401687
+        ],
+        "hi_lo_cover": true,
+        "volume_sufficient": true,
+        "executable": true
+      },
+      {
+        "date": "2026-07-17",
+        "basis_bps": 8.258436813515733,
+        "printed_band_bps": [
+          -107.0623050842887,
+          112.82808835772508
+        ],
+        "hi_lo_cover": true,
+        "volume_sufficient": true,
+        "executable": true
+      },
+      {
+        "date": "2026-07-20",
+        "basis_bps": 6.480938386435931,
+        "printed_band_bps": [
+          -169.71458783243216,
+          91.42790844499761
+        ],
+        "hi_lo_cover": true,
+        "volume_sufficient": true,
+        "executable": true
+      },
+      {
+        "date": "2026-07-21",
+        "basis_bps": 3.650491553145663,
+        "printed_band_bps": [
+          -55.96453078646012,
+          72.2351556579541
+        ],
+        "hi_lo_cover": true,
+        "volume_sufficient": true,
+        "executable": true
+      },
+      {
+        "date": "2026-07-22",
+        "basis_bps": -0.25678226149507594,
+        "printed_band_bps": [
+          -165.5428125812697,
+          126.37107779247633
+        ],
+        "hi_lo_cover": true,
+        "volume_sufficient": true,
+        "executable": true
+      },
+      {
+        "date": "2026-07-23",
+        "basis_bps": 2.439576919761232,
+        "printed_band_bps": [
+          -201.74428991056843,
+          192.08917114072588
+        ],
+        "hi_lo_cover": true,
+        "volume_sufficient": true,
+        "executable": true
+      },
+      {
+        "date": "2026-07-24",
+        "basis_bps": 9.748625519637299,
+        "printed_band_bps": [
+          -135.67426922321366,
+          159.40066493091655
+        ],
+        "hi_lo_cover": true,
+        "volume_sufficient": true,
+        "executable": true
+      },
+      {
+        "date": "2026-07-27",
+        "basis_bps": 6.965728896869613,
+        "printed_band_bps": [
+          -107.94566788109937,
+          105.26961562077385
+        ],
+        "hi_lo_cover": true,
+        "volume_sufficient": true,
+        "executable": true
+      },
+      {
+        "date": "2026-07-28",
+        "basis_bps": 3.7975969616375016,
+        "printed_band_bps": [
+          -111.1332748769036,
+          120.43360487551253
+        ],
+        "hi_lo_cover": true,
+        "volume_sufficient": true,
+        "executable": true
+      },
+      {
+        "date": "2026-07-29",
+        "basis_bps": -10.746721963099414,
+        "printed_band_bps": [
+          -164.63453303429546,
+          184.19201023721604
+        ],
+        "hi_lo_cover": true,
+        "volume_sufficient": true,
+        "executable": true
+      },
+      {
+        "date": "2026-07-30",
+        "basis_bps": -29.67968164584455,
+        "printed_band_bps": [
+          -225.51686166717428,
+          160.31044113237337
+        ],
+        "hi_lo_cover": true,
+        "volume_sufficient": true,
+        "executable": true
+      },
+      {
+        "date": "2026-07-31",
+        "basis_bps": -94.70477941002326,
+        "printed_band_bps": [
+          -124.74391709107817,
+          15.475209970896465
+        ],
+        "hi_lo_cover": true,
+        "volume_sufficient": true,
+        "executable": true
+      },
+      {
+        "date": "2026-08-03",
+        "basis_bps": -5.41196406397334,
+        "printed_band_bps": [
+          -90.8364799334257,
+          73.24508775500354
+        ],
+        "hi_lo_cover": true,
+        "volume_sufficient": true,
+        "executable": true
+      },
+      {
+        "date": "2026-08-04",
+        "basis_bps": -2.77334814230002,
+        "printed_band_bps": [
+          -70.34026657379935,
+          67.99291561087459
+        ],
+        "hi_lo_cover": true,
+        "volume_sufficient": true,
+        "executable": true
+      },
+      {
+        "date": "2026-08-05",
+        "basis_bps": -12.787454795179512,
+        "printed_band_bps": [
+          -232.7941349126232,
+          232.26232629875548
+        ],
+        "hi_lo_cover": true,
+        "volume_sufficient": true,
+        "executable": true
+      },
+      {
+        "date": "2026-08-06",
+        "basis_bps": -7.1704849054511826,
+        "printed_band_bps": [
+          -132.30046938455413,
+          118.86699552560212
+        ],
+        "hi_lo_cover": true,
+        "volume_sufficient": true,
+        "executable": true
+      },
+      {
+        "date": "2026-08-07",
+        "basis_bps": -3.9695667077652748,
+        "printed_band_bps": [
+          -260.1059207458553,
+          225.013243445563
+        ],
+        "hi_lo_cover": true,
+        "volume_sufficient": true,
+        "executable": true
+      },
+      {
+        "date": "2026-08-10",
+        "basis_bps": -3.2815935712733917,
+        "printed_band_bps": [
+          -158.9496463847837,
+          140.20848241938234
+        ],
+        "hi_lo_cover": true,
+        "volume_sufficient": true,
+        "executable": true
+      },
+      {
+        "date": "2026-08-11",
+        "basis_bps": -5.22363707600993,
+        "printed_band_bps": [
+          -153.62084690564527,
+          109.09495157654924
+        ],
+        "hi_lo_cover": true,
+        "volume_sufficient": true,
+        "executable": true
+      },
+      {
+        "date": "2026-08-12",
+        "basis_bps": -3.237817739148714,
+        "printed_band_bps": [
+          -92.59888017318103,
+          83.77334719935551
+        ],
+        "hi_lo_cover": true,
+        "volume_sufficient": true,
+        "executable": true
+      },
+      {
+        "date": "2026-08-13",
+        "basis_bps": -4.081532753819722,
+        "printed_band_bps": [
+          -116.50964548912458,
+          114.46534968058009
+        ],
+        "hi_lo_cover": true,
+        "volume_sufficient": true,
+        "executable": true
+      },
+      {
+        "date": "2026-08-14",
+        "basis_bps": -2.1114350527929395,
+        "printed_band_bps": [
+          -187.07117375663785,
+          169.3535117092752
+        ],
+        "hi_lo_cover": true,
+        "volume_sufficient": true,
+        "executable": true
+      },
+      {
+        "date": "2026-08-17",
+        "basis_bps": 0.16106042182083738,
+        "printed_band_bps": [
+          -87.280334254272,
+          96.49194132090503
+        ],
+        "hi_lo_cover": true,
+        "volume_sufficient": true,
+        "executable": true
+      },
+      {
+        "date": "2026-08-18",
+        "basis_bps": 5.604539010930743,
+        "printed_band_bps": [
+          -83.95348913365433,
+          87.47828342752935
+        ],
+        "hi_lo_cover": true,
+        "volume_sufficient": true,
+        "executable": true
+      },
+      {
+        "date": "2026-08-19",
+        "basis_bps": 4.373844480152874,
+        "printed_band_bps": [
+          -298.34191196422773,
+          302.9558153326765
+        ],
+        "hi_lo_cover": true,
+        "volume_sufficient": true,
+        "executable": true
+      },
+      {
+        "date": "2026-08-20",
+        "basis_bps": 2.7591752606085502,
+        "printed_band_bps": [
+          -182.18413545644518,
+          191.8105885184403
+        ],
+        "hi_lo_cover": true,
+        "volume_sufficient": true,
+        "executable": true
+      },
+      {
+        "date": "2026-08-21",
+        "basis_bps": 7.203132512158085,
+        "printed_band_bps": [
+          -161.04211716313074,
+          194.14449169469486
+        ],
+        "hi_lo_cover": true,
+        "volume_sufficient": true,
+        "executable": true
+      },
+      {
+        "date": "2026-08-24",
+        "basis_bps": 7.079210502021848,
+        "printed_band_bps": [
+          -138.6256569723821,
+          176.54935238720745
+        ],
+        "hi_lo_cover": true,
+        "volume_sufficient": true,
+        "executable": true
+      },
+      {
+        "date": "2026-08-25",
+        "basis_bps": 5.40110967351719,
+        "printed_band_bps": [
+          -141.7806263856099,
+          147.17326859830166
+        ],
+        "hi_lo_cover": true,
+        "volume_sufficient": true,
+        "executable": true
+      },
+      {
+        "date": "2026-08-26",
+        "basis_bps": -19.514657919421882,
+        "printed_band_bps": [
+          -302.945796597919,
+          291.19075049685347
+        ],
+        "hi_lo_cover": true,
+        "volume_sufficient": true,
+        "executable": true
+      },
+      {
+        "date": "2026-08-27",
+        "basis_bps": -38.65388288084395,
+        "printed_band_bps": [
+          -399.9965938974065,
+          252.79685267259154
+        ],
+        "hi_lo_cover": true,
+        "volume_sufficient": true,
+        "executable": true
+      },
+      {
+        "date": "2026-08-28",
+        "basis_bps": -55.434946243994396,
+        "printed_band_bps": [
+          -386.99770860112864,
+          236.15190098368467
+        ],
+        "hi_lo_cover": true,
+        "volume_sufficient": true,
+        "executable": true
+      },
+      {
+        "date": "2026-08-31",
+        "basis_bps": 41.79992312125265,
+        "printed_band_bps": [
+          -346.12638915874334,
+          199.19861890658453
+        ],
+        "hi_lo_cover": true,
+        "volume_sufficient": true,
+        "executable": true
+      },
+      {
+        "date": "2026-09-01",
+        "basis_bps": 1.963929173934519,
+        "printed_band_bps": [
+          -217.94986086425249,
+          230.5180220048786
+        ],
+        "hi_lo_cover": true,
+        "volume_sufficient": true,
+        "executable": true
+      },
+      {
+        "date": "2026-09-02",
+        "basis_bps": 1.4676984069195322,
+        "printed_band_bps": [
+          -202.01047578878396,
+          200.20540759377928
+        ],
+        "hi_lo_cover": true,
+        "volume_sufficient": true,
+        "executable": true
+      },
+      {
+        "date": "2026-09-03",
+        "basis_bps": 1.3565218799843388,
+        "printed_band_bps": [
+          -178.07677027079356,
+          212.9229503542707
+        ],
+        "hi_lo_cover": true,
+        "volume_sufficient": true,
+        "executable": true
+      },
+      {
+        "date": "2026-09-04",
+        "basis_bps": 4.638502091150595,
+        "printed_band_bps": [
+          -284.7469979926623,
+          294.57770683757406
+        ],
+        "hi_lo_cover": true,
+        "volume_sufficient": true,
+        "executable": true
+      },
+      {
+        "date": "2026-09-07",
+        "basis_bps": 5.12563929162855,
+        "printed_band_bps": [
+          -88.66924700232943,
+          97.22938361233169
+        ],
+        "hi_lo_cover": true,
+        "volume_sufficient": true,
+        "executable": true
+      },
+      {
+        "date": "2026-09-08",
+        "basis_bps": 5.12964580052586,
+        "printed_band_bps": [
+          -115.25166123831481,
+          112.13008251889546
+        ],
+        "hi_lo_cover": true,
+        "volume_sufficient": true,
+        "executable": true
+      },
+      {
+        "date": "2026-09-09",
+        "basis_bps": 6.797766709936149,
+        "printed_band_bps": [
+          -130.67516403217945,
+          126.96830794406976
+        ],
+        "hi_lo_cover": true,
+        "volume_sufficient": true,
+        "executable": true
+      },
+      {
+        "date": "2026-09-10",
+        "basis_bps": -3.265732696147618,
+        "printed_band_bps": [
+          -192.31049025465722,
+          201.67041702217563
+        ],
+        "hi_lo_cover": true,
+        "volume_sufficient": true,
+        "executable": true
+      },
+      {
+        "date": "2026-09-11",
+        "basis_bps": 4.476949888169932,
+        "printed_band_bps": [
+          -192.76543624122314,
+          347.6427864681595
+        ],
+        "hi_lo_cover": true,
+        "volume_sufficient": true,
+        "executable": true
+      },
+      {
+        "date": "2026-09-14",
+        "basis_bps": 3.3731391492896283,
+        "printed_band_bps": [
+          -184.0341127953656,
+          247.13889586584162
+        ],
+        "hi_lo_cover": true,
+        "volume_sufficient": true,
+        "executable": true
+      },
+      {
+        "date": "2026-09-15",
+        "basis_bps": 1.567844341023816,
+        "printed_band_bps": [
+          -93.09449590398981,
+          101.35124381390914
+        ],
+        "hi_lo_cover": true,
+        "volume_sufficient": true,
+        "executable": true
+      },
+      {
+        "date": "2026-09-16",
+        "basis_bps": 10.779206975536766,
+        "printed_band_bps": [
+          -149.8045344569569,
+          108.83404304140774
+        ],
+        "hi_lo_cover": true,
+        "volume_sufficient": true,
+        "executable": true
+      },
+      {
+        "date": "2026-09-17",
+        "basis_bps": 6.426970718177742,
+        "printed_band_bps": [
+          -225.34869433052597,
+          206.46317517235065
+        ],
+        "hi_lo_cover": true,
+        "volume_sufficient": true,
+        "executable": true
+      },
+      {
+        "date": "2026-09-18",
+        "basis_bps": 1.6955926742575789,
+        "printed_band_bps": [
+          -145.35646883166845,
+          159.62406686030963
+        ],
+        "hi_lo_cover": true,
+        "volume_sufficient": true,
+        "executable": true
+      },
+      {
+        "date": "2026-09-21",
+        "basis_bps": 7.071589979926447,
+        "printed_band_bps": [
+          -68.77338467317652,
+          83.36490208535521
+        ],
+        "hi_lo_cover": true,
+        "volume_sufficient": true,
+        "executable": true
+      },
+      {
+        "date": "2026-09-22",
+        "basis_bps": 8.485363258388642,
+        "printed_band_bps": [
+          -101.97926437490037,
+          134.28930480160392
+        ],
+        "hi_lo_cover": true,
+        "volume_sufficient": true,
+        "executable": true
+      },
+      {
+        "date": "2026-09-23",
+        "basis_bps": 9.86355496703767,
+        "printed_band_bps": [
+          -98.60519890527587,
+          112.10788008988406
+        ],
+        "hi_lo_cover": true,
+        "volume_sufficient": true,
+        "executable": true
+      },
+      {
+        "date": "2026-09-24",
+        "basis_bps": 7.104443880450509,
+        "printed_band_bps": [
+          -74.82391150013903,
+          96.55298600130396
+        ],
+        "hi_lo_cover": true,
+        "volume_sufficient": true,
+        "executable": true
+      },
+      {
+        "date": "2026-09-25",
+        "basis_bps": 0.24765246105964195,
+        "printed_band_bps": [
+          -92.66532819127521,
+          93.34197485237846
+        ],
+        "hi_lo_cover": true,
+        "volume_sufficient": true,
+        "executable": true
+      },
+      {
+        "date": "2026-09-28",
+        "basis_bps": -47.48595753749504,
+        "printed_band_bps": [
+          -298.14914866404985,
+          203.494045722181
+        ],
+        "hi_lo_cover": true,
+        "volume_sufficient": true,
+        "executable": true
+      },
+      {
+        "date": "2026-09-29",
+        "basis_bps": -3.792427831307961,
+        "printed_band_bps": [
+          -325.12997107677364,
+          119.18487729821811
+        ],
+        "hi_lo_cover": true,
+        "volume_sufficient": true,
+        "executable": true
+      },
+      {
+        "date": "2026-09-30",
+        "basis_bps": 25.330696382445836,
+        "printed_band_bps": [
+          -99.68167912960946,
+          92.12936284905474
+        ],
+        "hi_lo_cover": true,
+        "volume_sufficient": false,
+        "executable": false
+      }
+    ],
+    "GOLDM/GOLDPETAL": [
+      {
+        "date": "2025-12-31",
+        "basis_bps": -228.13305816250224,
+        "printed_band_bps": [
+          -314.9230848779249,
+          -87.26176950715548
+        ],
+        "hi_lo_cover": true,
+        "volume_sufficient": true,
+        "executable": true
+      },
+      {
+        "date": "2026-01-02",
+        "basis_bps": -244.959598093981,
+        "printed_band_bps": [
+          -298.7042352991688,
+          -114.20298536244337
+        ],
+        "hi_lo_cover": true,
+        "volume_sufficient": true,
+        "executable": true
+      },
+      {
+        "date": "2026-01-20",
+        "basis_bps": -258.58836044636007,
+        "printed_band_bps": [
+          -753.8048104134949,
+          404.02906643316436
+        ],
+        "hi_lo_cover": true,
+        "volume_sufficient": true,
+        "executable": true
+      },
+      {
+        "date": "2026-01-21",
+        "basis_bps": -768.054698756939,
+        "printed_band_bps": [
+          -1069.2583177078052,
+          229.03405254480566
+        ],
+        "hi_lo_cover": true,
+        "volume_sufficient": true,
+        "executable": true
+      },
+      {
+        "date": "2026-01-22",
+        "basis_bps": -483.34378151411715,
+        "printed_band_bps": [
+          -1106.3217007419926,
+          -7.341436077120431
+        ],
+        "hi_lo_cover": true,
+        "volume_sufficient": true,
+        "executable": true
+      },
+      {
+        "date": "2026-01-23",
+        "basis_bps": -498.7067740836553,
+        "printed_band_bps": [
+          -786.1224900189991,
+          -283.0980165613968
+        ],
+        "hi_lo_cover": true,
+        "volume_sufficient": true,
+        "executable": true
+      },
+      {
+        "date": "2026-01-27",
+        "basis_bps": -412.6284587205775,
+        "printed_band_bps": [
+          -753.5215085979379,
+          -169.2398648286381
+        ],
+        "hi_lo_cover": true,
+        "volume_sufficient": true,
+        "executable": true
+      },
+      {
+        "date": "2026-01-29",
+        "basis_bps": -370.6936743333883,
+        "printed_band_bps": [
+          -1159.4653015456643,
+          573.9257809948721
+        ],
+        "hi_lo_cover": true,
+        "volume_sufficient": true,
+        "executable": true
+      },
+      {
+        "date": "2026-01-30",
+        "basis_bps": -1026.277057591929,
+        "printed_band_bps": [
+          -2420.070413088839,
+          875.3382258271665
+        ],
+        "hi_lo_cover": true,
+        "volume_sufficient": true,
+        "executable": true
+      },
+      {
+        "date": "2026-02-01",
+        "basis_bps": -441.0166464969142,
+        "printed_band_bps": [
+          -1947.0009651318967,
+          -246.16023849992524
+        ],
+        "hi_lo_cover": true,
+        "volume_sufficient": true,
+        "executable": true
+      },
+      {
+        "date": "2026-02-02",
+        "basis_bps": -387.3072926951258,
+        "printed_band_bps": [
+          -1542.8053750463262,
+          686.458122203012
+        ],
+        "hi_lo_cover": true,
+        "volume_sufficient": true,
+        "executable": true
+      },
+      {
+        "date": "2026-02-03",
+        "basis_bps": -380.1788613429804,
+        "printed_band_bps": [
+          -979.2498571634471,
+          231.68512432288125
+        ],
+        "hi_lo_cover": true,
+        "volume_sufficient": true,
+        "executable": true
+      },
+      {
+        "date": "2026-02-04",
+        "basis_bps": -382.4889323773131,
+        "printed_band_bps": [
+          -1034.510946484708,
+          276.3585217954111
+        ],
+        "hi_lo_cover": true,
+        "volume_sufficient": true,
+        "executable": true
+      },
+      {
+        "date": "2026-02-05",
+        "basis_bps": -390.8904259143148,
+        "printed_band_bps": [
+          -719.5055856749534,
+          192.23694363489676
+        ],
+        "hi_lo_cover": true,
+        "volume_sufficient": true,
+        "executable": true
+      },
+      {
+        "date": "2026-02-06",
+        "basis_bps": -327.29756368904384,
+        "printed_band_bps": [
+          -735.3055113462068,
+          110.7734592167725
+        ],
+        "hi_lo_cover": true,
+        "volume_sufficient": true,
+        "executable": true
+      },
+      {
+        "date": "2026-02-09",
+        "basis_bps": -369.4004353178725,
+        "printed_band_bps": [
+          -598.3564668334645,
+          -99.64600829668483
+        ],
+        "hi_lo_cover": true,
+        "volume_sufficient": true,
+        "executable": true
+      },
+      {
+        "date": "2026-02-10",
+        "basis_bps": -356.394092824149,
+        "printed_band_bps": [
+          -481.04558227608743,
+          -193.09676152355792
+        ],
+        "hi_lo_cover": true,
+        "volume_sufficient": true,
+        "executable": true
+      },
+      {
+        "date": "2026-02-11",
+        "basis_bps": -312.96547911942406,
+        "printed_band_bps": [
+          -445.70780655366514,
+          -179.7229456733122
+        ],
+        "hi_lo_cover": true,
+        "volume_sufficient": true,
+        "executable": true
+      },
+      {
+        "date": "2026-02-12",
+        "basis_bps": -395.17735734611233,
+        "printed_band_bps": [
+          -760.888226979435,
+          44.528336635913966
+        ],
+        "hi_lo_cover": true,
+        "volume_sufficient": true,
+        "executable": true
+      },
+      {
+        "date": "2026-02-13",
+        "basis_bps": -312.84480189366406,
+        "printed_band_bps": [
+          -504.39578681274395,
+          -151.31877369174003
+        ],
+        "hi_lo_cover": true,
+        "volume_sufficient": true,
+        "executable": true
+      },
+      {
+        "date": "2026-02-16",
+        "basis_bps": -334.0684786197947,
+        "printed_band_bps": [
+          -433.5171912440513,
+          -235.71151054202033
+        ],
+        "hi_lo_cover": true,
+        "volume_sufficient": true,
+        "executable": true
+      },
+      {
+        "date": "2026-02-17",
+        "basis_bps": -324.5088844156703,
+        "printed_band_bps": [
+          -567.0619429374639,
+          -114.71698906247396
+        ],
+        "hi_lo_cover": true,
+        "volume_sufficient": true,
+        "executable": true
+      },
+      {
+        "date": "2026-02-18",
+        "basis_bps": -319.26765065054445,
+        "printed_band_bps": [
+          -558.784651919843,
+          -26.198444205375836
+        ],
+        "hi_lo_cover": true,
+        "volume_sufficient": true,
+        "executable": true
+      },
+      {
+        "date": "2026-02-19",
+        "basis_bps": -312.8887392937989,
+        "printed_band_bps": [
+          -472.1655729039888,
+          -137.00924372251743
+        ],
+        "hi_lo_cover": true,
+        "volume_sufficient": true,
+        "executable": true
+      },
+      {
+        "date": "2026-02-20",
+        "basis_bps": -246.0045282248891,
+        "printed_band_bps": [
+          -399.14045579972486,
+          -152.36256888132093
+        ],
+        "hi_lo_cover": true,
+        "volume_sufficient": true,
+        "executable": true
+      },
+      {
+        "date": "2026-02-26",
+        "basis_bps": -220.92840988605408,
+        "printed_band_bps": [
+          -333.3322776074903,
+          -83.40005531752365
+        ],
+        "hi_lo_cover": true,
+        "volume_sufficient": true,
+        "executable": true
+      },
+      {
+        "date": "2026-03-02",
+        "basis_bps": -236.2252251004905,
+        "printed_band_bps": [
+          -717.5435325528695,
+          266.25322831482544
+        ],
+        "hi_lo_cover": true,
+        "volume_sufficient": true,
+        "executable": true
+      },
+      {
+        "date": "2026-03-03",
+        "basis_bps": -282.767952690664,
+        "printed_band_bps": [
+          -743.6342703897815,
+          281.8944791070723
+        ],
+        "hi_lo_cover": true,
+        "volume_sufficient": true,
+        "executable": true
+      },
+      {
+        "date": "2026-03-04",
+        "basis_bps": -278.9591132834117,
+        "printed_band_bps": [
+          -421.000551010632,
+          -112.42686398108516
+        ],
+        "hi_lo_cover": true,
+        "volume_sufficient": true,
+        "executable": true
+      },
+      {
+        "date": "2026-03-05",
+        "basis_bps": -278.6844280047525,
+        "printed_band_bps": [
+          -510.95242759751596,
+          10.994859607469943
+        ],
+        "hi_lo_cover": true,
+        "volume_sufficient": true,
+        "executable": true
+      },
+      {
+        "date": "2026-03-06",
+        "basis_bps": -248.5006111112733,
+        "printed_band_bps": [
+          -436.76988615445174,
+          -57.510010612506335
+        ],
+        "hi_lo_cover": true,
+        "volume_sufficient": true,
+        "executable": true
+      },
+      {
+        "date": "2026-03-09",
+        "basis_bps": -244.9421109363719,
+        "printed_band_bps": [
+          -365.5898051046772,
+          -136.5821396566675
+        ],
+        "hi_lo_cover": true,
+        "volume_sufficient": true,
+        "executable": true
+      },
+      {
+        "date": "2026-03-11",
+        "basis_bps": -216.24051343412643,
+        "printed_band_bps": [
+          -330.52351532036175,
+          -92.45445871619327
+        ],
+        "hi_lo_cover": true,
+        "volume_sufficient": true,
+        "executable": true
+      },
+      {
+        "date": "2026-03-12",
+        "basis_bps": -238.62249470510474,
+        "printed_band_bps": [
+          -330.4624890814183,
+          -103.30970219856978
+        ],
+        "hi_lo_cover": true,
+        "volume_sufficient": true,
+        "executable": true
+      },
+      {
+        "date": "2026-03-13",
+        "basis_bps": -232.6093377503047,
+        "printed_band_bps": [
+          -446.56304222978156,
+          -38.018779738002216
+        ],
+        "hi_lo_cover": true,
+        "volume_sufficient": true,
+        "executable": true
+      },
+      {
+        "date": "2026-03-16",
+        "basis_bps": -216.89308226043786,
+        "printed_band_bps": [
+          -437.6356059860077,
+          1.6842754598071243
+        ],
+        "hi_lo_cover": true,
+        "volume_sufficient": true,
+        "executable": true
+      },
+      {
+        "date": "2026-03-17",
+        "basis_bps": -213.00959714847224,
+        "printed_band_bps": [
+          -361.39383278810834,
+          -67.79770671064016
+        ],
+        "hi_lo_cover": true,
+        "volume_sufficient": true,
+        "executable": true
+      },
+      {
+        "date": "2026-03-18",
+        "basis_bps": -222.99668522579384,
+        "printed_band_bps": [
+          -505.4606757721389,
+          59.73542859235195
+        ],
+        "hi_lo_cover": true,
+        "volume_sufficient": true,
+        "executable": true
+      },
+      {
+        "date": "2026-03-23",
+        "basis_bps": -210.99626940707108,
+        "printed_band_bps": [
+          -1248.724972213678,
+          910.4768197089079
+        ],
+        "hi_lo_cover": true,
+        "volume_sufficient": true,
+        "executable": true
+      }
+    ]
+  },
+  "verdict_summary": {
+    "pairs_tested": 6,
+    "pairs_ever_clearing_bound": 3,
+    "flagged_days_total": 280,
+    "flagged_days_executable": 279
+  }
+}

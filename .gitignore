@@ -1,0 +1,10 @@
+__pycache__/
+*.pyc
+.pytest_cache/
+.venv/
+*.egg-info/
+.DS_Store
+
+# reports/ is scratch output from ad-hoc CLI runs.
+# site/ is intentionally COMMITTED: it is the GitHub Pages demo, and it must
+# open offline with no network in Manali.
