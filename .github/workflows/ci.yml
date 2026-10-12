@@ -1,0 +1,17 @@
+name: CI
+on:
+  push:
+    branches: [main]
+  pull_request:
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install pandas numpy pytest
+      - run: python -m pytest -q
+      - name: Verify the CLI reproduces the published verdict
+        run: python -m arbbound.cli --input data/fixture_gold_2023-2026.csv

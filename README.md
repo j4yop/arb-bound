@@ -19,6 +19,9 @@ Built for **Hack in Hills '26 · Track 03: Commodity Derivatives Intelligence**.
 
 **Live demo:** <https://j4yop.github.io/arb-bound/>
 
+**Full write-ups:** [`docs/PROBLEM.md`](docs/PROBLEM.md) (problem statement + every question and
+its answer) · [`docs/WORKFLOW.md`](docs/WORKFLOW.md) (architecture, tech stack, build phases)
+
 ---
 
 ## The claim
