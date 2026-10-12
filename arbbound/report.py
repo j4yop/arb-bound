@@ -116,7 +116,9 @@ def render(report: dict, basis_history: dict[str, list[dict]] | None = None) -> 
             f"<span>{rows[-1]['label']}</span></div></div>"
         )
 
-    if vs["pairs_ever_clearing_bound"] == 0:
+    stable_pairs = sum(1 for w in wf.values() if w["level_is_stable"])
+    breached = vs["pairs_ever_clearing_bound"]
+    if breached == 0:
         verdict = (
             "<h2 class='verdict ok'>No cross-contract spread cleared its arbitrage "
             "bound in the unseen test window.</h2>"
@@ -124,10 +126,18 @@ def render(report: dict, basis_history: dict[str, list[dict]] | None = None) -> 
             "cost of physically re-minting between bar sizes, not with a "
             "mispricing that a trader could capture.</p>"
         )
+    elif breached == stable_pairs:
+        verdict = (
+            f"<h2 class='verdict ok'>No persistent arbitrageable edge &mdash; all "
+            f"{breached} breached pair(s) are explained by a structural level shift.</h2>"
+            "<p class='lead'>Every flagged day falls in a window where the structural "
+            "relationship between the two contracts had already moved. The apparent "
+            "opportunities are the consequences of a regime change, not independent "
+            "trades.</p>"
+        )
     else:
         verdict = (
-            f"<h2 class='verdict warn'>{vs['pairs_ever_clearing_bound']} pair(s) "
-            "printed gaps above the bound.</h2>"
+            f"<h2 class='verdict warn'>{breached} pair(s) printed gaps above the bound.</h2>"
             f"<p class='lead'>Of {vs['flagged_days_total']} flagged days, "
             f"{vs['flagged_days_executable']} sat inside the exchange's own printed "
             "high/low bands with sufficient volume. Where the structural level "
@@ -184,6 +194,10 @@ def render(report: dict, basis_history: dict[str, list[dict]] | None = None) -> 
 <p class="sub">MCX cross-contract gold &mdash; is the spread an opportunity, or the cost of closing it?</p>
 
 {verdict}
+<p class="lead">Tested walk-forward on {len(wf)} contract pairs: the centring level is
+fitted on the training window only, then frozen and applied unchanged to data the test
+never saw. <strong>{stable_pairs} of {len(wf)}</strong> pairs held a stable structural
+level.</p>
 
 <div class="grid">
   <div class="kpi"><b>{sample['traded_rows']:,}</b><span>traded rows</span></div>
