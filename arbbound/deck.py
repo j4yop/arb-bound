@@ -132,11 +132,11 @@ def slide_title(prs, report, repo):
           size=44, bold=True, line=1.15)
     _rule(s, 1.1, 5.6, 6.0)
 
-    nov = _november_break(report)
+    nov = _headline_break(report)
     if nov:
         _text(s, 1.1, 6.1, 17.8, 1.0,
-              f"In {nov['date']}, ₹2,164 of gold premium evaporated in 15 trading days. "
-              f"We found the day — and proved it was never an arbitrage.",
+              f"On {nov['date']}, {abs(nov['magnitude_bps']):.0f} basis points of gold "
+              f"premium evaporated. We found the day — and proved it was never an arbitrage.",
               size=19, color=MUTED)
     _text(s, 1.1, 9.6, 17.8, 0.6,
           f"arb-bound  ·  {report['sample']['traded_rows']:,} real MCX rows  ·  {repo}",
@@ -287,15 +287,15 @@ def slide_research(prs, report):
         _text(s, 10.6, y, 8.3, 0.4, detail, size=12.5, color=dcol)
         y += 0.72
 
-    nov = _november_break(report)
+    nov = _headline_break(report)
     _rule(s, 1.1, 9.25, 17.8)
     if nov:
         _text(s, 1.1, 9.5, 17.8, 1.2, [
-            f"Open question, deliberately unanswered:  {nov['pair']} moved "
-            f"{nov['before']:+.0f} → {nov['after']:+.0f} bps across ~3 weeks in "
-            f"{nov['month']} {nov['year']} — a monotone drift, not a dated circular taking effect.",
-            f"The nearest MCX circular (Aug 2025) post-dates it by eight months and cannot explain it. "
-            f"We report it as a dated open question rather than inventing a cause.",
+            f"Open question, deliberately unanswered:  {_short(nov['pair'])} moved "
+            f"{nov['median_before_bps']:+.0f} → {nov['median_after_bps']:+.0f} bps across "
+            f"weeks around {nov['date']} — a drift, not a dated circular taking effect.",
+            f"A structural cost cannot move like that, so something else drove it. We report "
+            f"it as a dated open question rather than inventing a cause.",
         ], size=13, color=MUTED, line=1.35)
 
 
@@ -392,20 +392,32 @@ def slide_close(prs, report, repo, demo):
 # ------------------------------------------------------------------ helpers
 
 
-def _november_break(report: dict) -> dict | None:
-    """Locate the headline November 2024 regime break in the computed report."""
-    for pair, breaks in report["regime_breaks"].items():
+def _headline_break(report: dict, min_magnitude_bps: float = 150.0) -> dict | None:
+    """Pick the single most significant regime break, **from the data**.
+
+    Deliberately *not* keyed to a date or a pair name. An earlier version
+    searched for the literal ``"2024-11"``, which meant the deck's headline
+    silently disappeared whenever the tool ran on different input - the exact
+    failure mode of a hardcoded result.
+
+    The headline is now simply the largest structural discontinuity the analysis
+    found: a break where the basis moved by at least ``min_magnitude_bps`` in the
+    adverse direction. Change the input and the deck picks whatever that input
+    actually contains, or drops the slide if there is nothing large enough.
+    """
+    best = None
+    for pair, breaks in report.get("regime_breaks", {}).items():
         for b in breaks:
-            if b["date"].startswith("2024-11") and b["magnitude_bps"] < -150:
-                return {
-                    "pair": pair,
-                    "date": b["date"],
-                    "before": b["median_before_bps"],
-                    "after": b["median_after_bps"],
-                    "month": "November",
-                    "year": "2024",
-                }
-    return None
+            # A rise in the tradeable direction is the headline; the sign
+            # convention differs per pair, so compare on magnitude.
+            magnitude = b["magnitude_bps"]
+            if magnitude > 0:
+                continue  # a narrowing gap, not the headline
+            if best is None or magnitude < best["magnitude_bps"]:
+                best = {**b, "pair": pair}
+    if best is None or abs(best["magnitude_bps"]) < min_magnitude_bps:
+        return None
+    return best
 
 
 def build(report: dict, template: str, out: str, repo: str, demo: str) -> None:

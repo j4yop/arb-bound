@@ -12,13 +12,28 @@ jobs:
         with:
           python-version: '3.11'
       - run: pip install pandas numpy pytest python-pptx
-      - run: python -m pytest -q
+      - name: Tests, including the no-hardcoding and credibility guards
+        run: python -m pytest -q
       - name: Verify the CLI reproduces the published verdict
         run: python -m arbbound.cli --input data/fixture_gold_2023-2026.csv
+      - name: Verify the sensitivity sweep runs from a real input
+        run: python -m arbbound.cli --sensitivity --input data/fixture_gold_2023-2026.csv >/dev/null
       - name: Verify the report regenerates identically
         run: |
           python -m arbbound.build --input data/fixture_gold_2023-2026.csv --outdir /tmp/site
           git diff --exit-code docs/report.json || (echo "report.json is stale - rerun the build" && exit 1)
+      - name: Verify the report contains no invented reference price
+        run: |
+          python - <<'PY'
+          import json
+          r = json.load(open('docs/report.json'))
+          ref = r['reference_price_inr_per_gram_fine']
+          assert ref % 100 != 0, f'reference price {ref} looks hardcoded'
+          assert r['sensitivity'], 'sensitivity sweep missing from the report'
+          for name, s in r['sensitivity'].items():
+              assert len(s['corners']) == 8, f'{name}: expected 8 assumption corners'
+          print('report is derived, not transcribed')
+          PY
       - name: Verify the deck still matches the report
         run: |
           python -m arbbound.deck --report docs/report.json --out /tmp/deck.pptx

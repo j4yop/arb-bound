@@ -74,6 +74,446 @@
       "overhead_b_inr_per_g": 4.0
     }
   },
+  "sensitivity": {
+    "GOLDGUINEA/GOLDM": {
+      "reference_price_inr_per_gram_fine": 12384.384384384384,
+      "min_structural_bps": 42.05818252270186,
+      "max_structural_bps": 445.7725375178522,
+      "min_total_bound_bps": 93.05818252270186,
+      "max_total_bound_bps": 496.77253751785224,
+      "corners": [
+        {
+          "mint_cost_per_bar_inr": 20.0,
+          "duty_wedge_bps": 0.0,
+          "friction_bps_per_leg": 4.0,
+          "slippage_bps_per_leg": 2.0,
+          "structural_bps": 42.05818252270186,
+          "total_bound_bps": 93.05818252270186
+        },
+        {
+          "mint_cost_per_bar_inr": 20.0,
+          "duty_wedge_bps": 0.0,
+          "friction_bps_per_leg": 35.0,
+          "slippage_bps_per_leg": 10.0,
+          "structural_bps": 42.05818252270186,
+          "total_bound_bps": 93.05818252270186
+        },
+        {
+          "mint_cost_per_bar_inr": 20.0,
+          "duty_wedge_bps": 400.0,
+          "friction_bps_per_leg": 4.0,
+          "slippage_bps_per_leg": 2.0,
+          "structural_bps": 442.0581825227018,
+          "total_bound_bps": 493.0581825227018
+        },
+        {
+          "mint_cost_per_bar_inr": 20.0,
+          "duty_wedge_bps": 400.0,
+          "friction_bps_per_leg": 35.0,
+          "slippage_bps_per_leg": 10.0,
+          "structural_bps": 442.0581825227018,
+          "total_bound_bps": 493.0581825227018
+        },
+        {
+          "mint_cost_per_bar_inr": 60.0,
+          "duty_wedge_bps": 0.0,
+          "friction_bps_per_leg": 4.0,
+          "slippage_bps_per_leg": 2.0,
+          "structural_bps": 45.7725375178522,
+          "total_bound_bps": 96.77253751785219
+        },
+        {
+          "mint_cost_per_bar_inr": 60.0,
+          "duty_wedge_bps": 0.0,
+          "friction_bps_per_leg": 35.0,
+          "slippage_bps_per_leg": 10.0,
+          "structural_bps": 45.7725375178522,
+          "total_bound_bps": 96.77253751785219
+        },
+        {
+          "mint_cost_per_bar_inr": 60.0,
+          "duty_wedge_bps": 400.0,
+          "friction_bps_per_leg": 4.0,
+          "slippage_bps_per_leg": 2.0,
+          "structural_bps": 445.7725375178522,
+          "total_bound_bps": 496.77253751785224
+        },
+        {
+          "mint_cost_per_bar_inr": 60.0,
+          "duty_wedge_bps": 400.0,
+          "friction_bps_per_leg": 35.0,
+          "slippage_bps_per_leg": 10.0,
+          "structural_bps": 445.7725375178522,
+          "total_bound_bps": 496.77253751785224
+        }
+      ]
+    },
+    "GOLDGUINEA/GOLDPETAL": {
+      "reference_price_inr_per_gram_fine": 12384.384384384384,
+      "min_structural_bps": 14.130698351115422,
+      "max_structural_bps": 42.39209505334627,
+      "min_total_bound_bps": 65.13069835111543,
+      "max_total_bound_bps": 93.39209505334628,
+      "corners": [
+        {
+          "mint_cost_per_bar_inr": 20.0,
+          "duty_wedge_bps": 0.0,
+          "friction_bps_per_leg": 4.0,
+          "slippage_bps_per_leg": 2.0,
+          "structural_bps": 14.130698351115422,
+          "total_bound_bps": 65.13069835111543
+        },
+        {
+          "mint_cost_per_bar_inr": 20.0,
+          "duty_wedge_bps": 0.0,
+          "friction_bps_per_leg": 35.0,
+          "slippage_bps_per_leg": 10.0,
+          "structural_bps": 14.130698351115422,
+          "total_bound_bps": 65.13069835111543
+        },
+        {
+          "mint_cost_per_bar_inr": 20.0,
+          "duty_wedge_bps": 400.0,
+          "friction_bps_per_leg": 4.0,
+          "slippage_bps_per_leg": 2.0,
+          "structural_bps": 14.130698351115422,
+          "total_bound_bps": 65.13069835111543
+        },
+        {
+          "mint_cost_per_bar_inr": 20.0,
+          "duty_wedge_bps": 400.0,
+          "friction_bps_per_leg": 35.0,
+          "slippage_bps_per_leg": 10.0,
+          "structural_bps": 14.130698351115422,
+          "total_bound_bps": 65.13069835111543
+        },
+        {
+          "mint_cost_per_bar_inr": 60.0,
+          "duty_wedge_bps": 0.0,
+          "friction_bps_per_leg": 4.0,
+          "slippage_bps_per_leg": 2.0,
+          "structural_bps": 42.39209505334627,
+          "total_bound_bps": 93.39209505334628
+        },
+        {
+          "mint_cost_per_bar_inr": 60.0,
+          "duty_wedge_bps": 0.0,
+          "friction_bps_per_leg": 35.0,
+          "slippage_bps_per_leg": 10.0,
+          "structural_bps": 42.39209505334627,
+          "total_bound_bps": 93.39209505334628
+        },
+        {
+          "mint_cost_per_bar_inr": 60.0,
+          "duty_wedge_bps": 400.0,
+          "friction_bps_per_leg": 4.0,
+          "slippage_bps_per_leg": 2.0,
+          "structural_bps": 42.39209505334627,
+          "total_bound_bps": 93.39209505334628
+        },
+        {
+          "mint_cost_per_bar_inr": 60.0,
+          "duty_wedge_bps": 400.0,
+          "friction_bps_per_leg": 35.0,
+          "slippage_bps_per_leg": 10.0,
+          "structural_bps": 42.39209505334627,
+          "total_bound_bps": 93.39209505334628
+        }
+      ]
+    },
+    "GOLDGUINEA/GOLDTEN": {
+      "reference_price_inr_per_gram_fine": 12384.384384384384,
+      "min_structural_bps": 0.40373423860329777,
+      "max_structural_bps": 1.2112027158098932,
+      "min_total_bound_bps": 51.40373423860329,
+      "max_total_bound_bps": 52.21120271580989,
+      "corners": [
+        {
+          "mint_cost_per_bar_inr": 20.0,
+          "duty_wedge_bps": 0.0,
+          "friction_bps_per_leg": 4.0,
+          "slippage_bps_per_leg": 2.0,
+          "structural_bps": 0.40373423860329777,
+          "total_bound_bps": 51.40373423860329
+        },
+        {
+          "mint_cost_per_bar_inr": 20.0,
+          "duty_wedge_bps": 0.0,
+          "friction_bps_per_leg": 35.0,
+          "slippage_bps_per_leg": 10.0,
+          "structural_bps": 0.40373423860329777,
+          "total_bound_bps": 51.40373423860329
+        },
+        {
+          "mint_cost_per_bar_inr": 20.0,
+          "duty_wedge_bps": 400.0,
+          "friction_bps_per_leg": 4.0,
+          "slippage_bps_per_leg": 2.0,
+          "structural_bps": 0.40373423860329777,
+          "total_bound_bps": 51.40373423860329
+        },
+        {
+          "mint_cost_per_bar_inr": 20.0,
+          "duty_wedge_bps": 400.0,
+          "friction_bps_per_leg": 35.0,
+          "slippage_bps_per_leg": 10.0,
+          "structural_bps": 0.40373423860329777,
+          "total_bound_bps": 51.40373423860329
+        },
+        {
+          "mint_cost_per_bar_inr": 60.0,
+          "duty_wedge_bps": 0.0,
+          "friction_bps_per_leg": 4.0,
+          "slippage_bps_per_leg": 2.0,
+          "structural_bps": 1.2112027158098932,
+          "total_bound_bps": 52.21120271580989
+        },
+        {
+          "mint_cost_per_bar_inr": 60.0,
+          "duty_wedge_bps": 0.0,
+          "friction_bps_per_leg": 35.0,
+          "slippage_bps_per_leg": 10.0,
+          "structural_bps": 1.2112027158098932,
+          "total_bound_bps": 52.21120271580989
+        },
+        {
+          "mint_cost_per_bar_inr": 60.0,
+          "duty_wedge_bps": 400.0,
+          "friction_bps_per_leg": 4.0,
+          "slippage_bps_per_leg": 2.0,
+          "structural_bps": 1.2112027158098932,
+          "total_bound_bps": 52.21120271580989
+        },
+        {
+          "mint_cost_per_bar_inr": 60.0,
+          "duty_wedge_bps": 400.0,
+          "friction_bps_per_leg": 35.0,
+          "slippage_bps_per_leg": 10.0,
+          "structural_bps": 1.2112027158098932,
+          "total_bound_bps": 52.21120271580989
+        }
+      ]
+    },
+    "GOLDM/GOLDPETAL": {
+      "reference_price_inr_per_gram_fine": 12384.384384384384,
+      "min_structural_bps": 56.18888087381728,
+      "max_structural_bps": 488.16463257119847,
+      "min_total_bound_bps": 107.18888087381728,
+      "max_total_bound_bps": 539.1646325711985,
+      "corners": [
+        {
+          "mint_cost_per_bar_inr": 20.0,
+          "duty_wedge_bps": 0.0,
+          "friction_bps_per_leg": 4.0,
+          "slippage_bps_per_leg": 2.0,
+          "structural_bps": 56.18888087381728,
+          "total_bound_bps": 107.18888087381728
+        },
+        {
+          "mint_cost_per_bar_inr": 20.0,
+          "duty_wedge_bps": 0.0,
+          "friction_bps_per_leg": 35.0,
+          "slippage_bps_per_leg": 10.0,
+          "structural_bps": 56.18888087381728,
+          "total_bound_bps": 107.18888087381728
+        },
+        {
+          "mint_cost_per_bar_inr": 20.0,
+          "duty_wedge_bps": 400.0,
+          "friction_bps_per_leg": 4.0,
+          "slippage_bps_per_leg": 2.0,
+          "structural_bps": 456.18888087381725,
+          "total_bound_bps": 507.1888808738172
+        },
+        {
+          "mint_cost_per_bar_inr": 20.0,
+          "duty_wedge_bps": 400.0,
+          "friction_bps_per_leg": 35.0,
+          "slippage_bps_per_leg": 10.0,
+          "structural_bps": 456.18888087381725,
+          "total_bound_bps": 507.1888808738172
+        },
+        {
+          "mint_cost_per_bar_inr": 60.0,
+          "duty_wedge_bps": 0.0,
+          "friction_bps_per_leg": 4.0,
+          "slippage_bps_per_leg": 2.0,
+          "structural_bps": 88.16463257119847,
+          "total_bound_bps": 139.16463257119847
+        },
+        {
+          "mint_cost_per_bar_inr": 60.0,
+          "duty_wedge_bps": 0.0,
+          "friction_bps_per_leg": 35.0,
+          "slippage_bps_per_leg": 10.0,
+          "structural_bps": 88.16463257119847,
+          "total_bound_bps": 139.16463257119847
+        },
+        {
+          "mint_cost_per_bar_inr": 60.0,
+          "duty_wedge_bps": 400.0,
+          "friction_bps_per_leg": 4.0,
+          "slippage_bps_per_leg": 2.0,
+          "structural_bps": 488.16463257119847,
+          "total_bound_bps": 539.1646325711985
+        },
+        {
+          "mint_cost_per_bar_inr": 60.0,
+          "duty_wedge_bps": 400.0,
+          "friction_bps_per_leg": 35.0,
+          "slippage_bps_per_leg": 10.0,
+          "structural_bps": 488.16463257119847,
+          "total_bound_bps": 539.1646325711985
+        }
+      ]
+    },
+    "GOLDM/GOLDTEN": {
+      "reference_price_inr_per_gram_fine": 12384.384384384384,
+      "min_structural_bps": 41.654448284098564,
+      "max_structural_bps": 444.56133480204227,
+      "min_total_bound_bps": 92.65444828409858,
+      "max_total_bound_bps": 495.5613348020422,
+      "corners": [
+        {
+          "mint_cost_per_bar_inr": 20.0,
+          "duty_wedge_bps": 0.0,
+          "friction_bps_per_leg": 4.0,
+          "slippage_bps_per_leg": 2.0,
+          "structural_bps": 41.654448284098564,
+          "total_bound_bps": 92.65444828409858
+        },
+        {
+          "mint_cost_per_bar_inr": 20.0,
+          "duty_wedge_bps": 0.0,
+          "friction_bps_per_leg": 35.0,
+          "slippage_bps_per_leg": 10.0,
+          "structural_bps": 41.654448284098564,
+          "total_bound_bps": 92.65444828409858
+        },
+        {
+          "mint_cost_per_bar_inr": 20.0,
+          "duty_wedge_bps": 400.0,
+          "friction_bps_per_leg": 4.0,
+          "slippage_bps_per_leg": 2.0,
+          "structural_bps": 441.6544482840985,
+          "total_bound_bps": 492.6544482840985
+        },
+        {
+          "mint_cost_per_bar_inr": 20.0,
+          "duty_wedge_bps": 400.0,
+          "friction_bps_per_leg": 35.0,
+          "slippage_bps_per_leg": 10.0,
+          "structural_bps": 441.6544482840985,
+          "total_bound_bps": 492.6544482840985
+        },
+        {
+          "mint_cost_per_bar_inr": 60.0,
+          "duty_wedge_bps": 0.0,
+          "friction_bps_per_leg": 4.0,
+          "slippage_bps_per_leg": 2.0,
+          "structural_bps": 44.56133480204231,
+          "total_bound_bps": 95.56133480204232
+        },
+        {
+          "mint_cost_per_bar_inr": 60.0,
+          "duty_wedge_bps": 0.0,
+          "friction_bps_per_leg": 35.0,
+          "slippage_bps_per_leg": 10.0,
+          "structural_bps": 44.56133480204231,
+          "total_bound_bps": 95.56133480204232
+        },
+        {
+          "mint_cost_per_bar_inr": 60.0,
+          "duty_wedge_bps": 400.0,
+          "friction_bps_per_leg": 4.0,
+          "slippage_bps_per_leg": 2.0,
+          "structural_bps": 444.56133480204227,
+          "total_bound_bps": 495.5613348020422
+        },
+        {
+          "mint_cost_per_bar_inr": 60.0,
+          "duty_wedge_bps": 400.0,
+          "friction_bps_per_leg": 35.0,
+          "slippage_bps_per_leg": 10.0,
+          "structural_bps": 444.56133480204227,
+          "total_bound_bps": 495.5613348020422
+        }
+      ]
+    },
+    "GOLDPETAL/GOLDTEN": {
+      "reference_price_inr_per_gram_fine": 12384.384384384384,
+      "min_structural_bps": 14.534432589718719,
+      "max_structural_bps": 43.60329776915616,
+      "min_total_bound_bps": 65.53443258971872,
+      "max_total_bound_bps": 94.60329776915614,
+      "corners": [
+        {
+          "mint_cost_per_bar_inr": 20.0,
+          "duty_wedge_bps": 0.0,
+          "friction_bps_per_leg": 4.0,
+          "slippage_bps_per_leg": 2.0,
+          "structural_bps": 14.534432589718719,
+          "total_bound_bps": 65.53443258971872
+        },
+        {
+          "mint_cost_per_bar_inr": 20.0,
+          "duty_wedge_bps": 0.0,
+          "friction_bps_per_leg": 35.0,
+          "slippage_bps_per_leg": 10.0,
+          "structural_bps": 14.534432589718719,
+          "total_bound_bps": 65.53443258971872
+        },
+        {
+          "mint_cost_per_bar_inr": 20.0,
+          "duty_wedge_bps": 400.0,
+          "friction_bps_per_leg": 4.0,
+          "slippage_bps_per_leg": 2.0,
+          "structural_bps": 14.534432589718719,
+          "total_bound_bps": 65.53443258971872
+        },
+        {
+          "mint_cost_per_bar_inr": 20.0,
+          "duty_wedge_bps": 400.0,
+          "friction_bps_per_leg": 35.0,
+          "slippage_bps_per_leg": 10.0,
+          "structural_bps": 14.534432589718719,
+          "total_bound_bps": 65.53443258971872
+        },
+        {
+          "mint_cost_per_bar_inr": 60.0,
+          "duty_wedge_bps": 0.0,
+          "friction_bps_per_leg": 4.0,
+          "slippage_bps_per_leg": 2.0,
+          "structural_bps": 43.60329776915616,
+          "total_bound_bps": 94.60329776915614
+        },
+        {
+          "mint_cost_per_bar_inr": 60.0,
+          "duty_wedge_bps": 0.0,
+          "friction_bps_per_leg": 35.0,
+          "slippage_bps_per_leg": 10.0,
+          "structural_bps": 43.60329776915616,
+          "total_bound_bps": 94.60329776915614
+        },
+        {
+          "mint_cost_per_bar_inr": 60.0,
+          "duty_wedge_bps": 400.0,
+          "friction_bps_per_leg": 4.0,
+          "slippage_bps_per_leg": 2.0,
+          "structural_bps": 43.60329776915616,
+          "total_bound_bps": 94.60329776915614
+        },
+        {
+          "mint_cost_per_bar_inr": 60.0,
+          "duty_wedge_bps": 400.0,
+          "friction_bps_per_leg": 35.0,
+          "slippage_bps_per_leg": 10.0,
+          "structural_bps": 43.60329776915616,
+          "total_bound_bps": 94.60329776915614
+        }
+      ]
+    }
+  },
   "walk_forward": {
     "GOLDGUINEA/GOLDM": {
       "verdict": "BOUND_EXCEEDED_IN_TEST",

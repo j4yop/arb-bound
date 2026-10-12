@@ -153,13 +153,33 @@ The hardest 6 minutes of the hackathon is not building this. It is a judge under
 - [ ] **Social round** — the Reel clip is the moment the line steps in the
       `GOLDGUINEA/GOLDPETAL` chart. 30 seconds, no narration needed.
 
-### Phase 5 — Close the credibility gap
+### Phase 5 — Close the credibility gap *(complete)*
 The demo is only half. The other half is surviving Q&A.
 
-- [ ] **Attack the weakest input first.** Who challenges the ₹20–60/bar mint cost? Have the sensitivity table ready.
-- [ ] **Publish the limitations panel in the UI**, not just the README. A rigour claim you volunteer is worth more than one you're caught without.
-- [ ] **Pre-register the hypothesis with a timestamp + commit hash**, before the final analysis run. It's already committed — preserve that.
-- [ ] **GitHub Actions** running pytest on every push.
+- [x] **Attack the weakest input first.** `--sensitivity --input <file>` sweeps
+      mint cost x duty wedge x friction/slippage across all 8 corners and prints the
+      bound range for each pair. The reference price is taken from the supplied
+      input, not a constant.
+- [x] **Publish the limitations panel in the UI.** The live dashboard now carries a
+      *Sensitivity to stated assumptions* table and a *Limitations* panel. A rigour
+      claim you volunteer is worth more than one you are caught without.
+- [x] **No part of the system is hardcoded to a result.** `tests/test_no_hardcoding.py`
+      (11 tests) refuses date literals in executable code, requires the headline break
+      to follow the data, and proves the pipeline produces a *different* verdict on a
+      different slice. The deck's headline used to search for the literal `"2024-11"`;
+      it now selects the largest adverse break by rule.
+- [x] **Pre-registration preserved.** The analysis is committed and the CI regenerates
+      `report.json` and diffs it, so results cannot silently change.
+- [x] **GitHub Actions** runs the full suite (60 tests) plus a CLI smoke check, a
+      report-regeneration diff, and a deck/report consistency check.
+
+The hardcoding audit found three real violations, all now fixed:
+
+| Where | Violation | Fix |
+|---|---|---|
+| `deck.py` | headline selected by literal `"2024-11"` | pick the largest adverse break by rule |
+| `cli.py` | `--sensitivity` used a fabricated `7500.0` price | derive it from the supplied input |
+| `report.py` | no assumptions shown on the live page | sensitivity table + limitations panel |
 
 ### Phase 6 — The open question *(the real differentiator)*
 We dated a regime break and could not attribute it. That is worth more than a tidy answer.
@@ -179,11 +199,13 @@ We dated a regime break and could not attribute it. That is worth more than a ti
 - [x] Walk-forward with no look-ahead
 - [x] Regime-break detection with volume signature
 - [x] Executability audit against printed hi/lo
-- [x] 39 tests green
+- [x] 60 tests green
 - [x] Live demo at `j4yop.github.io/arb-bound`
 - [x] Problem statement + Q&A documented
 - [x] Submission deck, generated from the report
 - [x] Judge script + Q&A defence
+- [x] Sensitivity sweep + limitations panel published in the UI
+- [x] Hardcoding audit — no result is pinned to a date, pair, or invented price
 - [ ] Nov 2024 attribution
 
 ---

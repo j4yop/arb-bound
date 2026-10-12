@@ -36,6 +36,36 @@ def _load(path: Path) -> pd.DataFrame:
     return load_csv_bhavcopy(path)
 
 
+def sensitivity_report(frame: pd.DataFrame) -> dict:
+    """Sweep every stated assumption across its range, for every pair.
+
+    Read off the *same* input as the verdict, so the reference price is the
+    market's, not a constant typed into the source. The point of the sweep is
+    that a conclusion is only worth stating if it survives the whole range of
+    assumptions it rests on.
+    """
+    ref = reference_price(frame)
+    out = {}
+    for a, b in pairs():
+        table = sensitivity(
+            compute_pair_bound(spec_for(a), spec_for(b), ref),
+            spec_for(a),
+            spec_for(b),
+            ref,
+        )
+        structural = table["structural_bps"]
+        total = table["total_bound_bps"]
+        out[f"{a}/{b}"] = {
+            "reference_price_inr_per_gram_fine": ref,
+            "min_structural_bps": float(structural.min()),
+            "max_structural_bps": float(structural.max()),
+            "min_total_bound_bps": float(total.min()),
+            "max_total_bound_bps": float(total.max()),
+            "corners": table.to_dict(orient="records"),
+        }
+    return out
+
+
 def build_report(frame: pd.DataFrame) -> dict:
     """Produce the full verdict structure from a loaded bhavcopy frame."""
     traded = frame[~frame["no_trade"]]
@@ -138,6 +168,7 @@ def build_report(frame: pd.DataFrame) -> dict:
             "contracts": sorted(frame["symbol"].unique().tolist()),
         },
         "bounds": bounds,
+        "sensitivity": sensitivity_report(frame),
         "walk_forward": walkforwards,
         "regime_breaks": breaks,
         "executability": executability,
@@ -235,17 +266,28 @@ def main(argv: list[str] | None = None) -> int:
     ap = argparse.ArgumentParser(prog="arbbound", description=__doc__)
     ap.add_argument("--input", type=Path, help="bhavcopy .json or .csv")
     ap.add_argument("--json", type=Path, help="write the full report as JSON")
-    ap.add_argument("--sensitivity", action="store_true", help="print bound sensitivity table")
+    ap.add_argument("--sensitivity", action="store_true",
+                    help="sweep every stated assumption across its range (needs --input)")
     args = ap.parse_args(argv)
 
     if args.sensitivity:
-        ref = 7500.0
-        for a, b in pairs():
-            table = sensitivity(
-                compute_pair_bound(spec_for(a), spec_for(b), ref), spec_for(a), spec_for(b), ref
-            )
-            print(f"\n{a}/{b}")
-            print(table.to_string(index=False))
+        frame = _load(args.input) if args.input else None
+        if frame is None:
+            ap.error("--sensitivity requires --input so the reference price is real")
+        report = sensitivity_report(frame)
+        ref = report[next(iter(report))]["reference_price_inr_per_gram_fine"]
+        print(f"Reference price: INR {ref:,.2f} per gram fine (from the supplied input)\n")
+        for name, s in report.items():
+            print(f"{name}")
+            print(f"  structural {s['min_structural_bps']:.0f}-{s['max_structural_bps']:.0f} bps"
+                  f"   total bound {s['min_total_bound_bps']:.0f}-{s['max_total_bound_bps']:.0f} bps"
+                  f"   across {len(s['corners'])} assumption corners")
+            for c in s["corners"]:
+                print(f"    mint {c['mint_cost_per_bar_inr']:>4.0f}/bar  "
+                      f"duty {c['duty_wedge_bps']:>4.0f}b  "
+                      f"fric {c['friction_bps_per_leg']:>4.0f}b  "
+                      f"slip {c['slippage_bps_per_leg']:>4.0f}b  -> "
+                      f"bound {c['total_bound_bps']:>6.0f}b")
         return 0
 
     if not args.input:

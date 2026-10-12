@@ -74,8 +74,8 @@ python -m arbbound.build --input data/fixture_gold_2023-2026.csv --outdir docs
 # Fetch live data (MCX blocks data-centre IPs; routed through a read proxy)
 python -m arbbound.fetch --out data/bhavcopy_2026-09-10.json
 
-# Assumptions are ranges, never point estimates
-python -m arbbound.cli --sensitivity
+# Assumptions are ranges, never point estimates; the sweep uses the input's own price
+python -m arbbound.cli --sensitivity --input data/fixture_gold_2023-2026.csv
 
 pytest -q
 ```
@@ -145,17 +145,38 @@ liquidity, because a gap you could never have crossed is not an opportunity.
 
 ## Honesty and limits
 
-Stated plainly, because a rigour claim you cannot defend is worthless:
+Stated plainly, because a rigour claim you cannot defend is worthless. The same panel is
+rendered on the **live dashboard itself**, not buried here:
 
 - **`MINT_COST_PER_BAR_INR` is an assumption, not a measurement.** MCX does not publish it.
-  It is carried as a range and swept via `--sensitivity`; conclusions are only claimed where
-  they survive the whole range.
+  It is carried as a range and swept via `--sensitivity --input <file>`; conclusions are only
+  claimed where they survive the whole range. The sweep is displayed on the dashboard.
 - **The duty wedge is policy-set and has moved repeatedly**, so it is a range, never a
-  fitted constant. It is the least certain input in the model.
+  fitted constant. It is the least certain input in the model, and the sensitivity table
+  shows how many basis points of the bound rest on it.
 - **The Nov 2024 break is dated but not explained.** A rigorous demonstration that no edge
   survives is a valid result; so is an honest "we could not attribute this".
 - **The bhavcopy is settlement data.** Anything requiring an executable fill is out of scope
   for this dataset — which is precisely why the executability audit exists.
+
+## No part of this is hardcoded to a result
+
+The one thing that would make all of the above worthless is a stored answer wearing the
+clothes of an analysis. Three guards prevent it, and `tests/test_no_hardcoding.py` enforces
+them:
+
+- **No date or pair literal in executable code.** The AST is scanned; a date inside a
+  provenance note is allowed, a date used to *branch* is not. The deck used to select its
+  headline by searching for `"2024-11"` — it now picks the largest adverse break by rule,
+  and lands on the same event.
+- **A different input produces a different result.** A truncated sample flips three pair
+  verdicts; the test asserts it. A hardcoded result would repeat.
+- **No invented constants.** The reference price is the median of the supplied input
+  (≈ ₹12,384/g on the bundled sample), and `--sensitivity` refuses to run without an input
+  rather than falling back to a typed-in price. CI asserts the published price is not a
+  round number.
+
+Regenerate everything from a clean clone and the numbers come back identical:
 
 ## Data sources
 
@@ -180,7 +201,8 @@ arbbound/
   analysis.py    walk-forward test, break detection, executability audit
   cli.py         bhavcopy in, verdict out
   fetch.py       live fetch through a read proxy
-  report.py      self-contained HTML dashboard
+  report.py      self-contained HTML dashboard (bound, walk-forward, sensitivity, limits)
+  deck.py        generates the submission deck from the report
   build.py       one-shot report + site build
-tests/           39 tests encoding the contract facts and the bound logic
+tests/           60 tests: contract facts, bound logic, no-hardcoding, credibility
 ```
