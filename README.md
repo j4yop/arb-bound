@@ -147,8 +147,10 @@ liquidity, because a gap you could never have crossed is not an opportunity.
   `GOLDGUINEA` tracked it exactly and `GOLDPETAL` held a **+167 bps premium** — and PETAL is the
   *liquid* leg, so it is not a thin-contract artefact. Best-supported account: a retail-premium
   normalisation, matching the WGC's India domestic-premium timeline. Full write-up:
-  [`docs/NOV2024.md`](docs/NOV2024.md). We report the one remaining unverified channel (an MCX
-  contract-spec change) as a dated open question rather than inventing a cause.
+  [`docs/NOV2024.md`](docs/NOV2024.md). The one remaining channel — an MCX contract-spec change —
+  was subsequently **closed**: MCX's own Master Circular – Products lists no GOLDGUINEA/GOLDPETAL
+  *futures* spec change in Oct–Dec 2024 (only Gold *options* were touched), and the nearest such
+  change post-dates by 9–10 months.
 - **Level shifts are reported as level shifts.** Two pairs show a large *median* difference
   between train and test windows. That is a change in the structural relationship, not 200+
    separate trading opportunities, and the tool says so.

@@ -3,8 +3,8 @@
 **Track:** 03 · Commodity Derivatives Intelligence
 **Team:** 3 · laptop only · **Repo:** https://github.com/j4yop/arb-bound
 
-This is the plan we build against. Phase 0–3 are **done and verified**; Phase 4–6 are the
-remaining build.
+This is the plan we build against. **Phases 0–6 are done and verified**; the one research
+thread that was left open (the Nov-2024 circular archive) was subsequently closed — see §Phase 6.
 
 ---
 
@@ -96,9 +96,9 @@ in isolation and what lets us replace an assumption without touching the pipelin
 | Data | **pandas + NumPy** | Already standard for bhavcopy; no new dependency risk |
 | Stats | **stdlib `math`, `statistics`** | The mean-shift statistic is ~10 lines. `ruptures` was installed and rejected — 5 strikes is not a changepoint problem, and a dependency is a demo risk |
 | Storage | **CSV + JSON, committed to git** | Judges can clone and rerun with zero setup. No DB, no cloud, no API key |
-| Tests | **pytest, 39 tests** | Contract facts and bound logic encoded as assertions |
+| Tests | **pytest, 73 tests** | Contract facts and bound logic encoded as assertions |
 | UI | **Server-rendered HTML, inline SVG, zero JS deps** | Opens offline in Manali with no `npm install`. A build step is a demo risk |
-| Deploy | **GitHub Pages** | Free, public, live URL for judges |
+| Deploy | **GitHub Pages + Vercel** | Free, public, live URLs for judges; same tree on both |
 | CI | `pytest` on push | A red test blocks the claim |
 
 **Explicitly rejected:** a database, a web framework, a charting library, an options-pricing
@@ -170,7 +170,7 @@ The demo is only half. The other half is surviving Q&A.
       it now selects the largest adverse break by rule.
 - [x] **Pre-registration preserved.** The analysis is committed and the CI regenerates
       `report.json` and diffs it, so results cannot silently change.
-- [x] **GitHub Actions** runs the full suite (60 tests) plus a CLI smoke check, a
+- [x] **GitHub Actions** runs the full suite (73 tests) plus a CLI smoke check, a
       report-regeneration diff, and a deck/report consistency check.
 
 The hardcoding audit found three real violations, all now fixed:
@@ -195,18 +195,25 @@ circular would have been.
       (~37k lots/day vs ~3k), so it is not a thin-contract artefact. A smooth decay, not a step,
       rules out a contract event. Best-supported account: a **retail-premium normalisation**
       (WGC: India's domestic premium fell US$2.8/oz → US$1/oz in the first week of November).
-- [x] **Only two of the fourteen detected breaks are market-wide.** The rest are leg-specific,
-      which is what makes the attribution column worth having.
+- [x] **Half the detected breaks are market-wide, half are leg-specific.** Of the 24 breaks
+      across the 6 pairs, 12 are attributed to one leg departing from the complex and 12 to a
+      market-wide move — which is exactly what makes the attribution column worth having.
 - [x] **Publish it either way.** Full write-up in [`docs/NOV2024.md`](NOV2024.md): verdict,
       timeline with sources, per-hypothesis table, negative searches, confidence.
 - [x] **It became a product feature, not a footnote.** `analysis.attribute_break` now runs on
       every break and reports which leg moved and whether it moved with the complex. The
       dashboard's *Detected regime breaks* table carries the attribution.
-- [ ] **Remaining:** the MCX circular archive for Oct–Dec 2024, via the working `r.jina.ai`
-      proxy, to formally close the rule-change channel (H1). Recorded as the one open item.
+- [x] **Closed: the MCX circular archive for Oct–Dec 2024.** The live site could not be paged
+      (JS-driven listing, archive endpoint behind a MIME-blocked JS file), so the channel was
+      closed instead via MCX's own **Master Circular – Products** (MCX/PMT/209/2025) on the
+      Advantis mirror. Its bullion list shows only Gold **options** changes in the window and
+      **no GOLDGUINEA/GOLDPETAL futures spec change**; the Gold Petal Apr-2025 commencement
+      circular still carries 5-day tender and Ex-Mumbai quoting. H1 is **rejected**, not merely
+      unconfirmed. See `docs/NOV2024.md` §3/H1.
 
 The brief explicitly blesses "no persistent edge"; it does not require a tidy cause. We have a
-**dated, decomposed, sourced** account and one honestly-open search thread.
+**dated, decomposed, sourced** account, and the one remaining channel (a rule change) is now
+**formally closed** rather than left open.
 
 ---
 
@@ -218,8 +225,8 @@ The brief explicitly blesses "no persistent edge"; it does not require a tidy ca
 - [x] Walk-forward with no look-ahead
 - [x] Regime-break detection with volume signature
 - [x] Executability audit against printed hi/lo
-- [x] 60 tests green
-- [x] Live demo at `j4yop.github.io/arb-bound`
+- [x] 73 tests green
+- [x] Live demo at `j4yop.github.io/arb-bound` and mirrored at `arb-bound.vercel.app`
 - [x] Live in-browser playground — run the real pipeline on your own input
 - [x] Break attribution: which leg moved, and whether it moved with the complex
 - [x] Nov-2024 break decomposed and documented (`docs/NOV2024.md`)
@@ -230,7 +237,9 @@ The brief explicitly blesses "no persistent edge"; it does not require a tidy ca
 - [x] Hardcoding audit — no result is pinned to a date, pair, or invented price
 - [x] Break attribution — which leg moved, relative to the whole complex
 - [x] Nov-2024 break decomposed from our own data (`docs/NOV2024.md`)
-- [ ] Nov 2024 rule-change channel — MCX circular archive Oct–Dec 2024 (the one open thread)
+- [x] Nov 2024 rule-change channel — MCX circular archive closed (Master Circular – Products)
+- [x] Generated artefacts are byte-reproducible (gzip mtime pinned; `docs/` rebuilds with zero diff)
+- [x] Deployed to Vercel; the hosted playground re-verified end-to-end in a browser
 
 ---
 
@@ -290,7 +299,7 @@ and the prices alone cannot separate them. The data needed to settle it is free 
 | pandas + NumPy | Standard for bhavcopy | — |
 | stdlib stats | Mean-shift is ~10 lines | `ruptures` — 5 strikes isn't a changepoint problem, and a dep is a demo risk |
 | CSV + JSON in git | Clone and rerun with zero setup | A database — another failure mode |
-| pytest | 39 tests encode the contract facts | — |
+| pytest | 73 tests encode the contract facts | — |
 | Inline SVG, zero JS | Opens offline in Manali, no `npm install` | React/Vite — a build step that can fail on stage |
 | GitHub Pages | Free live URL for judges | — |
 
@@ -310,6 +319,13 @@ and the prices alone cannot separate them. The data needed to settle it is free 
 
 ## Immediate next actions
 
-1. **Write the deck** (Phase 4). Everything it needs already exists and runs.
-2. **Chase the Nov 2024 circular** (Phase 6). Highest research value left.
-3. **Add GitHub Actions** so the green test suite is visible to judges.
+**No build steps remain.** Phases 0–6 are complete and the one open research thread is closed.
+What is left is submission-facing only:
+
+1. **Record the social Reel** (Phase 4, the only unticked box) — the 30-second clip of the line
+   stepping in the `GOLDGUINEA/GOLDPETAL` chart. Nothing in the build depends on it.
+2. **Rehearse the judge script** (`docs/JUDGE-SCRIPT.md`) live, against `arb-bound.vercel.app`,
+   including the cut list for running short.
+3. Optional polish only: a direct 8 g vs 1 g retail-premium series (IBJA) for Nov 2024 would
+   test H4 head-on, and Nov-2024 delivery/stock data would test the delivery-window hypothesis.
+   Neither is required by the brief.

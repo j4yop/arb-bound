@@ -291,11 +291,12 @@ def slide_research(prs, report):
     _rule(s, 1.1, 9.25, 17.8)
     if nov:
         _text(s, 1.1, 9.5, 17.8, 1.2, [
-            f"Open question, deliberately unanswered:  {_short(nov['pair'])} moved "
+            f"Dated and decomposed:  {_short(nov['pair'])} moved "
             f"{nov['median_before_bps']:+.0f} → {nov['median_after_bps']:+.0f} bps across "
             f"weeks around {nov['date']} — a drift, not a dated circular taking effect.",
-            f"A structural cost cannot move like that, so something else drove it. We report "
-            f"it as a dated open question rather than inventing a cause.",
+            f"A structural cost cannot move like that, so we decomposed it by contract: the "
+            f"complex fell while the liquid leg held its premium. The rule-change channel is "
+            f"closed against MCX's own consolidated circular list.",
         ], size=13, color=MUTED, line=1.35)
 
 
@@ -304,8 +305,6 @@ def slide_future(prs, report):
     _text(s, 1.1, 0.7, 17.8, 0.7, "FUTURE SCOPE", size=17, color=GOLD, bold=True)
 
     left = [
-        ("Close the open question", "Pull MCX circulars for Oct–Dec 2024 and test whether a "
-         "contract-spec or delivery change explains the November break."),
         ("Attribute the two stable breaches", "GOLDGUINEA/GOLDM and GOLDM/GOLDPETAL breach the "
          "bound on a stable level. The GOLDM duty wedge is currently a stated 0–400 bps range; "
          "a sourced duty history would resolve it."),
@@ -351,9 +350,10 @@ def slide_extra(prs, report):
          "A GOLDTEN-benchmarked '3-year' series is really about 18 months."),
     ]
     right = [
-        ("The November 2024 break is dated, not explained.",
-         "We tested the obvious hypothesis — the May 2026 duty hike — and it failed the timing "
-         "test: the spike peaks Feb 2026, the duty move is May 2026."),
+        ("The November 2024 break is dated and decomposed, not guessed.",
+         "The rule-change channel is closed: MCX's own Master Circular – Products lists no "
+         "GOLDGUINEA/GOLDPETAL futures-spec change in the window. It was a market event — the "
+         "liquid leg held its premium while the complex fell — not a rule event."),
         ("Settlement data cannot prove a tradeable edge.",
          "Everything here is end-of-day settlement. The executability audit bounds what could "
          "have been reachable; it does not establish a fill."),

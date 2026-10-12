@@ -96,10 +96,23 @@ across roughly three weeks in **November 2024** — a monotone drift, not a sing
 contract circular takes effect on a date and would produce a step, so this is **not** a rule
 change of the usual kind.
 
-**Answer: a dated, bounded, unexplained regime change.** We report it as an open question
-with a specific date rather than attributing it to a convenient cause. The nearest MCX
-circular (05-Aug-2025, staggered delivery tender period 5d → 3d) **post-dates the break by
-eight months and cannot explain it.**
+**Answer: a dated, bounded, decomposed regime change, with the rule-change channel closed.**
+We report it with a specific date rather than attributing it to a convenient cause. The nearest
+Guinea/Petal *futures* spec changes (05-Aug-2025 stagger 5d → 3d; 11-Sep-2025 launch calendar)
+**post-date the break by 9–10 months and cannot explain it.** MCX's own Master Circular – Products
+confirms no GOLDGUINEA/GOLDPETAL futures-spec change exists anywhere in Oct–Dec 2024 — only Gold
+*options* were modified — so the rule-change explanation is **rejected**, not merely unconfirmed.
+The supported account is the price-action decomposition below.
+
+**Q3a. The decomposition.** A basis is a difference and cannot say which side moved. So we
+decompose the break by contract. Across the four-leg gold complex, the whole complex fell
+**−312 bps** after the 5-Nov-2024 US election; `GOLDGUINEA` tracked that move exactly (0 bps
+idiosyncratic), while `GOLDPETAL` fell only half as far, holding a **+167 bps relative premium**.
+PETAL is the *liquid* leg (~37k lots/day vs ~3k), so this is not a thin-contract artefact, and the
+move is a smooth multi-week decay rather than a step — consistent with a retail-premium
+normalisation, matching the WGC's India domestic-premium timeline (US$2.8/oz → US$1/oz in the
+first week of November). This is now a permanent feature: `analysis.attribute_break` runs on
+**every** detected break and reports which leg departed and by how much.
 
 ---
 
@@ -147,8 +160,8 @@ than trusting it.**
 - The two serious existing projects cover **only 4 gold futures**, do **not** model the
   purity/duty wedge, and do **not** correct for maturity mismatch.
 - One of them states its own unresolved question — *"the cause is not yet confirmed"* — and
-  we have dated the break independently and shown the circular they had in mind post-dates
-  it.
+  we have dated the break independently, decomposed it by contract, and closed the rule-change
+  channel against MCX's own consolidated circular list.
 
 The claim here is not "we found an edge." It is **"we proved there is not one, by a method
 whose every assumption is stated and swept."**

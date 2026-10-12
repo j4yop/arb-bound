@@ -104,10 +104,12 @@ Raise this yourself. Never let a judge find it.
 > "One — minting cost is an assumption, not a measurement. MCX doesn't publish it. We carry it
 > as ₹20 to ₹60 per bar and we only claim conclusions that survive the whole range."
 
-> "Two — the November 2024 break is dated, not explained. We tested the obvious explanation,
-> the May 2026 import-duty hike, and it failed the timing test. The spike peaks in February;
-> the duty move is in May. So we're reporting it as an open question rather than inventing a
-> cause."
+> "Two — the November 2024 break is dated and decomposed, not hand-waved. We tested the obvious
+> explanation, the May 2026 import-duty hike, and it failed the timing test. And we closed the
+> rule-change channel outright: MCX's own Master Circular – Products shows that in October to
+> December 2024 only Gold *options* changed — no GOLDGUINEA or GOLDPETAL *futures* spec change
+> exists. So the move is a market event, not a rule event, which is exactly what the
+> decomposition shows."
 
 > "Three — two pairs still breach the bound on a stable level. `GOLDGUINEA/GOLDM` and
 > `GOLDM/GOLDPETAL`. We left them in."
@@ -127,8 +129,8 @@ judging room. It converts scepticism into evidence of rigour.
 > naive average silently mixes term structure into your spread."
 
 > "One of them flags the November 2024 break in their own README and says the cause is 'not
-> yet confirmed'. We dated it independently, and we showed the circular they had in mind
-> post-dates it by eight months."
+> yet confirmed'. We dated it independently, decomposed it by contract, and closed the
+> rule-change channel against MCX's own consolidated circular list."
 
 ---
 
