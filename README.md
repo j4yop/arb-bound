@@ -20,7 +20,18 @@ Built for **Hack in Hills '26 · Track 03: Commodity Derivatives Intelligence**.
 **Live demo:** <https://j4yop.github.io/arb-bound/>
 
 **Full write-ups:** [`docs/PROBLEM.md`](docs/PROBLEM.md) (problem statement + every question and
-its answer) · [`docs/WORKFLOW.md`](docs/WORKFLOW.md) (architecture, tech stack, build phases)
+its answer) · [`docs/WORKFLOW.md`](docs/WORKFLOW.md) (architecture, tech stack, build phases) ·
+[`docs/JUDGE-SCRIPT.md`](docs/JUDGE-SCRIPT.md) (6-minute demo runbook + Q&A defence)
+
+## Submission deck
+
+[`docs/arb-bound-deck.pptx`](docs/arb-bound-deck.pptx) — 8 slides on the official Hack in Hills
+template. Generated from `report.json` by `arbbound/deck.py`, so no number in it can drift
+from the code:
+
+```bash
+python -m arbbound.deck --report docs/report.json --out docs/arb-bound-deck.pptx
+```
 
 ---
 

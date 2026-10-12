@@ -138,14 +138,20 @@ This is where the work actually happened. The first run **contradicted the thesi
 **Exit criterion met:** the output stopped contradicting the thesis, and where it still
 disagrees it says so (two pairs breach and hold a stable level — reported, not explained away).
 
-### Phase 4 — Make it demonstrable *(in progress)*
+### Phase 4 — Make it demonstrable *(complete)*
 The hardest 6 minutes of the hackathon is not building this. It is a judge understanding it.
 
-- [ ] **Deck:** lead with the number. *"₹2,164 of gold premium vanished in 15 trading days in Nov 2024 — we found the day, and it wasn't an arbitrage."*
-- [ ] **Two-screen demo:** load a bhavcopy → watch the verdict print. One command, live.
-- [ ] **Judge script:** 3 scripted questions, each one click deep.
-- [ ] **Kill the 6-minute-methodology trap.** If we open with method, we lose the room.
-- [ ] **Social round:** the Reel is the moment the line steps. 30 seconds, no narration needed.
+- [x] **Deck** (`docs/arb-bound-deck.pptx`) — 8 slides on the official template, **generated**
+      from `report.json` by `arbbound/deck.py`. Leads with the Nov-2024 number. Verified: 8
+      slides, correct section order, 0 shape overflows, every number cross-checked against the
+      report.
+- [x] **Live demo** — one command, ~2s, fully offline. Committed data, static dashboard.
+- [x] **Judge script** (`docs/JUDGE-SCRIPT.md`) — minute-by-minute runbook, five anticipated
+      judge questions with answers, and an explicit cut list for running short.
+- [x] **Kill the 6-minute-methodology trap** — the script forbids opening with method and
+      hands the judge the number first.
+- [ ] **Social round** — the Reel clip is the moment the line steps in the
+      `GOLDGUINEA/GOLDPETAL` chart. 30 seconds, no narration needed.
 
 ### Phase 5 — Close the credibility gap
 The demo is only half. The other half is surviving Q&A.
@@ -176,10 +182,37 @@ We dated a regime break and could not attribute it. That is worth more than a ti
 - [x] 39 tests green
 - [x] Live demo at `j4yop.github.io/arb-bound`
 - [x] Problem statement + Q&A documented
-- [ ] Deck
+- [x] Submission deck, generated from the report
+- [x] Judge script + Q&A defence
 - [ ] Nov 2024 attribution
 
 ---
+
+## Phase log — what the phases actually cost
+
+| Phase | Result |
+|---|---|
+| 0 Feasibility | MCX 403s data-centre IPs. Solved via proxy egress + embedded-JSON extraction. **15,369 rows.** |
+| 1 Contract master | Pinned purity/quote-basis/expiry with provenance. Cheap, and everything after it depends on it. |
+| 2 Normalisation | `OPTFUT` rows share their underlying's `Symbol` — filtered before they could corrupt any average. |
+| 3 The bound | **Four real bugs**, all found by the output contradicting the thesis. This was the whole phase. |
+| 4 Demonstrable | Deck generated from the report, not hand-typed, so it cannot drift. Judge script written around the actual weak points. |
+
+### A research result worth recording
+
+We hypothesised the two stable breaches (`GOLDGUINEA/GOLDM`, `GOLDM/GOLDPETAL`) were explained
+by the **May 2026 import-duty hike** — India moved gold duty from 6% to 15%, the largest
+single increase on record, and `GOLDM` is the duty-inclusive contract.
+
+**The hypothesis failed its own test.** The basis peaks in **Feb 2026** (+300 bps) and decays
+by April. The duty move is **May 2026**. The spike *precedes* the duty change, so duty cannot
+be its cause.
+
+We also checked whether our own maturity-matching was manufacturing the artifact: binning the
+basis by days-to-expiry and restricting to well-matched, liquid pairs gives a stable median
+across every maturity bucket. The anomaly is real and not a matching error.
+
+Recorded rather than smoothed over — it is now an explicit part of the judge script.
 
 ## Appendix A — Problem statement and Q&A (condensed)
 

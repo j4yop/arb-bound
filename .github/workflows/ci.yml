@@ -11,7 +11,26 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.11'
-      - run: pip install pandas numpy pytest
+      - run: pip install pandas numpy pytest python-pptx
       - run: python -m pytest -q
       - name: Verify the CLI reproduces the published verdict
         run: python -m arbbound.cli --input data/fixture_gold_2023-2026.csv
+      - name: Verify the report regenerates identically
+        run: |
+          python -m arbbound.build --input data/fixture_gold_2023-2026.csv --outdir /tmp/site
+          git diff --exit-code docs/report.json || (echo "report.json is stale - rerun the build" && exit 1)
+      - name: Verify the deck still matches the report
+        run: |
+          python -m arbbound.deck --report docs/report.json --out /tmp/deck.pptx
+          python - <<'PY'
+          from pptx import Presentation
+          import json
+          p = Presentation('/tmp/deck.pptx')
+          deck = ' '.join(sh.text_frame.text for s in p.slides for sh in s.shapes if sh.has_text_frame)
+          rep = json.load(open('docs/report.json'))
+          assert len(p.slides) == 8, f'expected 8 slides, got {len(p.slides)}'
+          assert f"{rep['sample']['traded_rows']:,}" in deck, 'deck row count is stale'
+          for name, w in rep['walk_forward'].items():
+              assert name in deck, f'deck missing pair {name}'
+          print('deck matches report')
+          PY
