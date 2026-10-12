@@ -67,7 +67,7 @@ def _rule(slide, x, y, w):
     return ln
 
 
-def _kpi(slide, x, y, w, h, value, label, color=INK):
+def _kpi(slide, x, y, w, h, value, label, color=INK, value_size=30, label_size=11):
     box = slide.shapes.add_shape(1, Inches(x), Inches(y), Inches(w), Inches(h))
     box.fill.solid()
     box.fill.fore_color.rgb = RGBColor(0xFF, 0xFF, 0xFF)
@@ -76,22 +76,39 @@ def _kpi(slide, x, y, w, h, value, label, color=INK):
     box.shadow.inherit = False
     tf = box.text_frame
     tf.word_wrap = True
-    tf.margin_left = Inches(0.18)
+    tf.margin_left = Inches(0.14)
+    tf.margin_right = Inches(0.10)
     tf.margin_top = Inches(0.12)
     p = tf.paragraphs[0]
     r = p.add_run()
     r.text = value
-    r.font.size = Pt(30)
+    r.font.size = Pt(value_size)
     r.font.bold = True
     r.font.color.rgb = color
     r.font.name = "Inter"
     p2 = tf.add_paragraph()
     r2 = p2.add_run()
     r2.text = label
-    r2.font.size = Pt(11)
+    r2.font.size = Pt(label_size)
     r2.font.color.rgb = MUTED
     r2.font.name = "Inter"
     return box
+
+
+#: Short display names. MCX pair names like "GOLDGUINEA/GOLDPETAL" are far too
+#: long to sit inside a 2.8in KPI box without colliding with its neighbour.
+_SHORT = {
+    "GOLDGUINEA/GOLDM": "GUINEA / M",
+    "GOLDGUINEA/GOLDPETAL": "GUINEA / PETAL",
+    "GOLDGUINEA/GOLDTEN": "GUINEA / TEN",
+    "GOLDM/GOLDPETAL": "M / PETAL",
+    "GOLDM/GOLDTEN": "M / TEN",
+    "GOLDPETAL/GOLDTEN": "PETAL / TEN",
+}
+
+
+def _short(name: str) -> str:
+    return _SHORT.get(name, name.replace("GOLD", ""))
 
 
 def _section(prs, title, kicker=None):
@@ -197,7 +214,7 @@ def slide_solution(prs, report):
         col = BAD if b["bound_low_bps"] > 150 else GOLD
         _kpi(s, x, 7.9, 2.85, 1.5,
              f"{b['bound_low_bps']:.0f}–{b['bound_high_bps']:.0f}",
-             f"{name}  (bps)", col)
+             _short(name), col, value_size=26, label_size=12)
         x += 2.98
 
 
@@ -239,10 +256,14 @@ def slide_research(prs, report):
     n_stable = sum(1 for w in wf.values() if w["level_is_stable"])
     sample = report["sample"]
 
-    _kpi(s, 1.1, 1.6, 4.2, 1.5, f"{sample['traded_rows']:,}", "real traded rows, zero synthetic", INK)
-    _kpi(s, 5.5, 1.6, 4.2, 1.5, f"{n_pairs}", "contract pairs tested", INK)
-    _kpi(s, 9.9, 1.6, 4.2, 1.5, f"{n_stable}/{n_pairs}", "pairs with a stable structural level", OK)
-    _kpi(s, 14.3, 1.6, 4.6, 1.5, "0", "persistent edges that survive costs", OK)
+    _kpi(s, 1.1, 1.6, 4.2, 1.5, f"{sample['traded_rows']:,}", "real traded rows, zero synthetic",
+         INK, value_size=30, label_size=12)
+    _kpi(s, 5.5, 1.6, 4.2, 1.5, f"{n_pairs}", "contract pairs tested",
+         INK, value_size=30, label_size=12)
+    _kpi(s, 9.9, 1.6, 4.2, 1.5, f"{n_stable}/{n_pairs}", "pairs with a stable level",
+         OK, value_size=30, label_size=12)
+    _kpi(s, 14.3, 1.6, 4.6, 1.5, "0", "persistent edges survive costs",
+         OK, value_size=30, label_size=12)
 
     _rule(s, 1.1, 3.5, 17.8)
     _text(s, 1.1, 3.8, 17.8, 0.5, "WALK-FORWARD  —  residual basis, level frozen from training only",
