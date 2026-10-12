@@ -17,7 +17,8 @@ the metal**, which nobody can arbitrage away.
 
 Built for **Hack in Hills '26 · Track 03: Commodity Derivatives Intelligence**.
 
-**Live demo:** <https://j4yop.github.io/arb-bound/>
+**Live demo:** <https://j4yop.github.io/arb-bound/> · mirrored on Vercel at
+<https://arb-bound.vercel.app/> (same tree, same bytes — see `vercel.json`).
 
 **Full write-ups:** [`docs/PROBLEM.md`](docs/PROBLEM.md) (problem statement + every question and
 its answer) · [`docs/WORKFLOW.md`](docs/WORKFLOW.md) (architecture, tech stack, build phases) ·
