@@ -7,7 +7,18 @@ __pycache__/
 
 # Vercel CLI linkage and local env
 .vercel
-.env*
+.env.local
+
+# .env holds the TinyFish API key and must never be committed.
+# .env.example is a documented template and IS committed, so unignore it.
+.env
+!.env.example
+
+# Machine-local editor/agent config. opencode.json can carry a live TinyFish
+# API key in an MCP header; the committed template is opencode.example.json.
+.env.local
+opencode.json
+!.opencode.example.json
 
 # docs/index.html, docs/report.json and docs/playground.html are intentionally
 # COMMITTED: they are the static demo and must open with no network.

@@ -1,0 +1,19 @@
+{
+  "//": "Copy to opencode.json and set X-API-Key from $TINYFISH_API_KEY. The API key belongs in .env, never in this file.",
+  "//key": "Get it at https://agent.tinyfish.ai/api-keys (shown once) and export TINYFISH_API_KEY in .env",
+  "mcp": {
+    "servers": {
+      "tinyfish": {
+        "//": "TinyFish web tools as an MCP server: search, fetch, browser automation and agents.",
+        "//install": "npx -y @tiny-fish/cli@latest connect opencode --api-key $TINYFISH_API_KEY",
+        "//docs": "https://docs.tinyfish.ai/mcp-integration",
+        "type": "remote",
+        "url": "https://agent.tinyfish.ai/mcp",
+        "headers": {
+          "//comment": "Replace with the value of TINYFISH_API_KEY from .env - do not commit the real key.",
+          "X-API-Key": "TINYFISH_API_KEY"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,1237 @@
+{
+ "source": "TinyFish Web Agent run fa67aaf5-cda4-4b54-81a2-269988e3577f",
+ "target": "https://www.mcxindia.com/circulars/all-circulars",
+ "date_filter": "01/10/2024 to 31/12/2024",
+ "bulletin": "COMPLETED",
+ "steps": 115,
+ "run_started": "2026-10-13T06:15:39Z",
+ "archived_at": "2026-10-13",
+ "circulars": [
+  {
+   "date": "31 Dec 2024",
+   "title": "Due Date Rates",
+   "category": "MCXCCL",
+   "circular_no": "861"
+  },
+  {
+   "date": "31 Dec 2024",
+   "title": "Commencement Of Zinc April 2025 Option Contract With Zinc (5 Mt) Futures (Compulsory Delivery) As Underlying",
+   "category": "T&S",
+   "circular_no": "860"
+  },
+  {
+   "date": "31 Dec 2024",
+   "title": "Commencement Of Copper April 2025 Option Contract With Copper (2500 Kilograms) Futures (Compulsory Delivery) As Underlying",
+   "category": "T&S",
+   "circular_no": "859"
+  },
+  {
+   "date": "31 Dec 2024",
+   "title": "Commencement Of Futures Trading In Gold Petal April 2025 Contract",
+   "category": "T&S",
+   "circular_no": "858"
+  },
+  {
+   "date": "31 Dec 2024",
+   "title": "Commencement Of Futures Trading In Aluminium Mini, Aluminium, Copper, Lead Mini, Lead, Nickel, Zinc Mini And Zinc May 2025 Contracts",
+   "category": "T&S",
+   "circular_no": "857"
+  },
+  {
+   "date": "31 Dec 2024",
+   "title": "Commencement Of Futures Trading In Five New Contracts",
+   "category": "T&S",
+   "circular_no": "856"
+  },
+  {
+   "date": "30 Dec 2024",
+   "title": "Submission Of Atr On Impersonation And Unauthorized Market Practices",
+   "category": "Membership and Compliance",
+   "circular_no": "855"
+  },
+  {
+   "date": "30 Dec 2024",
+   "title": "Clearing And Settlement Holiday On February 1, 2025",
+   "category": "MCXCCL",
+   "circular_no": "854"
+  },
+  {
+   "date": "30 Dec 2024",
+   "title": "Clearing And Settlement Holidays For The Year 2025",
+   "category": "MCXCCL",
+   "circular_no": "853"
+  },
+  {
+   "date": "30 Dec 2024",
+   "title": "Accreditation Of Warehouses For Cotton Bales",
+   "category": "MCXCCL",
+   "circular_no": "852"
+  },
+  {
+   "date": "27 Dec 2024",
+   "title": "Due Date Rates",
+   "category": "MCXCCL",
+   "circular_no": "851"
+  },
+  {
+   "date": "27 Dec 2024",
+   "title": "Mock Trading",
+   "category": "TECH",
+   "circular_no": "850"
+  },
+  {
+   "date": "27 Dec 2024",
+   "title": "Merger Of Bse Tech Infra Services Pvt. Ltd. With Bse Technologies Pvt. Ltd.",
+   "category": "CTCL",
+   "circular_no": "849"
+  },
+  {
+   "date": "27 Dec 2024",
+   "title": "Monthly Mock Trading Calendar For The Year 2025",
+   "category": "TECH",
+   "circular_no": "848"
+  },
+  {
+   "date": "26 Dec 2024",
+   "title": "Commencement Of Natural Gas Mini March 2025 Options Contract With Natural Gas Mini (250 Mmbtu) Futures As Underlying",
+   "category": "T&S",
+   "circular_no": "847"
+  },
+  {
+   "date": "26 Dec 2024",
+   "title": "Commencement Of Natural Gas March 2025 Options Contract With Natural Gas (1,250 Mmbtu) Futures As Underlying",
+   "category": "T&S",
+   "circular_no": "846"
+  },
+  {
+   "date": "26 Dec 2024",
+   "title": "Commencement Of Futures Trading In Natural Gas And Natural Gas Mini June 2025 Contract",
+   "category": "T&S",
+   "circular_no": "845"
+  },
+  {
+   "date": "26 Dec 2024",
+   "title": "Due Date Rates",
+   "category": "MCXCCL",
+   "circular_no": "844"
+  },
+  {
+   "date": "24 Dec 2024",
+   "title": "Revised List Of Approved Securities, Approved Commodities And Approved Banks",
+   "category": "MCXCCL",
+   "circular_no": "843"
+  },
+  {
+   "date": "24 Dec 2024",
+   "title": "Application For Surrender Of Membership",
+   "category": "Membership and Compliance",
+   "circular_no": "842"
+  },
+  {
+   "date": "24 Dec 2024",
+   "title": "Live Trading Session On February 01, 2025 (Saturday)",
+   "category": "T&S",
+   "circular_no": "841"
+  },
+  {
+   "date": "23 Dec 2024",
+   "title": "Amendment In Exposure Free Deposit For Mtm Shortage (Efdms) Methodology",
+   "category": "MCXCCL",
+   "circular_no": "840"
+  },
+  {
+   "date": "23 Dec 2024",
+   "title": "Release Of Collaterals On Date Of Settlement Of Running Account Of Client\u2019S Funds",
+   "category": "MCXCCL",
+   "circular_no": "839"
+  },
+  {
+   "date": "23 Dec 2024",
+   "title": "Submission Of Vapt Report And/Or Action Taken Report Atr Compliance Report Reminder",
+   "category": "TECH",
+   "circular_no": "838"
+  },
+  {
+   "date": "23 Dec 2024",
+   "title": "Tender / Pre\u2013Expiry Margin Schedule For The Month Of January 2025",
+   "category": "MCXCCL",
+   "circular_no": "837"
+  },
+  {
+   "date": "20 Dec 2024",
+   "title": "Due Date Rates",
+   "category": "MCXCCL",
+   "circular_no": "836"
+  },
+  {
+   "date": "19 Dec 2024",
+   "title": "Modifications In Contract Specification Of Mentha Oil Futures Contracts",
+   "category": "T&S",
+   "circular_no": "835"
+  },
+  {
+   "date": "19 Dec 2024",
+   "title": "Cyber Security Awareness Program For Members \u2013 December 2024",
+   "category": "TECH",
+   "circular_no": "834"
+  },
+  {
+   "date": "19 Dec 2024",
+   "title": "Trading In Crude Palm Oil Contracts",
+   "category": "T&S",
+   "circular_no": "833"
+  },
+  {
+   "date": "19 Dec 2024",
+   "title": "Commencement Of Futures Trading In Mcx Icomdex Bullion Index (Mcx Bulldex\u00ae) March 2025 Contract",
+   "category": "T&S",
+   "circular_no": "832"
+  },
+  {
+   "date": "19 Dec 2024",
+   "title": "Due Date Rates",
+   "category": "MCXCCL",
+   "circular_no": "831"
+  },
+  {
+   "date": "18 Dec 2024",
+   "title": "Commencement Of Trading In Crude Oil Mini March 2025 Option Contract With Crude Oil Mini (10 Barrels) Futures As Underlying",
+   "category": "T&S",
+   "circular_no": "830"
+  },
+  {
+   "date": "18 Dec 2024",
+   "title": "Commencement Of Trading In Crude Oil March 2025 Option Contract With Crude Oil (100 Barrels) Futures As Underlying",
+   "category": "T&S",
+   "circular_no": "829"
+  },
+  {
+   "date": "18 Dec 2024",
+   "title": "Commencement Of Futures Trading In Crude Oil And Crude Oil Mini June 2025 Contracts",
+   "category": "T&S",
+   "circular_no": "828"
+  },
+  {
+   "date": "17 Dec 2024",
+   "title": "Amendment In Margin Shortfall Block Amount (Msba) Methodology",
+   "category": "MCXCCL",
+   "circular_no": "827"
+  },
+  {
+   "date": "17 Dec 2024",
+   "title": "Revised Penalty/Action For Violation Of Exchange Guidelines By The Members",
+   "category": "Membership and Compliance",
+   "circular_no": "826"
+  },
+  {
+   "date": "17 Dec 2024",
+   "title": "Application For Surrender Of Membership",
+   "category": "Membership and Compliance",
+   "circular_no": "825"
+  },
+  {
+   "date": "17 Dec 2024",
+   "title": "Voluntary Closure Of Business",
+   "category": "Membership and Compliance",
+   "circular_no": "824"
+  },
+  {
+   "date": "17 Dec 2024",
+   "title": "Delivery & Invoices Settlement Schedule For January 2025 Expiry Contracts",
+   "category": "MCXCCL",
+   "circular_no": "823"
+  },
+  {
+   "date": "16 Dec 2024",
+   "title": "Review Of Margin Period Of Risk (Mpor)",
+   "category": "MCXCCL",
+   "circular_no": "822"
+  },
+  {
+   "date": "16 Dec 2024",
+   "title": "Revised List Of Approved Banks",
+   "category": "MCXCCL",
+   "circular_no": "821"
+  },
+  {
+   "date": "16 Dec 2024",
+   "title": "Penalty Structure For Failure To Implement The Framework To Provide The Facility Of Voluntary Freezing / Blocking Of Trading Accounts",
+   "category": "Membership and Compliance",
+   "circular_no": "820"
+  },
+  {
+   "date": "13 Dec 2024",
+   "title": "Commencement Of Futures Trading In Mcx Icomdex Base Metal Index (Mcx Metldex\u00ae) March 2025 Contract",
+   "category": "T&S",
+   "circular_no": "819"
+  },
+  {
+   "date": "13 Dec 2024",
+   "title": "Commencement Of Silver November 2025 Options Contract With Silver (30 Kilograms) Futures As Underlying",
+   "category": "T&S",
+   "circular_no": "818"
+  },
+  {
+   "date": "13 Dec 2024",
+   "title": "Commencement Of Silver Mini November 2025 Options Contract With Silver Mini (5 Kilograms) Futures As Underlying",
+   "category": "T&S",
+   "circular_no": "817"
+  },
+  {
+   "date": "13 Dec 2024",
+   "title": "Commencement Of Gold Option October 2025 & November 2025 Contracts With Gold (1 Kg) Futures As Underlying",
+   "category": "T&S",
+   "circular_no": "816"
+  },
+  {
+   "date": "13 Dec 2024",
+   "title": "Commencement Of Futures Trading In Gold December 2025 And Silver December 2025 Contracts",
+   "category": "T&S",
+   "circular_no": "815"
+  },
+  {
+   "date": "13 Dec 2024",
+   "title": "Trading Holidays For The Calendar Year 2025",
+   "category": "T&S",
+   "circular_no": "814"
+  },
+  {
+   "date": "13 Dec 2024",
+   "title": "Accreditation Of Warehouses For Cotton Bales",
+   "category": "MCXCCL",
+   "circular_no": "813"
+  },
+  {
+   "date": "13 Dec 2024",
+   "title": "Mock Trading",
+   "category": "TECH",
+   "circular_no": "812"
+  },
+  {
+   "date": "13 Dec 2024",
+   "title": "Trading Binary Interface Mcx Enhanced Trading Interface (Eti) Api V1.4.2 Revised Live Date",
+   "category": "CTCL",
+   "circular_no": "811"
+  },
+  {
+   "date": "12 Dec 2024",
+   "title": "Modifications In Contract Specification Of Mcx Icomdex Bullion Index (Mcx Bulldex\u00ae) Futures Contract",
+   "category": "T&S",
+   "circular_no": "810"
+  },
+  {
+   "date": "10 Dec 2024",
+   "title": "Review Of Minimum Volatility Scan Range (Vsr)",
+   "category": "MCXCCL",
+   "circular_no": "809"
+  },
+  {
+   "date": "10 Dec 2024",
+   "title": "Application For Surrender Of Membership",
+   "category": "Membership and Compliance",
+   "circular_no": "808"
+  },
+  {
+   "date": "09 Dec 2024",
+   "title": "Alternate Risk Management Framework Applicable In Case Of Near Zero And Negative Prices",
+   "category": "MCXCCL",
+   "circular_no": "807"
+  },
+  {
+   "date": "09 Dec 2024",
+   "title": "Guidelines In Pursuance Of Amendment To Sebi Kyc (Know Your Client) Registration Agency (Kra) Regulations, 2011.",
+   "category": "T&S",
+   "circular_no": "806"
+  },
+  {
+   "date": "06 Dec 2024",
+   "title": "Mock Trading",
+   "category": "MCXCCL",
+   "circular_no": "805"
+  },
+  {
+   "date": "06 Dec 2024",
+   "title": "Due Date Rates",
+   "category": "MCXCCL",
+   "circular_no": "804"
+  },
+  {
+   "date": "05 Dec 2024",
+   "title": "Commencement Of Trading In Gold Mini Option February 2025 Contract With Gold Mini (100 Grams) Futures As Underlying",
+   "category": "T&S",
+   "circular_no": "803"
+  },
+  {
+   "date": "05 Dec 2024",
+   "title": "Commencement Of Futures Trading In Gold Mini March 2025 Contract",
+   "category": "T&S",
+   "circular_no": "802"
+  },
+  {
+   "date": "05 Dec 2024",
+   "title": "Revision In Threshold Limits For Concentration Margin",
+   "category": "MCXCCL",
+   "circular_no": "801"
+  },
+  {
+   "date": "05 Dec 2024",
+   "title": "Approval Of Surrender Of Membership",
+   "category": "Membership and Compliance",
+   "circular_no": "800"
+  },
+  {
+   "date": "05 Dec 2024",
+   "title": "Mock Trading",
+   "category": "TECH",
+   "circular_no": "799"
+  },
+  {
+   "date": "04 Dec 2024",
+   "title": "Unsc Press Release And Sanction List",
+   "category": "Membership and Compliance",
+   "circular_no": "798"
+  },
+  {
+   "date": "04 Dec 2024",
+   "title": "Trading Binary Interface Mcx Enhanced Trading Interface (Eti) Api V1.4.2 Live Date",
+   "category": "CTCL",
+   "circular_no": "797"
+  },
+  {
+   "date": "04 Dec 2024",
+   "title": "Sms And E Mail Alerts To Investors By Stock Exchanges.",
+   "category": "T&S",
+   "circular_no": "796"
+  },
+  {
+   "date": "03 Dec 2024",
+   "title": "Cyber Security And Cyber Resilience Framework (Cscrf) For Sebi Regulated Entities (Res)",
+   "category": "TECH",
+   "circular_no": "795"
+  },
+  {
+   "date": "02 Dec 2024",
+   "title": "De Accreditation Of Warehouses",
+   "category": "MCXCCL",
+   "circular_no": "794"
+  },
+  {
+   "date": "02 Dec 2024",
+   "title": "Accreditation Of Warehouse For Storage Of Base Metals & Steel Rebar",
+   "category": "MCXCCL",
+   "circular_no": "793"
+  },
+  {
+   "date": "02 Dec 2024",
+   "title": "Accreditation Of Warehouses For Cotton Bales",
+   "category": "MCXCCL",
+   "circular_no": "792"
+  },
+  {
+   "date": "02 Dec 2024",
+   "title": "Guidelines To Stock Exchanges, Clearing Corporations And Depositories",
+   "category": "Others",
+   "circular_no": "791"
+  },
+  {
+   "date": "02 Dec 2024",
+   "title": "FATF Public Statements - October 2024 Plenary",
+   "category": "Membership and Compliance",
+   "circular_no": "790"
+  },
+  {
+   "date": "29 Nov 2024",
+   "title": "Due Date Rates",
+   "category": "MCXCCL",
+   "circular_no": "789"
+  },
+  {
+   "date": "29 Nov 2024",
+   "title": "Commencement Of Zinc March 2025 Option Contract With Zinc (5 Mt) Futures (Compulsory Delivery) As Underlying",
+   "category": "T&S",
+   "circular_no": "788"
+  },
+  {
+   "date": "29 Nov 2024",
+   "title": "Commencement Of Copper March 2025 Option Contract With Copper (2500 Kilograms) Futures (Compulsory Delivery) As Underlying",
+   "category": "T&S",
+   "circular_no": "787"
+  },
+  {
+   "date": "29 Nov 2024",
+   "title": "Commencement Of Futures Trading In Steel Rebar April 2025 Contract",
+   "category": "T&S",
+   "circular_no": "786"
+  },
+  {
+   "date": "29 Nov 2024",
+   "title": "Commencement Of Futures Trading In Thirteen New Contracts",
+   "category": "T&S",
+   "circular_no": "785"
+  },
+  {
+   "date": "29 Nov 2024",
+   "title": "Point To Point Leased Line Connectivity At Mcx Disaster Recovery Site (Drs)",
+   "category": "TECH",
+   "circular_no": "784"
+  },
+  {
+   "date": "28 Nov 2024",
+   "title": "Reminder \u2013 Submission Of Data Pertaining To Risk Based Supervision And Internal Audit Report",
+   "category": "Membership and Compliance",
+   "circular_no": "783"
+  },
+  {
+   "date": "28 Nov 2024",
+   "title": "Tender / Pre\u2013Expiry Margin Schedule For The Month Of December 2024",
+   "category": "MCXCCL",
+   "circular_no": "782"
+  },
+  {
+   "date": "28 Nov 2024",
+   "title": "Guidelines To Stock Exchanges, Clearing Corporations And Depositories",
+   "category": "MCXCCL",
+   "circular_no": "781"
+  },
+  {
+   "date": "27 Nov 2024",
+   "title": "Due Date Rates",
+   "category": "MCXCCL",
+   "circular_no": "780"
+  },
+  {
+   "date": "27 Nov 2024",
+   "title": "Mock Trading",
+   "category": "TECH",
+   "circular_no": "779"
+  },
+  {
+   "date": "26 Nov 2024",
+   "title": "Mcxmcxccl7782024 Revised List Of Approved Securities Approved Commodities And Approved Banks",
+   "category": "C&S",
+   "circular_no": "778"
+  },
+  {
+   "date": "26 Nov 2024",
+   "title": "Due Date Rates",
+   "category": "MCXCCL",
+   "circular_no": "777"
+  },
+  {
+   "date": "25 Nov 2024",
+   "title": "Commencement Of Natural Gas Mini February 2025 Options Contract With Natural Gas Mini (250 Mmbtu) Futures As Underlying",
+   "category": "T&S",
+   "circular_no": "776"
+  },
+  {
+   "date": "25 Nov 2024",
+   "title": "Commencement Of Natural Gas February 2025 Options Contract With Natural Gas (1,250 Mmbtu) Futures As Underlying",
+   "category": "T&S",
+   "circular_no": "775"
+  },
+  {
+   "date": "25 Nov 2024",
+   "title": "Commencement Of Futures Trading In Natural Gas May 2025 And Natural Gas Mini May 2025 Contract",
+   "category": "T&S",
+   "circular_no": "774"
+  },
+  {
+   "date": "25 Nov 2024",
+   "title": "Reminder \u2013 Submission Of Data Pertaining To Risk Based Supervision And Internal Audit Report",
+   "category": "Membership and Compliance",
+   "circular_no": "773"
+  },
+  {
+   "date": "22 Nov 2024",
+   "title": "Procedure For Deposit And Storage Of Cotton Bales At Mcxccl Accredited Warehouses",
+   "category": "MCXCCL",
+   "circular_no": "772"
+  },
+  {
+   "date": "22 Nov 2024",
+   "title": "Mock Trading",
+   "category": "TECH",
+   "circular_no": "771"
+  },
+  {
+   "date": "21 Nov 2024",
+   "title": "Cyber Security And Cyber Resilience Audit Of Trading Members (Type Iii) Reminder",
+   "category": "TECH",
+   "circular_no": "770"
+  },
+  {
+   "date": "21 Nov 2024",
+   "title": "System Audit Of Trading Member Atf Members (Type Iii) Reminder",
+   "category": "TECH",
+   "circular_no": "769"
+  },
+  {
+   "date": "21 Nov 2024",
+   "title": "Due Date Rates",
+   "category": "MCXCCL",
+   "circular_no": "768"
+  },
+  {
+   "date": "21 Nov 2024",
+   "title": "Due Date Rates",
+   "category": "MCXCCL",
+   "circular_no": "767"
+  },
+  {
+   "date": "19 Nov 2024",
+   "title": "Acceptance Of Mcx Good Delivery Norms For Bis \u2013 Standard Gold For Delivery In Gold Mini (100 Grams) Futures List Of Empanelled",
+   "category": "Others",
+   "circular_no": "766"
+  },
+  {
+   "date": "19 Nov 2024",
+   "title": "Review Of Margin Period Of Risk (Mpor)",
+   "category": "MCXCCL",
+   "circular_no": "765"
+  },
+  {
+   "date": "19 Nov 2024",
+   "title": "Commencement Of Trading In Crude Oil Mini Feb 2025 Option Contract With Crude Oil Mini (10 Barrels) Futures As Underlying",
+   "category": "T&S",
+   "circular_no": "764"
+  },
+  {
+   "date": "19 Nov 2024",
+   "title": "Commencement Of Trading In Crude Oil Feb 2025 Option Contract With Crude Oil (100 Barrels) Futures As Underlying",
+   "category": "T&S",
+   "circular_no": "763"
+  },
+  {
+   "date": "19 Nov 2024",
+   "title": "Commencement Of Futures Trading In Crude Oil And Crude Oil Mini May 2025 Contracts",
+   "category": "T&S",
+   "circular_no": "762"
+  },
+  {
+   "date": "19 Nov 2024",
+   "title": "Commencement Of Futures Trading In Mcx Icomdex Bullion Index (Mcx Bulldex\u00ae) February 2025 Contract",
+   "category": "T&S",
+   "circular_no": "761"
+  },
+  {
+   "date": "18 Nov 2024",
+   "title": "Delivery & Invoices Settlement Schedule For December 2024 Expiry Contracts",
+   "category": "MCXCCL",
+   "circular_no": "760"
+  },
+  {
+   "date": "18 Nov 2024",
+   "title": "Reminder For Submission Of Half Yearly Internal Audit Report By Clearing Members (Itcm & Pcm) For Half Year Ended September 30, 2024",
+   "category": "MCXCCL",
+   "circular_no": "759"
+  },
+  {
+   "date": "18 Nov 2024",
+   "title": "Reminder \u2013 Submission Of Data Pertaining To Risk Based Supervision And Internal Audit Report",
+   "category": "Membership and Compliance",
+   "circular_no": "758"
+  },
+  {
+   "date": "15 Nov 2024",
+   "title": "Mock Trading From Disaster Recovery Site (Drs)",
+   "category": "MCXCCL",
+   "circular_no": "757"
+  },
+  {
+   "date": "14 Nov 2024",
+   "title": "Modification In Gold, Gold Mini, Silver And Silver Mini Options Contracts",
+   "category": "T&S",
+   "circular_no": "756"
+  },
+  {
+   "date": "14 Nov 2024",
+   "title": "Reminder For Submission Of Half Yearly Networth Certificate As On September 30, 2024",
+   "category": "Membership and Compliance",
+   "circular_no": "755"
+  },
+  {
+   "date": "14 Nov 2024",
+   "title": "Commencement Of Futures Trading In Mcx Icomdex Base Metal Index (Mcx Metldex\u00ae) February 2025",
+   "category": "T&S",
+   "circular_no": "754"
+  },
+  {
+   "date": "14 Nov 2024",
+   "title": "Mock Trading From Disaster Recovery Site (Drs)",
+   "category": "TECH",
+   "circular_no": "753"
+  },
+  {
+   "date": "13 Nov 2024",
+   "title": "Reminder Submission Of Half Yearly Networth Certificate As On September 30, 2024.",
+   "category": "MCXCCL",
+   "circular_no": "752"
+  },
+  {
+   "date": "13 Nov 2024",
+   "title": "Warehouses For Cotton Bales Contract",
+   "category": "MCXCCL",
+   "circular_no": "751"
+  },
+  {
+   "date": "11 Nov 2024",
+   "title": "FATF Public Statements - October 2024 Plenary",
+   "category": "Membership and Compliance",
+   "circular_no": "750"
+  },
+  {
+   "date": "11 Nov 2024",
+   "title": "Monitoring Of Position Limits",
+   "category": "T&S",
+   "circular_no": "749"
+  },
+  {
+   "date": "11 Nov 2024",
+   "title": "Settlement Holiday On Account Of Maharashtra Legislative Assembly General Election On November 20, 2024",
+   "category": "MCXCCL",
+   "circular_no": "748"
+  },
+  {
+   "date": "11 Nov 2024",
+   "title": "Reminder \u2013 Submission Of Data Pertaining To Risk Based Supervision And Internal Audit Report",
+   "category": "Membership and Compliance",
+   "circular_no": "747"
+  },
+  {
+   "date": "11 Nov 2024",
+   "title": "Enhancement In Member Reporting Portal With Respect To Client Margin Reporting",
+   "category": "MCXCCL",
+   "circular_no": "746"
+  },
+  {
+   "date": "08 Nov 2024",
+   "title": "Revision In Threshold Limits For Concentration Margin",
+   "category": "MCXCCL",
+   "circular_no": "745"
+  },
+  {
+   "date": "08 Nov 2024",
+   "title": "Alternate Risk Management Framework Applicable In Case Of Near Zero And Negative Prices",
+   "category": "MCXCCL",
+   "circular_no": "744"
+  },
+  {
+   "date": "08 Nov 2024",
+   "title": "Review Of Minimum Volatility Scan Range (Vsr)",
+   "category": "MCXCCL",
+   "circular_no": "743"
+  },
+  {
+   "date": "08 Nov 2024",
+   "title": "Increase In Maximum Limit To Upload Ucc Records In One File",
+   "category": "T&S",
+   "circular_no": "742"
+  },
+  {
+   "date": "08 Nov 2024",
+   "title": "Revision In Expiry Date Of Mcx Icomdex Base Metal Index (Mcx Metldex\u00ae) Futures Contract On Account Of Trading Holiday On November 20, 2024",
+   "category": "T&S",
+   "circular_no": "741"
+  },
+  {
+   "date": "08 Nov 2024",
+   "title": "Mock Trading",
+   "category": "MCXCCL",
+   "circular_no": "740"
+  },
+  {
+   "date": "08 Nov 2024",
+   "title": "Guidelines In Pursuance Of Amendment To Sebi Kyc (Know Your Client) Registration Agency (Kra) Regulations, 2011",
+   "category": "T&S",
+   "circular_no": "739"
+  },
+  {
+   "date": "08 Nov 2024",
+   "title": "Trading Holiday On Account Of Maharashtra Legislative Assembly General Election On November 20, 2024",
+   "category": "T&S",
+   "circular_no": "738"
+  },
+  {
+   "date": "07 Nov 2024",
+   "title": "Mock Trading From Disaster Recovery Site (Drs)",
+   "category": "TECH",
+   "circular_no": "737"
+  },
+  {
+   "date": "07 Nov 2024",
+   "title": "Mock Trading",
+   "category": "TECH",
+   "circular_no": "736"
+  },
+  {
+   "date": "06 Nov 2024",
+   "title": "Association Of Persons Regulated By The Board And Their Agents With Certain Persons",
+   "category": "MCXCCL",
+   "circular_no": "735"
+  },
+  {
+   "date": "05 Nov 2024",
+   "title": "Commencement Of Trading In Gold Mini January 2025 Options Contract With Gold Mini (100 Grams) Futures As Underlying",
+   "category": "T&S",
+   "circular_no": "734"
+  },
+  {
+   "date": "05 Nov 2024",
+   "title": "Commencement Of Futures Trading In Gold Mini February 2025 Contract",
+   "category": "T&S",
+   "circular_no": "733"
+  },
+  {
+   "date": "05 Nov 2024",
+   "title": "Delisting Of Mcx Registered Indian Refined Lead Brand \u2018Jc Alloys\u2019",
+   "category": "MCXCCL",
+   "circular_no": "732"
+  },
+  {
+   "date": "05 Nov 2024",
+   "title": "Monitoring Shareholding Of Market Infrastructure Institutions (Miis)",
+   "category": "General",
+   "circular_no": "731"
+  },
+  {
+   "date": "04 Nov 2024",
+   "title": "Amendments To The Bye Laws, Pursuant To Sebi Approval Letter Dated October 14, 2024",
+   "category": "MCXCCL",
+   "circular_no": "730"
+  },
+  {
+   "date": "04 Nov 2024",
+   "title": "Delisting Of Mcx Registered Indian Refined Lead Brand \u2018Jc Alloys\u2019",
+   "category": "Others",
+   "circular_no": "729"
+  },
+  {
+   "date": "31 Oct 2024",
+   "title": "Due Date Rates",
+   "category": "MCXCCL",
+   "circular_no": "728"
+  },
+  {
+   "date": "31 Oct 2024",
+   "title": "Commencement Of Zinc February 2025 Option Contract With Zinc (5 Mt) Futures (Compulsory Delivery) As Underlying",
+   "category": "T&S",
+   "circular_no": "727"
+  },
+  {
+   "date": "31 Oct 2024",
+   "title": "Commencement Of Copper February 2025 Option Contract With Copper (2500 Kilograms) Futures (Compulsory Delivery) As Underlying",
+   "category": "T&S",
+   "circular_no": "726"
+  },
+  {
+   "date": "31 Oct 2024",
+   "title": "Commencement Of Futures Trading In Fifteen New Contracts",
+   "category": "T&S",
+   "circular_no": "725"
+  },
+  {
+   "date": "31 Oct 2024",
+   "title": "Muhurat Trading Session",
+   "category": "MCXCCL",
+   "circular_no": "724"
+  },
+  {
+   "date": "30 Oct 2024",
+   "title": "Tender / Pre\u2013Expiry Margin Schedule For The Month Of November 2024",
+   "category": "MCXCCL",
+   "circular_no": "723"
+  },
+  {
+   "date": "29 Oct 2024",
+   "title": "Due Date Rates",
+   "category": "MCXCCL",
+   "circular_no": "722"
+  },
+  {
+   "date": "28 Oct 2024",
+   "title": "Revised List Of Approved Securities Approved Commodities And Approved Banks",
+   "category": "MCXCCL",
+   "circular_no": "721"
+  },
+  {
+   "date": "28 Oct 2024",
+   "title": "Due Date Rates",
+   "category": "MCXCCL",
+   "circular_no": "720"
+  },
+  {
+   "date": "28 Oct 2024",
+   "title": "Commencement Of Natural Gas Mini January 2025 Options Contract With Natural Gas Mini (250 Mmbtu) Futures As Underlying",
+   "category": "T&S",
+   "circular_no": "719"
+  },
+  {
+   "date": "28 Oct 2024",
+   "title": "Commencement Of Natural Gas January 2025 Options Contract With Natural Gas (1,250 Mmbtu) Futures As Underlying",
+   "category": "T&S",
+   "circular_no": "718"
+  },
+  {
+   "date": "28 Oct 2024",
+   "title": "Commencement Of Futures Trading In Natural Gas And Natural Gas Mini April 2025 Contract",
+   "category": "T&S",
+   "circular_no": "717"
+  },
+  {
+   "date": "28 Oct 2024",
+   "title": "Guidelines For Inactive Client Accounts",
+   "category": "Membership and Compliance",
+   "circular_no": "716"
+  },
+  {
+   "date": "24 Oct 2024",
+   "title": "Sebi Order Against Evermore Share Broking Private Limited.",
+   "category": "MCXCCL",
+   "circular_no": "715"
+  },
+  {
+   "date": "24 Oct 2024",
+   "title": "Monitoring Shareholding Of Market Infrastructure Institutions (Miis)",
+   "category": "MCXCCL",
+   "circular_no": "714"
+  },
+  {
+   "date": "24 Oct 2024",
+   "title": "Reporting Of Collateral Segregation Data For Muhurat Trading Session On Account Of Diwali On November 01, 2024",
+   "category": "MCXCCL",
+   "circular_no": "713"
+  },
+  {
+   "date": "24 Oct 2024",
+   "title": "Sebi Order Against Evermore Share Broking Private Limited",
+   "category": "Membership and Compliance",
+   "circular_no": "712"
+  },
+  {
+   "date": "23 Oct 2024",
+   "title": "Reminder Submission Of Annual Returns And Annual Confirmations For Financial Year 2023 24",
+   "category": "MCXCCL",
+   "circular_no": "711"
+  },
+  {
+   "date": "23 Oct 2024",
+   "title": "Due Date Rates",
+   "category": "MCXCCL",
+   "circular_no": "710"
+  },
+  {
+   "date": "23 Oct 2024",
+   "title": "Mock Trading From Disaster Recovery Site(Drs)",
+   "category": "TECH",
+   "circular_no": "709"
+  },
+  {
+   "date": "22 Oct 2024",
+   "title": "Transaction Processing Timelines For Muhurat Trading Session On November 01, 2024",
+   "category": "MCXCCL",
+   "circular_no": "708"
+  },
+  {
+   "date": "22 Oct 2024",
+   "title": "Due Date Rates",
+   "category": "MCXCCL",
+   "circular_no": "707"
+  },
+  {
+   "date": "21 Oct 2024",
+   "title": "Accreditation Of Warehouse For Storage Of Base Metals & Steel Rebar",
+   "category": "MCXCCL",
+   "circular_no": "706"
+  },
+  {
+   "date": "21 Oct 2024",
+   "title": "Gazette Notification Updates In Section 35 Of Ua(P) Act 1967",
+   "category": "Membership and Compliance",
+   "circular_no": "705"
+  },
+  {
+   "date": "21 Oct 2024",
+   "title": "Muhurat Trading Session On Account Of Diwali On November 01, 2024",
+   "category": "T&S",
+   "circular_no": "704"
+  },
+  {
+   "date": "21 Oct 2024",
+   "title": "Commencement Of Trading In Crude Oil Mini January 2025 Options Contract With Crude Oil Mini (10 Barrels) Futures As Underlying",
+   "category": "T&S",
+   "circular_no": "703"
+  },
+  {
+   "date": "21 Oct 2024",
+   "title": "Commencement Of Trading In Crude Oil Jan 2025 Option Contract With Crude Oil (100 Barrels) Futures As Underlying",
+   "category": "T&S",
+   "circular_no": "702"
+  },
+  {
+   "date": "21 Oct 2024",
+   "title": "Commencement Of Futures Trading In Crude Oil And Crude Oil Mini April 2025 Contracts",
+   "category": "T&S",
+   "circular_no": "701"
+  },
+  {
+   "date": "18 Oct 2024",
+   "title": "Commencement Of Futures Trading In Mcx Icomdex Bullion Index (Mcx Bulldex\u00ae) January 2025 Contract",
+   "category": "T&S",
+   "circular_no": "700"
+  },
+  {
+   "date": "18 Oct 2024",
+   "title": "Observance Of Vigilance Awareness Week From October 28, 2024 November 03, 2024",
+   "category": "Membership and Compliance",
+   "circular_no": "699"
+  },
+  {
+   "date": "17 Oct 2024",
+   "title": "Modification In Gold Options Contract With Gold (1Kg) Futures As Underlying To Include Monthly Expiries",
+   "category": "T&S",
+   "circular_no": "698"
+  },
+  {
+   "date": "17 Oct 2024",
+   "title": "Mandatory Reporting Of National Company Law Tribunal (Nclt) Proceedings By Members",
+   "category": "Investor Services",
+   "circular_no": "697"
+  },
+  {
+   "date": "17 Oct 2024",
+   "title": "Mock Trading From Disaster Recovery Site(Drs)",
+   "category": "TECH",
+   "circular_no": "696"
+  },
+  {
+   "date": "17 Oct 2024",
+   "title": "Observance Of Vigilance Awareness Week From October 28, 2024 November 03, 2024",
+   "category": "MCXCCL",
+   "circular_no": "695"
+  },
+  {
+   "date": "17 Oct 2024",
+   "title": "Delivery & Invoices Settlement Schedule For November 2024 Expiry Contracts",
+   "category": "MCXCCL",
+   "circular_no": "694"
+  },
+  {
+   "date": "16 Oct 2024",
+   "title": "Review Of Margin Period Of Risk (Mpor)",
+   "category": "MCXCCL",
+   "circular_no": "693"
+  },
+  {
+   "date": "15 Oct 2024",
+   "title": "Commencement Of Futures Trading In Silver Mini November 2025 Contract",
+   "category": "T&S",
+   "circular_no": "692"
+  },
+  {
+   "date": "15 Oct 2024",
+   "title": "Commencement Of Gold Option September 2025 Contract With Gold (1 Kg) Futures As Underlying",
+   "category": "T&S",
+   "circular_no": "691"
+  },
+  {
+   "date": "15 Oct 2024",
+   "title": "Commencement Of Futures Trading In Gold October 2025 Contract",
+   "category": "T&S",
+   "circular_no": "690"
+  },
+  {
+   "date": "14 Oct 2024",
+   "title": "Reminder Submission Of Annual Returns And Annual Confirmations For Financial Year 2023 24",
+   "category": "Membership and Compliance",
+   "circular_no": "689"
+  },
+  {
+   "date": "14 Oct 2024",
+   "title": "Commencement Of Futures Trading In Mcx Icomdex Base Metal Index (Mcx Metldex\u00ae) January 2025 Contract",
+   "category": "T&S",
+   "circular_no": "688"
+  },
+  {
+   "date": "11 Oct 2024",
+   "title": "Submission Of Half Yearly Internal Audit Report By Clearing Members (Itcm & Pcm) For Half Year Ended September 30, 2024",
+   "category": "MCXCCL",
+   "circular_no": "687"
+  },
+  {
+   "date": "10 Oct 2024",
+   "title": "Submission Of Internal Audit Report For The Half Year Ended On September 30, 2024",
+   "category": "Membership and Compliance",
+   "circular_no": "686"
+  },
+  {
+   "date": "10 Oct 2024",
+   "title": "Extension Of Timeline For Implementation Of Sebi Circular Sebi/Ho/Mirsd/Mirsd Pod1/P/Cir/2024/75 Dated June 05, 202",
+   "category": "Membership and Compliance",
+   "circular_no": "685"
+  },
+  {
+   "date": "10 Oct 2024",
+   "title": "Guidelines In Pursuance Of Amendment To Sebi Kyc (Know Your Client) Registration Agency (Kra) Regulations, 2011",
+   "category": "T&S",
+   "circular_no": "684"
+  },
+  {
+   "date": "10 Oct 2024",
+   "title": "Launch Of Cotton Seed Wash Oil Futures Contracts",
+   "category": "T&S",
+   "circular_no": "683"
+  },
+  {
+   "date": "10 Oct 2024",
+   "title": "Advisory For Stockbroker \u2013 Member Onboarding For Cert In Cyber Swachhta Kendra (Csk)",
+   "category": "TECH",
+   "circular_no": "682"
+  },
+  {
+   "date": "09 Oct 2024",
+   "title": "Alternate Risk Management Framework Applicable In Case Of Near Zero And Negative Prices",
+   "category": "MCXCCL",
+   "circular_no": "681"
+  },
+  {
+   "date": "09 Oct 2024",
+   "title": "Revision In Threshold Limits For Concentration Margin",
+   "category": "MCXCCL",
+   "circular_no": "680"
+  },
+  {
+   "date": "09 Oct 2024",
+   "title": "Review Of Minimum Volatility Scan Range (Vsr)",
+   "category": "MCXCCL",
+   "circular_no": "679"
+  },
+  {
+   "date": "09 Oct 2024",
+   "title": "Risk Based Supervision Submission Of Data/Details/Information For The Period April 01, 2024 To September 30, 2024",
+   "category": "Membership and Compliance",
+   "circular_no": "678"
+  },
+  {
+   "date": "09 Oct 2024",
+   "title": "Submission Of Half Yearly Networth Certificate As On September 30, 2024",
+   "category": "MCXCCL",
+   "circular_no": "677"
+  },
+  {
+   "date": "09 Oct 2024",
+   "title": "System Audit Of Trading Member Atf Members (Type Iii)",
+   "category": "TECH",
+   "circular_no": "676"
+  },
+  {
+   "date": "09 Oct 2024",
+   "title": "Cyber Security And Cyber Resilience Audit Of Trading Members (Type Iii)",
+   "category": "TECH",
+   "circular_no": "675"
+  },
+  {
+   "date": "08 Oct 2024",
+   "title": "Reminder Reporting Of Artificial Intelligence (Ai) And Machine Learning (Ml) Applications And Systems Offered And Used By Members Of The Exchange",
+   "category": "TECH",
+   "circular_no": "674"
+  },
+  {
+   "date": "08 Oct 2024",
+   "title": "Reminder Information Sharing On Cyber Security Incident",
+   "category": "TECH",
+   "circular_no": "673"
+  },
+  {
+   "date": "08 Oct 2024",
+   "title": "Submission Of Half Yearly Networth Certificate As On September 30, 2024",
+   "category": "Membership and Compliance",
+   "circular_no": "672"
+  },
+  {
+   "date": "07 Oct 2024",
+   "title": "Annual Rebalancing Of Mcx Icomdex\u00ae Indices For The Year 2025 \u2013 Announcement Of Weights",
+   "category": "Others",
+   "circular_no": "671"
+  },
+  {
+   "date": "07 Oct 2024",
+   "title": "Due Date Rates",
+   "category": "MCXCCL",
+   "circular_no": "670"
+  },
+  {
+   "date": "07 Oct 2024",
+   "title": "Segregation And Monitoring Of Collateral At Client Level",
+   "category": "MCXCCL",
+   "circular_no": "669"
+  },
+  {
+   "date": "04 Oct 2024",
+   "title": "Mock Trading From Disaster Recovery Site (Drs)",
+   "category": "MCXCCL",
+   "circular_no": "668"
+  },
+  {
+   "date": "04 Oct 2024",
+   "title": "Mock Trading From Disaster Recovery Site (Drs)",
+   "category": "TECH",
+   "circular_no": "667"
+  },
+  {
+   "date": "04 Oct 2024",
+   "title": "De Accreditation Of Warehouse",
+   "category": "MCXCCL",
+   "circular_no": "666"
+  },
+  {
+   "date": "04 Oct 2024",
+   "title": "Commencement Of Trading In Gold Mini Option December 2024 Contract With Gold Mini (100 Grams) Futures As Underlying",
+   "category": "T&S",
+   "circular_no": "665"
+  },
+  {
+   "date": "04 Oct 2024",
+   "title": "Commencement Of Futures Trading In Gold Mini January 2025 Contract",
+   "category": "T&S",
+   "circular_no": "664"
+  },
+  {
+   "date": "04 Oct 2024",
+   "title": "Mandating Client Email Id Field In Unique Client Code (Ucc)",
+   "category": "T&S",
+   "circular_no": "663"
+  },
+  {
+   "date": "03 Oct 2024",
+   "title": "Clarification On Margin Collection & Reporting",
+   "category": "Membership and Compliance",
+   "circular_no": "662"
+  },
+  {
+   "date": "03 Oct 2024",
+   "title": "Parameters For Performance Evaluation Of Market Infrastructure Institutions",
+   "category": "MCXCCL",
+   "circular_no": "661"
+  },
+  {
+   "date": "03 Oct 2024",
+   "title": "Application For Surrender Of Membership",
+   "category": "Membership and Compliance",
+   "circular_no": "660"
+  },
+  {
+   "date": "01 Oct 2024",
+   "title": "Parameters For Performance Evaluation Of Market Infrastructure",
+   "category": "Others",
+   "circular_no": "659"
+  },
+  {
+   "date": "01 Oct 2024",
+   "title": "Notification By The Government Of India About Quality Control Order, 2023",
+   "category": "MCXCCL",
+   "circular_no": "658"
+  }
+ ],
+ "run_id": "fa67aaf5-cda4-4b54-81a2-269988e3577f",
+ "status": "COMPLETED"
+}

@@ -92,12 +92,25 @@ def load_csv_bhavcopy(path: str | Path) -> pd.DataFrame:
 
 
 def _parse_mcx_date(value: object) -> pd.Timestamp:
-    """Parse MCX's two date formats.
+    """Parse MCX's date formats.
 
     Requests and CSV exports use ``DD/MM/YYYY``; the API response uses
-    ``MM/DD/YYYY``. Expiries use a compact ``04SEP2026`` form.
+    ``MM/DD/YYYY``. Expiries use a compact ``04SEP2026`` form. The API response
+    *also* carries ``DateDisplay`` (``12 Oct 2026``), which is unambiguous and
+    is parsed here so callers can prefer it.
+
+    The two slash forms are genuinely ambiguous against each other -- both
+    readings of ``10/12/2026`` parse without error -- so a bare slash date is
+    a guess. ``_normalise_frame`` therefore prefers ``DateDisplay`` whenever
+    that column is present.
     """
     text = str(value).strip()
+    # Unambiguous renderings first, so we never have to guess.
+    for fmt in ("%d %b %Y", "%d %B %Y"):
+        try:
+            return pd.Timestamp(pd.to_datetime(text, format=fmt))
+        except (ValueError, TypeError):
+            continue
     for fmt in ("%d/%m/%Y", "%m/%d/%Y", "%Y-%m-%d"):
         try:
             return pd.Timestamp(pd.to_datetime(text, format=fmt))
@@ -108,6 +121,30 @@ def _parse_mcx_date(value: object) -> pd.Timestamp:
     if m:
         return pd.Timestamp(f"{m.group(3)}-{m.group(2)}-{m.group(1)}")
     raise ValueError(f"unrecognised MCX date: {value!r}")
+
+
+def _dates_from(frame: pd.DataFrame) -> pd.Series:
+    """Resolve the trade date without guessing between MM/DD and DD/MM.
+
+    The API bhavcopy payload carries ``DateDisplay`` ("12 Oct 2026") alongside
+    ``Date`` ("10/12/2026"). Both slash readings parse cleanly, so picking one
+    by format order is a coin flip that silently moves rows by months. When the
+    unambiguous field is present it wins; otherwise we fall back to ``Date``
+    and say so, rather than pretending there was no ambiguity.
+    """
+    if "DateDisplay" not in frame.columns:
+        return frame["Date"].map(_parse_mcx_date)
+
+    display = frame["DateDisplay"].astype(str).str.strip()
+    parsed = pd.to_datetime(display, format="%d %b %Y", errors="coerce")
+    # Rows where the display form does not parse fall back to the raw Date.
+    fallback = pd.Series(
+        [pd.NaT] * len(frame), index=frame.index, dtype="datetime64[ns]"
+    )
+    if parsed.isna().any():
+        fallback = frame["Date"].map(_parse_mcx_date)
+        parsed = parsed.fillna(fallback)
+    return pd.Series(parsed.values, index=frame.index)
 
 
 def _normalise_frame(frame: pd.DataFrame) -> pd.DataFrame:
@@ -133,7 +170,7 @@ def _normalise_frame(frame: pd.DataFrame) -> pd.DataFrame:
         instrument = frame["InstrumentName"].astype(str).str.strip().str.upper()
         frame = frame[instrument == "FUTCOM"].copy()
 
-    frame["date"] = frame["Date"].map(_parse_mcx_date)
+    frame["date"] = _dates_from(frame)
     frame["expiry"] = frame["ExpiryDate"].map(_parse_mcx_date)
 
     for col in ("Open", "High", "Low", "Close", "PreviousClose"):
