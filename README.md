@@ -40,7 +40,7 @@ In reality, three structural mechanics prevent riskless extraction:
 
 ### Q1. How large must a cross-contract basis be before anyone can extract profit?
 - **Solution:** Derived an analytical, structural economic bound from contract specifications rather than curve-fitting:
-  $$\text{Bound} = \Delta \text{Fabrication Overhead} + \text{Purity/Duty Wedge} + \text{Statutory Frictions \& Slippage}$$
+  $$\text{Bound} = \Delta \text{Fabrication Overhead} + \text{Purity/Duty Wedge} + \text{Statutory Frictions and Slippage}$$
   - Fabrication overhead difference: 20–60 INR/bar assumption (swept across full parameter sensitivity).
   - Purity/duty wedge: Sourced directly from MCX circulars.
   - Statutory frictions: SEBI/exchange turnover fees, STT/CTT, stamp duty, brokerage, and GST (4–35 bps per leg).
